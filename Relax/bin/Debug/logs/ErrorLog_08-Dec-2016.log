@@ -1,0 +1,36 @@
+Start Error Log for today
+12/8/2016 11:19:32 AM Err# [0].Des --> Listing TS stream..., OK.
+Extraction has been started...
+Files Versions: LisaCore.dll: 3.1.6129, LisaCoreWin.dll: 3.1.6129, LisaExtractor.dll: 3.1.6129, LisaExtractorApp.dll: 3.1.6129, extract.exe: 3.1.6130, Relax.exe: 2.0.0, Relax.vshost.exe: 14.0.23107, OK.
+
+Start Time: 2016/12/08 11:19:13
+
+Read buffer: 3 MB, Write buffer: 0.5 MB
+Sorting input 0 streams by last write time..., OK.
+Reading changed FAT files stats..., OK.
+Saving stat: "16-12-08#11-19-13.stat.xml"..., OK.
+End Time: 2016/12/08 11:19:13, Extract Time: 0 seconds.
+Could not find any TS File!
+Files have been extracted into:
+   "O:\MY"
+Extraction has been finished.
+
+------------------------------------------------------------------
+12/8/2016 11:30:02 AM Err# [76].Des --> Could not find a part of the path 'o:\rlxtst0\ts'.
+------------------------------------------------------------------
+12/8/2016 11:30:06 AM Err# [76].Des --> Could not find a part of the path 'o:\rlxtst0\ts'.
+------------------------------------------------------------------
+12/8/2016 11:30:10 AM Err# [76].Des --> Could not find a part of the path 'o:\rlxtst0\ts'.
+------------------------------------------------------------------
+12/8/2016 11:30:15 AM Err# [76].Des --> Could not find a part of the path 'o:\rlxtst0\ts'.
+------------------------------------------------------------------
+12/8/2016 11:30:30 AM Err# [76].Des --> Could not find a part of the path 'o:\rlxtst0\ts'.
+------------------------------------------------------------------
+12/8/2016 11:31:08 AM Err# [76].Des --> Could not find a part of the path 'o:\rlxtst0\ts'.
+------------------------------------------------------------------
+12/8/2016 11:31:21 AM Err# [76].Des --> Could not find a part of the path 'o:\rlxtst0\ts'.
+------------------------------------------------------------------
+12/8/2016 11:43:34 AM Err# [76].Des --> Could not find directory 'o:\rlxtst0\ts\'.
+------------------------------------------------------------------
+12/8/2016 11:43:59 AM Err# [76].Des --> Could not find directory 'o:\rlxtst0\ts\'.
+------------------------------------------------------------------

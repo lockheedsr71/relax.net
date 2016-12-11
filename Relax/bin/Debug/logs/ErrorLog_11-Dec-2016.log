@@ -1,0 +1,224 @@
+Start Error Log for today
+12/11/2016 10:05:06 AM Err# [0].Des --> Listing TS stream..., OK.
+Extraction has been started...
+Files Versions: LisaCore.dll: 3.1.6129, LisaCoreWin.dll: 3.1.6129, LisaExtractor.dll: 3.1.6129, LisaExtractorApp.dll: 3.1.6129, extract.exe: 3.1.6130, Relax.exe: 2.0.0, Relax.vshost.exe: 14.0.23107, OK.
+
+Start Time: 2016/12/11 10:05:05
+
+Read buffer: 3 MB, Write buffer: 0.5 MB
+Sorting input 0 streams by last write time..., OK.
+Reading changed FAT files stats..., OK.
+Saving stat: "16-12-11#10-05-05.stat.xml"..., OK.
+End Time: 2016/12/11 10:05:05, Extract Time: 0 seconds.
+Could not find any TS File!
+Files have been extracted into:
+   "O:\MY"
+Extraction has been finished.
+
+------------------------------------------------------------------------------------
+12/11/2016 10:06:31 AM Err# [0].Des --> Listing TS stream..., OK.
+Extraction has been started...
+Files Versions: LisaCore.dll: 3.1.6129, LisaCoreWin.dll: 3.1.6129, LisaExtractor.dll: 3.1.6129, LisaExtractorApp.dll: 3.1.6129, extract.exe: 3.1.6130, Relax.exe: 2.0.0, Relax.vshost.exe: 14.0.23107, OK.
+
+Start Time: 2016/12/11 10:06:30
+
+Read buffer: 3 MB, Write buffer: 0.5 MB
+Sorting input 0 streams by last write time..., OK.
+Reading changed FAT files stats..., OK.
+Saving stat: "16-12-11#10-06-30.stat.xml"..., OK.
+End Time: 2016/12/11 10:06:30, Extract Time: 0 seconds.
+Could not find any TS File!
+Files have been extracted into:
+   "O:\MY"
+Extraction has been finished.
+
+------------------------------------------------------------------------------------
+12/11/2016 10:09:43 AM Err# [0].Des --> Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug> Volume in drive O is Projects
+ Volume Serial Number is AC86-1CD5
+
+ Directory of O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug
+
+12/11/2016  10:09 AM    <DIR>          .
+12/11/2016  10:09 AM    <DIR>          ..
+10/13/2016  12:37 PM            12,800 extract.exe
+10/12/2016  10:28 AM            45,568 LisaCore.dll
+10/12/2016  10:28 AM             9,728 LisaCoreWin.dll
+10/12/2016  10:28 AM            59,392 LisaExtractor.dll
+10/12/2016  10:28 AM            42,496 LisaExtractorApp.dll
+12/11/2016  10:05 AM    <DIR>          logs
+12/11/2016  10:09 AM           977,408 Relax.exe
+11/12/2016  04:10 PM               186 Relax.exe.config
+12/11/2016  10:09 AM            89,600 Relax.pdb
+12/11/2016  10:08 AM            22,696 Relax.vshost.exe
+11/12/2016  04:10 PM               186 Relax.vshost.exe.config
+11/15/2016  02:22 PM             3,163 Relax.vshost.exe.manifest
+12/11/2016  10:09 AM             1,948 Relax.xml
+12/11/2016  10:07 AM    <DIR>          ts
+11/21/2016  11:57 AM               781 vars.ini0
+12/11/2016  10:09 AM               653 vars.xml
+              14 File(s)      1,266,605 bytes
+               4 Dir(s)  237,634,023,424 bytes free
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+------------------------------------------------------------------------------------
+12/11/2016 10:10:25 AM Err# [0].Des --> Listing TS stream..., OK.
+Extraction has been started...
+Files Versions: LisaCore.dll: 3.1.6129, LisaCoreWin.dll: 3.1.6129, LisaExtractor.dll: 3.1.6129, LisaExtractorApp.dll: 3.1.6129, extract.exe: 3.1.6130, Relax.exe: 2.0.0, Relax.vshost.exe: 14.0.23107, OK.
+
+Start Time: 2016/12/11 10:10:24
+
+Read buffer: 3 MB, Write buffer: 0.5 MB
+Sorting input 0 streams by last write time..., OK.
+Reading changed FAT files stats..., OK.
+Saving stat: "16-12-11#10-10-24.stat.xml"..., OK.
+End Time: 2016/12/11 10:10:24, Extract Time: 0 seconds.
+Could not find any TS File!
+Files have been extracted into:
+   "O:\MY"
+Extraction has been finished.
+
+------------------------------------------------------------------------------------
+12/11/2016 10:25:33 AM Err# [0].Des --> Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug>
+------------------------------------------------------------------------------------
+12/11/2016 10:26:00 AM Err# [0].Des --> Listing TS stream..., OK.
+Extraction has been started...
+Files Versions: LisaCore.dll: 3.1.6129, LisaCoreWin.dll: 3.1.6129, LisaExtractor.dll: 3.1.6129, LisaExtractorApp.dll: 3.1.6129, extract.exe: 3.1.6130, Relax.exe: 2.0.0, Relax.vshost.exe: 14.0.23107, OK.
+
+Start Time: 2016/12/11 10:25:59
+
+Read buffer: 3 MB, Write buffer: 0.5 MB
+Sorting input 0 streams by last write time..., OK.
+Reading changed FAT files stats..., OK.
+Saving stat: "16-12-11#10-25-59.stat.xml"..., OK.
+End Time: 2016/12/11 10:25:59, Extract Time: 0 seconds.
+Could not find any TS File!
+Files have been extracted into:
+   "O:\MY"
+Extraction has been finished.
+
+------------------------------------------------------------------------------------
+12/11/2016 10:45:25 AM Err# [0].Des --> 
+------------------------------------------------------------------------------------
+12/11/2016 11:11:44 AM Err# [0].Des --> Listing TS stream..., OK.
+Extraction has been started...
+Files Versions: LisaCore.dll: 3.1.6129, LisaCoreWin.dll: 3.1.6129, LisaExtractor.dll: 3.1.6129, LisaExtractorApp.dll: 3.1.6129, extract.exe: 3.1.6130, Relax.exe: 2.0.0, Relax.vshost.exe: 14.0.23107, OK.
+
+Start Time: 2016/12/11 11:11:43
+
+Read buffer: 3 MB, Write buffer: 0.5 MB
+Sorting input 0 streams by last write time..., OK.
+Reading changed FAT files stats..., OK.
+Saving stat: "16-12-11#11-11-43.stat.xml"..., OK.
+End Time: 2016/12/11 11:11:43, Extract Time: 0 seconds.
+Could not find any TS File!
+Files have been extracted into:
+   "O:\MY"
+Extraction has been finished.
+
+------------------------------------------------------------------------------------
+12/11/2016 2:25:31 PM Err# [76].Des --> Could not find directory 'o:\rlxtst0\ts'.
+------------------------------------------------------------------------------------
+12/11/2016 2:25:32 PM Err# [76].Des --> Could not find directory 'o:\rlxtst0\ts'.
+------------------------------------------------------------------------------------
+12/11/2016 2:25:40 PM Err# [76].Des --> Could not find directory 'o:\rlxtst0\ts'.
+------------------------------------------------------------------------------------
+12/11/2016 2:25:47 PM Err# [76].Des --> Could not find directory 'o:\rlxtst0\ts'.
+------------------------------------------------------------------------------------
+12/11/2016 2:26:10 PM Err# [76].Des --> Could not find directory 'o:\rlxtst0\ts'.
+------------------------------------------------------------------------------------
+12/11/2016 2:26:49 PM Err# [0].Des --> Listing TS stream..., OK.
+Extraction has been started...
+Files Versions: LisaCore.dll: 3.1.6129, LisaCoreWin.dll: 3.1.6129, LisaExtractor.dll: 3.1.6129, LisaExtractorApp.dll: 3.1.6129, extract.exe: 3.1.6130, Relax.exe: 2.0.0, Relax.vshost.exe: 14.0.23107, OK.
+
+Start Time: 2016/12/11 14:26:36
+
+Read buffer: 3 MB, Write buffer: 0.5 MB
+Sorting input 0 streams by last write time..., OK.
+Reading changed FAT files stats..., OK.
+Saving stat: "16-12-11#14-26-36.stat.xml"..., OK.
+End Time: 2016/12/11 14:26:36, Extract Time: 0 seconds.
+Could not find any TS File!
+Files have been extracted into:
+   "O:\MY"
+Extraction has been finished.
+
+------------------------------------------------------------------------------------
+12/11/2016 2:27:49 PM Err# [0].Des --> Listing TS stream..., OK.
+Extraction has been started...
+Files Versions: LisaCore.dll: 3.1.6129, LisaCoreWin.dll: 3.1.6129, LisaExtractor.dll: 3.1.6129, LisaExtractorApp.dll: 3.1.6129, extract.exe: 3.1.6130, Relax.exe: 2.0.0, Relax.vshost.exe: 14.0.23107, OK.
+
+Start Time: 2016/12/11 14:27:13
+
+Read buffer: 3 MB, Write buffer: 0.5 MB
+Sorting input 0 streams by last write time..., OK.
+Reading changed FAT files stats..., OK.
+Saving stat: "16-12-11#14-27-13.stat.xml"..., OK.
+End Time: 2016/12/11 14:27:13, Extract Time: 0 seconds.
+Could not find any TS File!
+Files have been extracted into:
+   "O:\MY"
+Extraction has been finished.
+
+------------------------------------------------------------------------------------
+12/11/2016 2:28:12 PM Err# [0].Des --> Listing TS stream..., OK.
+Extraction has been started...
+Files Versions: LisaCore.dll: 3.1.6129, LisaCoreWin.dll: 3.1.6129, LisaExtractor.dll: 3.1.6129, LisaExtractorApp.dll: 3.1.6129, extract.exe: 3.1.6130, Relax.exe: 2.0.0, Relax.vshost.exe: 14.0.23107, OK.
+
+Start Time: 2016/12/11 14:28:11
+
+Read buffer: 3 MB, Write buffer: 0.5 MB
+Sorting input 0 streams by last write time..., OK.
+Reading changed FAT files stats..., OK.
+Saving stat: "16-12-11#14-28-11.stat.xml"..., OK.
+End Time: 2016/12/11 14:28:11, Extract Time: 0 seconds.
+Could not find any TS File!
+Files have been extracted into:
+   "O:\MY"
+Extraction has been finished.
+
+------------------------------------------------------------------------------------
+12/11/2016 2:28:40 PM Err# [0].Des --> Listing TS stream..., OK.
+Extraction has been started...
+Files Versions: LisaCore.dll: 3.1.6129, LisaCoreWin.dll: 3.1.6129, LisaExtractor.dll: 3.1.6129, LisaExtractorApp.dll: 3.1.6129, extract.exe: 3.1.6130, Relax.exe: 2.0.0, Relax.vshost.exe: 14.0.23107, OK.
+
+Start Time: 2016/12/11 14:28:39
+
+Read buffer: 3 MB, Write buffer: 0.5 MB
+Sorting input 0 streams by last write time..., OK.
+Reading changed FAT files stats..., OK.
+Saving stat: "16-12-11#14-28-39.stat.xml"..., OK.
+End Time: 2016/12/11 14:28:39, Extract Time: 0 seconds.
+Could not find any TS File!
+Files have been extracted into:
+   "O:\MY"
+Extraction has been finished.
+
+------------------------------------------------------------------------------------

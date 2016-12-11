@@ -1,0 +1,32 @@
+;RELAX Engine version 2 config file 
+[time]					
+;set time for starting Relax e.g. 15:46
+startin1=11:57
+startin2=0
+startin3=0
+
+[path]					
+;set recorded .TS file (local or network share path)
+;set file path to copy .TS file to client and output file after extract
+;FilePathUbix =\\192.168.10.253\rec\share_auto\Toosheh TV\
+FilePathUbix =o:\rlxtst\ubix\
+FilePathClient =ts\
+FilePathClientOut =vid\
+
+[remove]
+;set some paths to remove after extracting .TS file (for some policy and managements).Maximum 5 path can be defined.  
+;There is some issue with  removing some persian file names.
+path1=\.lisa\
+path2=\toosheh\‰—„ «›“«—\
+path3=\updates\
+path4=\toosheh\›Ì· —‘ò‰\
+path5=
+
+[timers]
+;config some timers needed in relax engine 
+chktimer=10000
+
+
+
+
+

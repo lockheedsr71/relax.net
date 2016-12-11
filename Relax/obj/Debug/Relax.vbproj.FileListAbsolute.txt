@@ -1,0 +1,12 @@
+o:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug\Relax.exe.config
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.Form1.resources
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.vbproj.GenerateResource.Cache
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug\Relax.exe
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug\Relax.pdb
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\bin\Debug\Relax.xml
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.Resources.resources
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.exe
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.xml
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.pdb
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.vbprojResolveAssemblyReference.cache
+O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.frmNotification.resources
