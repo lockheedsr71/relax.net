@@ -48,8 +48,6 @@ Partial Class Form1
         Me.txtchktimer = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.txtremovepath5 = New System.Windows.Forms.TextBox()
-        Me.txtremovepath4 = New System.Windows.Forms.TextBox()
         Me.txtremovepath3 = New System.Windows.Forms.TextBox()
         Me.txtremovepath2 = New System.Windows.Forms.TextBox()
         Me.txtremovepath1 = New System.Windows.Forms.TextBox()
@@ -85,6 +83,16 @@ Partial Class Form1
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.txtremovepath4 = New System.Windows.Forms.TextBox()
+        Me.txtremovepath5 = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -207,6 +215,7 @@ Partial Class Form1
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.Label21)
         Me.GroupBox5.Controls.Add(Me.txtremoveExt3)
         Me.GroupBox5.Controls.Add(Me.Label20)
         Me.GroupBox5.Controls.Add(Me.txtremoveExt2)
@@ -215,9 +224,9 @@ Partial Class Form1
         Me.GroupBox5.Controls.Add(Me.Label18)
         Me.GroupBox5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.GroupBox5.ForeColor = System.Drawing.Color.Yellow
-        Me.GroupBox5.Location = New System.Drawing.Point(11, 177)
+        Me.GroupBox5.Location = New System.Drawing.Point(11, 215)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(335, 109)
+        Me.GroupBox5.Size = New System.Drawing.Size(335, 71)
         Me.GroupBox5.TabIndex = 25
         Me.GroupBox5.TabStop = false
         Me.GroupBox5.Text = " Remove files by extentions (Include subfolders):"
@@ -225,9 +234,9 @@ Partial Class Form1
         'txtremoveExt3
         '
         Me.txtremoveExt3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtremoveExt3.Location = New System.Drawing.Point(88, 72)
+        Me.txtremoveExt3.Location = New System.Drawing.Point(88, 49)
         Me.txtremoveExt3.Name = "txtremoveExt3"
-        Me.txtremoveExt3.Size = New System.Drawing.Size(88, 15)
+        Me.txtremoveExt3.Size = New System.Drawing.Size(44, 15)
         Me.txtremoveExt3.TabIndex = 24
         '
         'Label20
@@ -235,7 +244,7 @@ Partial Class Form1
         Me.Label20.AutoSize = true
         Me.Label20.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label20.Location = New System.Drawing.Point(12, 72)
+        Me.Label20.Location = New System.Drawing.Point(12, 49)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(73, 15)
         Me.Label20.TabIndex = 23
@@ -244,9 +253,9 @@ Partial Class Form1
         'txtremoveExt2
         '
         Me.txtremoveExt2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtremoveExt2.Location = New System.Drawing.Point(88, 50)
+        Me.txtremoveExt2.Location = New System.Drawing.Point(224, 27)
         Me.txtremoveExt2.Name = "txtremoveExt2"
-        Me.txtremoveExt2.Size = New System.Drawing.Size(88, 15)
+        Me.txtremoveExt2.Size = New System.Drawing.Size(43, 15)
         Me.txtremoveExt2.TabIndex = 22
         '
         'Label19
@@ -254,7 +263,7 @@ Partial Class Form1
         Me.Label19.AutoSize = true
         Me.Label19.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label19.Location = New System.Drawing.Point(12, 50)
+        Me.Label19.Location = New System.Drawing.Point(148, 27)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(73, 15)
         Me.Label19.TabIndex = 21
@@ -265,7 +274,7 @@ Partial Class Form1
         Me.txtremoveExt1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtremoveExt1.Location = New System.Drawing.Point(88, 28)
         Me.txtremoveExt1.Name = "txtremoveExt1"
-        Me.txtremoveExt1.Size = New System.Drawing.Size(88, 15)
+        Me.txtremoveExt1.Size = New System.Drawing.Size(44, 15)
         Me.txtremoveExt1.TabIndex = 20
         '
         'Label18
@@ -313,16 +322,17 @@ Partial Class Form1
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Label22)
         Me.GroupBox4.Controls.Add(Me.txtchktimer)
         Me.GroupBox4.Controls.Add(Me.Label15)
         Me.GroupBox4.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.Yellow
-        Me.GroupBox4.Location = New System.Drawing.Point(357, 177)
+        Me.GroupBox4.Location = New System.Drawing.Point(357, 227)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(216, 109)
+        Me.GroupBox4.Size = New System.Drawing.Size(216, 59)
         Me.GroupBox4.TabIndex = 23
         Me.GroupBox4.TabStop = false
-        Me.GroupBox4.Text = "Interval timers:"
+        Me.GroupBox4.Text = "Interval timers (milliseconds):"
         '
         'txtchktimer
         '
@@ -345,6 +355,8 @@ Partial Class Form1
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Label27)
+        Me.GroupBox3.Controls.Add(Me.Label26)
         Me.GroupBox3.Controls.Add(Me.txtremovepath5)
         Me.GroupBox3.Controls.Add(Me.txtremovepath4)
         Me.GroupBox3.Controls.Add(Me.txtremovepath3)
@@ -359,31 +371,15 @@ Partial Class Form1
         Me.GroupBox3.ForeColor = System.Drawing.Color.Yellow
         Me.GroupBox3.Location = New System.Drawing.Point(272, 24)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(301, 147)
+        Me.GroupBox3.Size = New System.Drawing.Size(301, 185)
         Me.GroupBox3.TabIndex = 16
         Me.GroupBox3.TabStop = false
         Me.GroupBox3.Text = "Removing paths after extract:"
         '
-        'txtremovepath5
-        '
-        Me.txtremovepath5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtremovepath5.Location = New System.Drawing.Point(60, 123)
-        Me.txtremovepath5.Name = "txtremovepath5"
-        Me.txtremovepath5.Size = New System.Drawing.Size(225, 15)
-        Me.txtremovepath5.TabIndex = 24
-        '
-        'txtremovepath4
-        '
-        Me.txtremovepath4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtremovepath4.Location = New System.Drawing.Point(60, 99)
-        Me.txtremovepath4.Name = "txtremovepath4"
-        Me.txtremovepath4.Size = New System.Drawing.Size(225, 15)
-        Me.txtremovepath4.TabIndex = 23
-        '
         'txtremovepath3
         '
         Me.txtremovepath3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtremovepath3.Location = New System.Drawing.Point(60, 75)
+        Me.txtremovepath3.Location = New System.Drawing.Point(60, 93)
         Me.txtremovepath3.Name = "txtremovepath3"
         Me.txtremovepath3.Size = New System.Drawing.Size(225, 15)
         Me.txtremovepath3.TabIndex = 22
@@ -391,7 +387,7 @@ Partial Class Form1
         'txtremovepath2
         '
         Me.txtremovepath2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtremovepath2.Location = New System.Drawing.Point(60, 51)
+        Me.txtremovepath2.Location = New System.Drawing.Point(60, 60)
         Me.txtremovepath2.Name = "txtremovepath2"
         Me.txtremovepath2.Size = New System.Drawing.Size(225, 15)
         Me.txtremovepath2.TabIndex = 21
@@ -420,7 +416,7 @@ Partial Class Form1
         Me.Label10.AutoSize = true
         Me.Label10.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label10.Location = New System.Drawing.Point(8, 50)
+        Me.Label10.Location = New System.Drawing.Point(8, 59)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(46, 15)
         Me.Label10.TabIndex = 16
@@ -431,7 +427,7 @@ Partial Class Form1
         Me.Label11.AutoSize = true
         Me.Label11.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label11.Location = New System.Drawing.Point(8, 74)
+        Me.Label11.Location = New System.Drawing.Point(8, 92)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(46, 15)
         Me.Label11.TabIndex = 17
@@ -442,7 +438,7 @@ Partial Class Form1
         Me.Label12.AutoSize = true
         Me.Label12.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label12.Location = New System.Drawing.Point(8, 98)
+        Me.Label12.Location = New System.Drawing.Point(8, 123)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(46, 15)
         Me.Label12.TabIndex = 18
@@ -453,7 +449,7 @@ Partial Class Form1
         Me.Label13.AutoSize = true
         Me.Label13.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label13.Location = New System.Drawing.Point(8, 123)
+        Me.Label13.Location = New System.Drawing.Point(8, 155)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(46, 15)
         Me.Label13.TabIndex = 19
@@ -461,6 +457,9 @@ Partial Class Form1
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label25)
+        Me.GroupBox2.Controls.Add(Me.Label24)
+        Me.GroupBox2.Controls.Add(Me.Label23)
         Me.GroupBox2.Controls.Add(Me.txtfilepathclientout)
         Me.GroupBox2.Controls.Add(Me.txtfilepathclient)
         Me.GroupBox2.Controls.Add(Me.txtfilepathubix)
@@ -471,7 +470,7 @@ Partial Class Form1
         Me.GroupBox2.ForeColor = System.Drawing.Color.Yellow
         Me.GroupBox2.Location = New System.Drawing.Point(11, 289)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(565, 96)
+        Me.GroupBox2.Size = New System.Drawing.Size(565, 124)
         Me.GroupBox2.TabIndex = 22
         Me.GroupBox2.TabStop = false
         Me.GroupBox2.Text = "File and folders path:"
@@ -479,7 +478,7 @@ Partial Class Form1
         'txtfilepathclientout
         '
         Me.txtfilepathclientout.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtfilepathclientout.Location = New System.Drawing.Point(160, 72)
+        Me.txtfilepathclientout.Location = New System.Drawing.Point(160, 89)
         Me.txtfilepathclientout.Name = "txtfilepathclientout"
         Me.txtfilepathclientout.Size = New System.Drawing.Size(379, 15)
         Me.txtfilepathclientout.TabIndex = 15
@@ -487,7 +486,7 @@ Partial Class Form1
         'txtfilepathclient
         '
         Me.txtfilepathclient.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtfilepathclient.Location = New System.Drawing.Point(160, 47)
+        Me.txtfilepathclient.Location = New System.Drawing.Point(160, 55)
         Me.txtfilepathclient.Name = "txtfilepathclient"
         Me.txtfilepathclient.Size = New System.Drawing.Size(379, 15)
         Me.txtfilepathclient.TabIndex = 15
@@ -516,7 +515,7 @@ Partial Class Form1
         Me.Label7.AutoSize = true
         Me.Label7.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label7.Location = New System.Drawing.Point(6, 48)
+        Me.Label7.Location = New System.Drawing.Point(6, 56)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(146, 15)
         Me.Label7.TabIndex = 13
@@ -527,7 +526,7 @@ Partial Class Form1
         Me.Label8.AutoSize = true
         Me.Label8.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label8.Location = New System.Drawing.Point(6, 71)
+        Me.Label8.Location = New System.Drawing.Point(6, 88)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(126, 15)
         Me.Label8.TabIndex = 14
@@ -535,6 +534,7 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label28)
         Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.lbltime)
         Me.GroupBox1.Controls.Add(Me.Label14)
@@ -548,7 +548,7 @@ Partial Class Form1
         Me.GroupBox1.ForeColor = System.Drawing.Color.Yellow
         Me.GroupBox1.Location = New System.Drawing.Point(11, 24)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(250, 147)
+        Me.GroupBox1.Size = New System.Drawing.Size(250, 185)
         Me.GroupBox1.TabIndex = 21
         Me.GroupBox1.TabStop = false
         Me.GroupBox1.Text = "Starting time sets:(24h format)"
@@ -557,20 +557,20 @@ Partial Class Form1
         'Label16
         '
         Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label16.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label16.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(6, 35)
+        Me.Label16.Location = New System.Drawing.Point(10, 46)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(238, 29)
+        Me.Label16.Size = New System.Drawing.Size(234, 39)
         Me.Label16.TabIndex = 15
-        Me.Label16.Text = "** Enter time format like above to work correctly"
+        Me.Label16.Text = "** Enter time format like above to work program correctly"
         '
         'lbltime
         '
         Me.lbltime.AutoSize = true
         Me.lbltime.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.lbltime.ForeColor = System.Drawing.Color.Red
-        Me.lbltime.Location = New System.Drawing.Point(178, 17)
+        Me.lbltime.Location = New System.Drawing.Point(182, 23)
         Me.lbltime.Name = "lbltime"
         Me.lbltime.Size = New System.Drawing.Size(43, 18)
         Me.lbltime.TabIndex = 6
@@ -581,7 +581,7 @@ Partial Class Form1
         Me.Label14.AutoSize = true
         Me.Label14.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Location = New System.Drawing.Point(7, 17)
+        Me.Label14.Location = New System.Drawing.Point(11, 23)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(168, 16)
         Me.Label14.TabIndex = 10
@@ -590,7 +590,7 @@ Partial Class Form1
         'txtstartin3
         '
         Me.txtstartin3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtstartin3.Location = New System.Drawing.Point(129, 120)
+        Me.txtstartin3.Location = New System.Drawing.Point(129, 144)
         Me.txtstartin3.Name = "txtstartin3"
         Me.txtstartin3.Size = New System.Drawing.Size(106, 15)
         Me.txtstartin3.TabIndex = 14
@@ -598,7 +598,7 @@ Partial Class Form1
         'txtstartin2
         '
         Me.txtstartin2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtstartin2.Location = New System.Drawing.Point(129, 100)
+        Me.txtstartin2.Location = New System.Drawing.Point(129, 120)
         Me.txtstartin2.Name = "txtstartin2"
         Me.txtstartin2.Size = New System.Drawing.Size(106, 15)
         Me.txtstartin2.TabIndex = 13
@@ -606,7 +606,7 @@ Partial Class Form1
         'txtstartin1
         '
         Me.txtstartin1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtstartin1.Location = New System.Drawing.Point(129, 80)
+        Me.txtstartin1.Location = New System.Drawing.Point(129, 96)
         Me.txtstartin1.Name = "txtstartin1"
         Me.txtstartin1.Size = New System.Drawing.Size(106, 15)
         Me.txtstartin1.TabIndex = 12
@@ -616,7 +616,7 @@ Partial Class Form1
         Me.Label3.AutoSize = true
         Me.Label3.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label3.Location = New System.Drawing.Point(7, 80)
+        Me.Label3.Location = New System.Drawing.Point(7, 96)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(99, 15)
         Me.Label3.TabIndex = 9
@@ -627,7 +627,7 @@ Partial Class Form1
         Me.Label4.AutoSize = true
         Me.Label4.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label4.Location = New System.Drawing.Point(5, 99)
+        Me.Label4.Location = New System.Drawing.Point(5, 119)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(114, 15)
         Me.Label4.TabIndex = 10
@@ -638,7 +638,7 @@ Partial Class Form1
         Me.Label5.AutoSize = true
         Me.Label5.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label5.Location = New System.Drawing.Point(7, 120)
+        Me.Label5.Location = New System.Drawing.Point(7, 144)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(100, 15)
         Me.Label5.TabIndex = 11
@@ -753,6 +753,110 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = false
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = true
+        Me.Label21.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.Label21.Location = New System.Drawing.Point(148, 45)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(76, 14)
+        Me.Label21.TabIndex = 25
+        Me.Label21.Text = "Example : mp3"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = true
+        Me.Label22.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.Label22.Location = New System.Drawing.Point(119, 39)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(86, 14)
+        Me.Label22.TabIndex = 26
+        Me.Label22.Text = "Example : 15000"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = true
+        Me.Label23.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.Label23.Location = New System.Drawing.Point(157, 38)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(123, 14)
+        Me.Label23.TabIndex = 27
+        Me.Label23.Text = "Example : d:\test\source"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = true
+        Me.Label24.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.Label24.Location = New System.Drawing.Point(157, 72)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(82, 14)
+        Me.Label24.TabIndex = 28
+        Me.Label24.Text = "Example : temp\"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = true
+        Me.Label25.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.Label25.Location = New System.Drawing.Point(156, 107)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(105, 14)
+        Me.Label25.TabIndex = 29
+        Me.Label25.Text = "Example : myvideos\"
+        '
+        'txtremovepath4
+        '
+        Me.txtremovepath4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtremovepath4.Location = New System.Drawing.Point(60, 124)
+        Me.txtremovepath4.Name = "txtremovepath4"
+        Me.txtremovepath4.Size = New System.Drawing.Size(225, 15)
+        Me.txtremovepath4.TabIndex = 23
+        '
+        'txtremovepath5
+        '
+        Me.txtremovepath5.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtremovepath5.Location = New System.Drawing.Point(60, 155)
+        Me.txtremovepath5.Name = "txtremovepath5"
+        Me.txtremovepath5.Size = New System.Drawing.Size(225, 15)
+        Me.txtremovepath5.TabIndex = 24
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = true
+        Me.Label26.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.Label26.Location = New System.Drawing.Point(57, 44)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(81, 14)
+        Me.Label26.TabIndex = 26
+        Me.Label26.Text = "Example : \.lisa\"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = true
+        Me.Label27.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.Label27.Location = New System.Drawing.Point(57, 77)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(136, 14)
+        Me.Label27.TabIndex = 27
+        Me.Label27.Text = "Example : \toosheh\نرم افزار\"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = true
+        Me.Label28.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.Label28.Location = New System.Drawing.Point(126, 163)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(83, 14)
+        Me.Label28.TabIndex = 27
+        Me.Label28.Text = "Example : 18:45"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -830,8 +934,6 @@ End Sub
     Friend WithEvents txtstartin3 As TextBox
     Friend WithEvents txtstartin2 As TextBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents txtremovepath5 As TextBox
-    Friend WithEvents txtremovepath4 As TextBox
     Friend WithEvents txtremovepath3 As TextBox
     Friend WithEvents txtremovepath2 As TextBox
     Friend WithEvents txtremovepath1 As TextBox
@@ -856,4 +958,14 @@ End Sub
     Friend WithEvents Label20 As Label
     Friend WithEvents txtremoveExt2 As TextBox
     Friend WithEvents Label19 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents txtremovepath5 As TextBox
+    Friend WithEvents txtremovepath4 As TextBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label28 As Label
 End Class

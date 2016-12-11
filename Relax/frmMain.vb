@@ -130,21 +130,20 @@ errpart:
   .StartInfo = New ProcessStartInfo("cmd.exe", " /c extract.exe " & cmdcommand)
     With .StartInfo
         .CreateNoWindow = false
-        .UseShellExecute = False
-     .RedirectStandardOutput = false 
+        .UseShellExecute = true
+    ' .RedirectStandardOutput = true 
               
     End With
-
-
+            
     .Start() 
     .WaitForExit()
 End With
 
       
      '   Dim cmdout As String = cmdProcess.StandardOutput.ReadToEnd
-      '  cmdProcess.StandardOutput .ReadToEnd 
+     '  cmdProcess.StandardOutput .ReadToEnd 
         
-         '    stuff.mylog (cmdout)
+        ' stuff.mylog (cmdout)
  
     End Function
 

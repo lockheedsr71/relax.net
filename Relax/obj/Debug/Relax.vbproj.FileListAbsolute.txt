@@ -10,3 +10,15 @@ O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.xml
 O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.pdb
 O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.vbprojResolveAssemblyReference.cache
 O:\MY GIT\examples\vb.net\relax\Relax\Relax\obj\Debug\Relax.frmNotification.resources
+o:\MY GIT\relax.net\Relax\bin\Debug\Relax.exe.config
+o:\MY GIT\relax.net\Relax\obj\Debug\Relax.exe
+o:\MY GIT\relax.net\Relax\obj\Debug\Relax.xml
+o:\MY GIT\relax.net\Relax\obj\Debug\Relax.pdb
+o:\MY GIT\relax.net\Relax\bin\Debug\Relax.exe
+o:\MY GIT\relax.net\Relax\bin\Debug\Relax.pdb
+o:\MY GIT\relax.net\Relax\bin\Debug\Relax.xml
+o:\MY GIT\relax.net\Relax\obj\Debug\Relax.vbprojResolveAssemblyReference.cache
+o:\MY GIT\relax.net\Relax\obj\Debug\Relax.Form1.resources
+o:\MY GIT\relax.net\Relax\obj\Debug\Relax.frmNotification.resources
+o:\MY GIT\relax.net\Relax\obj\Debug\Relax.Resources.resources
+o:\MY GIT\relax.net\Relax\obj\Debug\Relax.vbproj.GenerateResource.Cache
