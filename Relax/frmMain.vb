@@ -16,12 +16,8 @@ Public Class Form1
     Public variable As Integer = 1
  
 
-
     Private Sub Main()
-        
-
-
-            stuff.getargs  ()
+        stuff.getargs  ()
         
       On Error goto errpart
             
@@ -33,22 +29,23 @@ Public Class Form1
         filechk("LisaExtractorApp.dll")
         filechk("LisaCoreWin.dll")
 
+        
         projdir = My.Application.Info.DirectoryPath & "\"
         mydate = DateTime.Now.ToString("yyyy-MM-dd")
         mytime = DateTime.Now.ToString("HH:mm")
         lbltime.Text =    DateTime.Now.ToString("HH:mm:ss")                               
 
-        if mytime = mytimeend then goto ex
+    '    if mytime = mytimeend then goto ex
         If mytime = startin1 Or mytime = startin2 Or mytime = startin3 then
 
             CreateObject("WScript.Shell").Popup("This program will copy and convert TOOSHEH TV DATA and Media to shared folder on network share path.RELAX Running at this location : " & projdir, 3, "Welcome to RELAX", 64)
-            Directory.CreateDirectory(projdir & FilePathClient)         ' create ts folder in project dir 
+            Directory.CreateDirectory(FilePathClient)         ' create ts folder in project dir 
             Thread.Sleep(1000)
 
 
             If chktsclient("ts") = False Then
      
-                My.Computer.FileSystem.CopyDirectory(FilePathUbix, projdir & "ts", showUI:=FileIO.UIOption.AllDialogs)
+                My.Computer.FileSystem.CopyDirectory(FilePathUbix,  txtfilepathclient.Text , showUI:=FileIO.UIOption.AllDialogs)
 
             Else
 
@@ -67,34 +64,31 @@ Public Class Form1
                 CreateObject("WScript.Shell").Popup("All file(s) copied to client successfully.", 2, "Copy status ... ", 64)
 
             end if
-
             
             doextract ()
-
-
+            
          '''   Thread.Sleep(chktimer)
 
 
             '   Remove folders  ==============================================================================================================
 
-            delfile(projdir & FilePathClientOut & mydate & removepath1)
-            delfile(projdir & FilePathClientOut & mydate & removepath2)
-            delfile(projdir & FilePathClientOut & mydate & removepath3)
-            delfile(projdir & FilePathClientOut & mydate & removepath4)
-            delfile(projdir & FilePathClientOut & mydate & removepath5)
+            delfile( FilePathClientOut & mydate & removepath1)
+            delfile( FilePathClientOut & mydate & removepath2)
+            delfile( FilePathClientOut & mydate & removepath3)
+            delfile( FilePathClientOut & mydate & removepath4)
+            delfile( FilePathClientOut & mydate & removepath5)
 
             '  Remove folders  ==============================================================================================================
             '      Directory.Delete (projdir  & FilePathClient ,True)
 
-            delfile(projdir & FilePathClient)
+            delfile( FilePathClient)
 
             CreateObject("WScript.Shell").Popup(".TS file deleting ... , Operational successfully completed. ", 3, "RELAX Inform", 64)
 
             mytimeend = DateTime.Now.ToString("HH:mm")
-
-ex:
+            ex:
         end if
-
+        
 errpart:
 
         If Err.Number = 76 then
@@ -116,13 +110,11 @@ errpart:
 
     Function doextract ()
 
-          
-        Dim cmdProcess As New Process
+         Dim cmdProcess As New Process
         Dim cmdcommand 
-        
-            cmdcommand = projdir & FilePathClientOut & mydate & " /ts  " & projdir & FilePathClient
-            
-         With cmdProcess
+        cmdcommand =  FilePathClientOut &"\"& mydate & " /ts  "  & FilePathClient
+      
+       With cmdProcess
              Dim procID As Integer 
 ' Run calculator.
 
@@ -134,18 +126,15 @@ errpart:
     ' .RedirectStandardOutput = true 
               
     End With
-            
+           
     .Start() 
     .WaitForExit()
 End With
-
-      
+        
      '   Dim cmdout As String = cmdProcess.StandardOutput.ReadToEnd
      '  cmdProcess.StandardOutput .ReadToEnd 
-        
         ' stuff.mylog (cmdout)
- 
-    End Function
+ End Function
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -153,13 +142,10 @@ End With
         chkxml
         ContextMenuStrip1.Enabled = True
         me.Show()
-
-
-
         Label2.Text = Application.ProductVersion
         While 1
             Application.DoEvents()
-          '  me.Refresh
+         ' me.Refresh
             Thread.Sleep(100)
             Main()
         end While
@@ -167,11 +153,7 @@ End With
     End Sub
     
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-        txtstartin1.Text = startin1
-    End Sub
-
-    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+   Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
         getxml.wrtxml
     Form1_Load (e,e)
 
@@ -210,20 +192,12 @@ End With
         me.Hide()
     End Sub
 
-    Private Sub ContextMenuStrip1_Opening(sender As Object, e As CancelEventArgs) Handles ContextMenuStrip1.Opening
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) 
-     
-    End Sub
-
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
          
       '  richtxtlog.LoadFile(projdir &"\logs\"&"ErrorLog_08-Dec-2016.log")
          Dim openFileDialog1 As New OpenFileDialog()
         openFileDialog1.InitialDirectory  =  Application.StartupPath & "\logs"
-        openFileDialog1.Filter = "Cursor Files|*.log"
+        openFileDialog1.Filter = "log Files|*.log"
         openFileDialog1.Title = "Select a log File"
 
         If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
@@ -237,15 +211,7 @@ End With
         End If
     End Sub
 
-    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
-
-    End Sub
-
-    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles txtremoveExt1.TextChanged
-
-    End Sub
-
-    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+   Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         End
     End Sub
 
@@ -263,7 +229,6 @@ End With
 
         me.Show()
         Me.TabControl1.SelectedTab = TabPage3
-
 
     End Sub
 
@@ -325,13 +290,11 @@ End With
         startin1 = txtstartin1.Text
         startin2 = txtstartin2.Text
         startin3 = txtstartin3.Text
-
-
+        
         'read paths
         FilePathUbix = txtfilepathubix.Text
         FilePathClient = txtfilepathclient.Text
         FilePathClientOut = txtfilepathclientout.Text
-
 
         'read removing files
 
@@ -368,7 +331,7 @@ End With
 
     Private function chktsclient(ext As string)
 
-        Dim tspath = projdir & FilePathClient
+        Dim tspath =  FilePathClient
         Dim paths() As String = IO.Directory.GetFiles(tspath, "*." & ext)
         If paths.Length > 0 Then
             chktsclient = True
@@ -399,19 +362,15 @@ End With
             Directory.Delete(fname, True)
 
             Dim directoryExists = Directory.Exists(fname)
-
-
         Catch e As Exception
 
         End Try
 
-
-    End Function
+        End Function
 
     Private Sub NotifyIcon1_MouseDown(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDown
 
-      
-        If e.Button = MouseButtons.Left then
+      If e.Button = MouseButtons.Left then
             'When Show menu clicks, it will show the form:
             Me.WindowState = FormWindowState.Normal
             'Show in the task bar:

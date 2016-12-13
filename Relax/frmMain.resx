@@ -1793,9 +1793,6 @@
   <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>289, 17</value>
   </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>399, 17</value>
-  </metadata>
   <data name="RichTextBox1.Text" xml:space="preserve">
     <value>Welcome to RELAX Engine.
 
@@ -1806,6 +1803,9 @@ program first copy files from server or shared location to client and then
 do job.for each current day you must have only one TS file in source directory.
 We are working hard to release better versions and fix bugs day by day.</value>
   </data>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>399, 17</value>
+  </metadata>
   <data name="RichTextBox2.Text" xml:space="preserve">
     <value>RELAX Engine  File auto extractor and automation tool.
 Program developer and designer : M.B.K
