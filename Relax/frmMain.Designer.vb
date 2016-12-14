@@ -63,9 +63,9 @@ Partial Class Form1
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.txtfilepathclientout = New System.Windows.Forms.TextBox()
         Me.txtfilepathclient = New System.Windows.Forms.TextBox()
         Me.txtfilepathubix = New System.Windows.Forms.TextBox()
@@ -93,6 +93,7 @@ Partial Class Form1
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -517,9 +518,9 @@ Partial Class Form1
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Label25)
-        Me.GroupBox2.Controls.Add(Me.Label24)
-        Me.GroupBox2.Controls.Add(Me.Label23)
+        Me.GroupBox2.Controls.Add(Me.Button6)
+        Me.GroupBox2.Controls.Add(Me.Button5)
+        Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.txtfilepathclientout)
         Me.GroupBox2.Controls.Add(Me.txtfilepathclient)
         Me.GroupBox2.Controls.Add(Me.txtfilepathubix)
@@ -535,61 +536,66 @@ Partial Class Form1
         Me.GroupBox2.TabStop = false
         Me.GroupBox2.Text = "File and folders path:"
         '
-        'Label25
+        'Button6
         '
-        Me.Label25.AutoSize = true
-        Me.Label25.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
-        Me.Label25.Location = New System.Drawing.Point(156, 107)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(254, 14)
-        Me.Label25.TabIndex = 29
-        Me.Label25.Text = "Example : myvideos\ (must use \ at the end of path)"
+        Me.Button6.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.Black
+        Me.Button6.Location = New System.Drawing.Point(485, 83)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(67, 21)
+        Me.Button6.TabIndex = 32
+        Me.Button6.Text = "Browse"
+        Me.Button6.UseVisualStyleBackColor = true
         '
-        'Label24
+        'Button5
         '
-        Me.Label24.AutoSize = true
-        Me.Label24.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.Label24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
-        Me.Label24.Location = New System.Drawing.Point(157, 72)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(231, 14)
-        Me.Label24.TabIndex = 28
-        Me.Label24.Text = "Example : temp\ (must use \ at the end of path)"
+        Me.Button5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.Black
+        Me.Button5.Location = New System.Drawing.Point(485, 52)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(67, 21)
+        Me.Button5.TabIndex = 31
+        Me.Button5.Text = "Browse"
+        Me.Button5.UseVisualStyleBackColor = true
         '
-        'Label23
+        'Button1
         '
-        Me.Label23.AutoSize = true
-        Me.Label23.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
-        Me.Label23.Location = New System.Drawing.Point(157, 38)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(123, 14)
-        Me.Label23.TabIndex = 27
-        Me.Label23.Text = "Example : d:\test\source"
+        Me.Button1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(485, 20)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(67, 21)
+        Me.Button1.TabIndex = 30
+        Me.Button1.Text = "Browse"
+        Me.Button1.UseVisualStyleBackColor = true
         '
         'txtfilepathclientout
         '
         Me.txtfilepathclientout.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtfilepathclientout.Location = New System.Drawing.Point(160, 89)
+        Me.txtfilepathclientout.Enabled = false
+        Me.txtfilepathclientout.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.txtfilepathclientout.Location = New System.Drawing.Point(160, 84)
         Me.txtfilepathclientout.Name = "txtfilepathclientout"
-        Me.txtfilepathclientout.Size = New System.Drawing.Size(379, 15)
+        Me.txtfilepathclientout.Size = New System.Drawing.Size(316, 19)
         Me.txtfilepathclientout.TabIndex = 15
         '
         'txtfilepathclient
         '
         Me.txtfilepathclient.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtfilepathclient.Location = New System.Drawing.Point(160, 55)
+        Me.txtfilepathclient.Enabled = false
+        Me.txtfilepathclient.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.txtfilepathclient.Location = New System.Drawing.Point(160, 53)
         Me.txtfilepathclient.Name = "txtfilepathclient"
-        Me.txtfilepathclient.Size = New System.Drawing.Size(379, 15)
+        Me.txtfilepathclient.Size = New System.Drawing.Size(316, 19)
         Me.txtfilepathclient.TabIndex = 15
         '
         'txtfilepathubix
         '
         Me.txtfilepathubix.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtfilepathubix.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.txtfilepathubix.Location = New System.Drawing.Point(160, 22)
         Me.txtfilepathubix.Name = "txtfilepathubix"
-        Me.txtfilepathubix.Size = New System.Drawing.Size(379, 15)
+        Me.txtfilepathubix.Size = New System.Drawing.Size(316, 19)
         Me.txtfilepathubix.TabIndex = 15
         '
         'Label6
@@ -597,7 +603,7 @@ Partial Class Form1
         Me.Label6.AutoSize = true
         Me.Label6.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label6.Location = New System.Drawing.Point(6, 22)
+        Me.Label6.Location = New System.Drawing.Point(6, 25)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(126, 15)
         Me.Label6.TabIndex = 12
@@ -608,7 +614,7 @@ Partial Class Form1
         Me.Label7.AutoSize = true
         Me.Label7.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label7.Location = New System.Drawing.Point(6, 56)
+        Me.Label7.Location = New System.Drawing.Point(6, 53)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(146, 15)
         Me.Label7.TabIndex = 13
@@ -619,7 +625,7 @@ Partial Class Form1
         Me.Label8.AutoSize = true
         Me.Label8.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label8.Location = New System.Drawing.Point(6, 88)
+        Me.Label8.Location = New System.Drawing.Point(6, 81)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(126, 15)
         Me.Label8.TabIndex = 14
@@ -959,12 +965,13 @@ End Sub
     Friend WithEvents Label19 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents Label23 As Label
     Friend WithEvents txtremovepath5 As TextBox
     Friend WithEvents txtremovepath4 As TextBox
     Friend WithEvents Label27 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label28 As Label
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
 End Class

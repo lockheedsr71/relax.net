@@ -72,7 +72,7 @@ Public Class Form1
 
             '   Remove folders  ==============================================================================================================
 
-            delfile( FilePathClientOut & mydate & removepath1)
+            delfile( FilePathClientOut &  mydate & removepath1)
             delfile( FilePathClientOut & mydate & removepath2)
             delfile( FilePathClientOut & mydate & removepath3)
             delfile( FilePathClientOut & mydate & removepath4)
@@ -94,7 +94,7 @@ errpart:
         If Err.Number = 76 then
             stuff.mylog(ErrorToString)
             '   stuff.notify (5000,"test mikonim title asli injast","It looks like the problem is with the instantiation of your class; you've instantiated as Form1, when it should befrmCentsConverter; i.e. Dim frmConvert As New frmCentsConverter, instead of Dim frmConvert As New Form1. It could also be that you've renamed the start-up form of the a",Color.GreenYellow )
-            msgbox(ErrorToString & " RELAX need correct path to access the TS file.Please set correct path in vars.xml.RELAX now terminate.", vbCritical, "TS path not found")
+            msgbox(ErrorToString & " RELAX need correct path to access the TS file.Please set correct path in vars.xml or in setting tab.Please run relax again 1min latter after starting time. RELAX now terminate.", vbCritical, "TS path not found")
             stuff.mylog(ErrorToString)
              end
 
@@ -112,7 +112,7 @@ errpart:
 
          Dim cmdProcess As New Process
         Dim cmdcommand 
-        cmdcommand =  FilePathClientOut &"\"& mydate & " /ts  "  & FilePathClient
+        cmdcommand =  FilePathClientOut & mydate & " /ts  "  & FilePathClient
       
        With cmdProcess
              Dim procID As Integer 
@@ -211,7 +211,32 @@ End With
         End If
     End Sub
 
-   Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+ 
+         If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
+        txtfilepathubix.Text = FolderBrowserDialog1.SelectedPath
+    End If
+
+         
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        
+         If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
+        txtfilepathclient.Text = FolderBrowserDialog1.SelectedPath & "\temp"
+    End If
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        
+         If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
+        txtfilepathclientout.Text = FolderBrowserDialog1.SelectedPath
+    End If
+    End Sub
+
+   
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         End
     End Sub
 
@@ -292,9 +317,9 @@ End With
         startin3 = txtstartin3.Text
         
         'read paths
-        FilePathUbix = txtfilepathubix.Text
-        FilePathClient = txtfilepathclient.Text
-        FilePathClientOut = txtfilepathclientout.Text
+        FilePathUbix = txtfilepathubix.Text  
+        FilePathClient = txtfilepathclient.Text &"\"
+        FilePathClientOut = txtfilepathclientout.Text &"\"
 
         'read removing files
 

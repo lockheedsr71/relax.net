@@ -2,14 +2,14 @@
 <!--XML Database.-->
 <Configs>
   <Time>
-    <startin1>12:45</startin1>
+    <startin1>12:04</startin1>
     <startin2>0</startin2>
     <startin3>0</startin3>
   </Time>
   <path>
     <FilePathUbix>o:\rlxtst0\tsasl</FilePathUbix>
-    <FilePathClient>f:\salam\111</FilePathClient>
-    <FilePathClientOut>f:\salam\222</FilePathClientOut>
+    <FilePathClient>F:\salam\temp</FilePathClient>
+    <FilePathClientOut>F:\salam\44</FilePathClientOut>
   </path>
   <remove>
     <path1>\.lisa\</path1>
