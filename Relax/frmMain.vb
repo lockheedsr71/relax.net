@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.IO
-Imports System.Threading              ' for sleep command
+Imports System.Threading
+Imports Microsoft.Win32              ' for sleep command
 
 Public Class Form1
     Private myIni As goini
@@ -28,7 +29,6 @@ Public Class Form1
         filechk("LisaExtractor.dll")
         filechk("LisaExtractorApp.dll")
         filechk("LisaCoreWin.dll")
-
         
         projdir = My.Application.Info.DirectoryPath & "\"
         mydate = DateTime.Now.ToString("yyyy-MM-dd")
@@ -38,9 +38,9 @@ Public Class Form1
     '    if mytime = mytimeend then goto ex
         If mytime = startin1 Or mytime = startin2 Or mytime = startin3 then
 
-            CreateObject("WScript.Shell").Popup("This program will copy and convert TOOSHEH TV DATA and Media to shared folder on network share path.RELAX Running at this location : " & projdir, 3, "Welcome to RELAX", 64)
-            Directory.CreateDirectory(FilePathClient)         ' create ts folder in project dir 
-            Thread.Sleep(1000)
+                CreateObject("WScript.Shell").Popup("This program will copy and convert TOOSHEH TV DATA and Media to shared folder on network share path.RELAX Running at this location : " & projdir, 3, "Welcome to RELAX", 64)
+                Directory.CreateDirectory(FilePathClient)         ' create ts folder in project dir 
+                Thread.Sleep(1000)
 
 
             If chktsclient("ts") = False Then
@@ -57,9 +57,9 @@ Public Class Form1
 
             If chktssrv("ts") = False Then
 
-                CreateObject("WScript.Shell").Popup("No .TS file found in server to copy. ", 2, "Copy status ... ", 64)
+                     CreateObject("WScript.Shell").Popup("No .TS file found in server to copy. ", 2, "Copy status ... ", 64)
 
-            else
+              else
 
                 CreateObject("WScript.Shell").Popup("All file(s) copied to client successfully.", 2, "Copy status ... ", 64)
 
@@ -91,27 +91,42 @@ Public Class Form1
         
 errpart:
 
+
+         Dim s As String
+         Dim answ As String 
+      '   s = "----------------------------------------" & vbCrLf
+		s = s & Err.Number & " - "                                 '& Err.Source & vbCrLf
+		s = s & Err.Description & vbCrLf
+        s = s & "You can select cancel to terminate program or click Ok to continue. "
+	'	s = s & "----------------------------------------"
+
+       
+
         If Err.Number = 76 then
-            stuff.mylog(ErrorToString)
-            '   stuff.notify (5000,"test mikonim title asli injast","It looks like the problem is with the instantiation of your class; you've instantiated as Form1, when it should befrmCentsConverter; i.e. Dim frmConvert As New frmCentsConverter, instead of Dim frmConvert As New Form1. It could also be that you've renamed the start-up form of the a",Color.GreenYellow )
-            msgbox(ErrorToString & " RELAX need correct path to access the TS file.Please set correct path in vars.xml or in setting tab.Please run relax again 1min latter after starting time. RELAX now terminate.", vbCritical, "TS path not found")
-            stuff.mylog(ErrorToString)
-             end
+                stuff.mylog(ErrorToString)
+                '   stuff.notify (5000,"test mikonim title asli injast","It looks like the problem is with the instantiation of your class; you've instantiated as Form1, when it should befrmCentsConverter; i.e. Dim frmConvert As New frmCentsConverter, instead of Dim frmConvert As New Form1. It could also be that you've renamed the start-up form of the a",Color.GreenYellow )
+                msgbox(ErrorToString & " RELAX need correct path to access the TS file.Please set correct path in vars.xml or in setting tab.Please run relax again 1 min latter after starting time. RELAX now terminate.", vbCritical, "TS path not found")
+                stuff.mylog(ErrorToString)
+                 end
 
         end If
 
-        If Err.Number <> 0 then
-            MsgBox(Err.Number & " - " &  ErrorToString)
-        End If
+    If Err.Number <> 0 then
+         '   MsgBox(Err.Number & " - " &  ErrorToString)
 
+             answ =  MsgBox(s, MsgBoxStyle.ApplicationModal + MsgBoxStyle.Critical + MsgBoxStyle.OkCancel , Application.ProductName)
+		 
+              if answ = MsgBoxResult.Cancel  then End
 
-    End Sub
+    End If
+
+        End Sub
 
 
     Function doextract ()
 
          Dim cmdProcess As New Process
-        Dim cmdcommand 
+         Dim cmdcommand 
         cmdcommand =  FilePathClientOut & mydate & " /ts  "  & FilePathClient
       
        With cmdProcess
@@ -234,11 +249,18 @@ End With
     End If
     End Sub
 
-   
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles chkstartup.CheckedChanged
+        if chkstartup.Checked=true then stuff.addreg 
+
+        if chkstartup.Checked=false then stuff.removereg 
+        
+    End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         End
     End Sub
+
+    
 
     Private Sub Form1_SizeChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.SizeChanged
         If Me.WindowState = FormWindowState.Minimized Then
@@ -397,16 +419,34 @@ End With
 
       If e.Button = MouseButtons.Left then
             'When Show menu clicks, it will show the form:
+               Me.Visible = True
             Me.WindowState = FormWindowState.Normal
             'Show in the task bar:
-            Me.ShowInTaskbar = False
-            'Disable the Context Menu:
-            ''  ContextMenuStrip1.Enabled = False
-            me.Show()
+     
         End If
     End Sub
 
     Private Sub Form1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        Me.hide()
+       'First minimize the form
+         Me.WindowState = FormWindowState.Minimized
+
+        'Now make it invisible (make it look like it went into the system tray)
+        Me.Visible = False
+    End Sub
+
+    Private Sub TabControl1_MouseClick(sender As Object, e As MouseEventArgs) Handles TabControl1.MouseClick
+        dim full As String 
+
+        stuff.readreg()
+        if lblstartuppath.Text =   ""  then 
+            chkstartup.Checked =False
+            else
+            chkstartup.Checked =True
+        End If
+
+        
+
+
+
     End Sub
 End Class

@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Relax Extractor")>
-<Assembly: AssemblyDescription("Relax Automation Extractor")>
-<Assembly: AssemblyCompany("FOXNET")>
-<Assembly: AssemblyProduct("Relax")>
-<Assembly: AssemblyCopyright("Copyright ©  2016 by Foxnet")>
+<Assembly: AssemblyTitle("Relax Engine")>
+<Assembly: AssemblyDescription("Relax Engine automation extractor for TOOSHEH TV NETWORK (TTN)")>
+<Assembly: AssemblyCompany("FOX")>
+<Assembly: AssemblyProduct("Relax Engine")>
+<Assembly: AssemblyCopyright("Copyright © 2016-2017 by Lockheed")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -32,4 +32,4 @@ Imports System.Runtime.InteropServices
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
 <Assembly: AssemblyVersion("2.0.0.1")>
-<Assembly: AssemblyFileVersion("2.0.0.619")>
+<Assembly: AssemblyFileVersion("2.0.0.677")>

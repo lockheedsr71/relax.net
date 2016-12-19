@@ -63,6 +63,7 @@ Partial Class Form1
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -84,6 +85,9 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.chkstartup = New System.Windows.Forms.CheckBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -94,6 +98,8 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.lblstartuppath = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -103,6 +109,8 @@ Partial Class Form1
         Me.GroupBox3.SuspendLayout
         Me.GroupBox2.SuspendLayout
         Me.GroupBox1.SuspendLayout
+        Me.TabPage5.SuspendLayout
+        Me.GroupBox6.SuspendLayout
         Me.TabPage4.SuspendLayout
         Me.TabPage3.SuspendLayout
         CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).BeginInit
@@ -161,6 +169,7 @@ Partial Class Form1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
@@ -351,7 +360,7 @@ Partial Class Form1
         Me.Label22.AutoSize = true
         Me.Label22.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
-        Me.Label22.Location = New System.Drawing.Point(119, 39)
+        Me.Label22.Location = New System.Drawing.Point(69, 39)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(86, 14)
         Me.Label22.TabIndex = 26
@@ -406,9 +415,9 @@ Partial Class Form1
         Me.Label27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
         Me.Label27.Location = New System.Drawing.Point(57, 77)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(136, 14)
+        Me.Label27.Size = New System.Drawing.Size(133, 14)
         Me.Label27.TabIndex = 27
-        Me.Label27.Text = "Example : \toosheh\نرم افزار\"
+        Me.Label27.Text = "Example : \toosheh\نرم افزار"
         '
         'Label26
         '
@@ -417,9 +426,9 @@ Partial Class Form1
         Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
         Me.Label26.Location = New System.Drawing.Point(57, 44)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(81, 14)
+        Me.Label26.Size = New System.Drawing.Size(78, 14)
         Me.Label26.TabIndex = 26
-        Me.Label26.Text = "Example : \.lisa\"
+        Me.Label26.Text = "Example : \.lisa"
         '
         'txtremovepath5
         '
@@ -518,6 +527,7 @@ Partial Class Form1
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label23)
         Me.GroupBox2.Controls.Add(Me.Button6)
         Me.GroupBox2.Controls.Add(Me.Button5)
         Me.GroupBox2.Controls.Add(Me.Button1)
@@ -536,11 +546,22 @@ Partial Class Form1
         Me.GroupBox2.TabStop = false
         Me.GroupBox2.Text = "File and folders path:"
         '
+        'Label23
+        '
+        Me.Label23.AutoSize = true
+        Me.Label23.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.Label23.Location = New System.Drawing.Point(157, 44)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(306, 14)
+        Me.Label23.TabIndex = 33
+        Me.Label23.Text = "You can add this address manually .E.g. \\192.168.1.10\share\"
+        '
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Button6.ForeColor = System.Drawing.Color.Black
-        Me.Button6.Location = New System.Drawing.Point(485, 83)
+        Me.Button6.Location = New System.Drawing.Point(485, 95)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(67, 21)
         Me.Button6.TabIndex = 32
@@ -551,7 +572,7 @@ Partial Class Form1
         '
         Me.Button5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(485, 52)
+        Me.Button5.Location = New System.Drawing.Point(485, 64)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(67, 21)
         Me.Button5.TabIndex = 31
@@ -574,7 +595,7 @@ Partial Class Form1
         Me.txtfilepathclientout.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtfilepathclientout.Enabled = false
         Me.txtfilepathclientout.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.txtfilepathclientout.Location = New System.Drawing.Point(160, 84)
+        Me.txtfilepathclientout.Location = New System.Drawing.Point(160, 96)
         Me.txtfilepathclientout.Name = "txtfilepathclientout"
         Me.txtfilepathclientout.Size = New System.Drawing.Size(316, 19)
         Me.txtfilepathclientout.TabIndex = 15
@@ -584,7 +605,7 @@ Partial Class Form1
         Me.txtfilepathclient.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtfilepathclient.Enabled = false
         Me.txtfilepathclient.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.txtfilepathclient.Location = New System.Drawing.Point(160, 53)
+        Me.txtfilepathclient.Location = New System.Drawing.Point(160, 65)
         Me.txtfilepathclient.Name = "txtfilepathclient"
         Me.txtfilepathclient.Size = New System.Drawing.Size(316, 19)
         Me.txtfilepathclient.TabIndex = 15
@@ -614,7 +635,7 @@ Partial Class Form1
         Me.Label7.AutoSize = true
         Me.Label7.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label7.Location = New System.Drawing.Point(6, 53)
+        Me.Label7.Location = New System.Drawing.Point(6, 65)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(146, 15)
         Me.Label7.TabIndex = 13
@@ -625,7 +646,7 @@ Partial Class Form1
         Me.Label8.AutoSize = true
         Me.Label8.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label8.Location = New System.Drawing.Point(6, 81)
+        Me.Label8.Location = New System.Drawing.Point(6, 93)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(126, 15)
         Me.Label8.TabIndex = 14
@@ -658,11 +679,11 @@ Partial Class Form1
         Me.Label28.AutoSize = true
         Me.Label28.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
-        Me.Label28.Location = New System.Drawing.Point(126, 163)
+        Me.Label28.Location = New System.Drawing.Point(57, 164)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(83, 14)
+        Me.Label28.Size = New System.Drawing.Size(128, 14)
         Me.Label28.TabIndex = 27
-        Me.Label28.Text = "Example : 18:45"
+        Me.Label28.Text = "Example : 18:45 Or 09:35"
         '
         'Label16
         '
@@ -765,6 +786,41 @@ Partial Class Form1
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Set the values for configuration file here : "
         '
+        'TabPage5
+        '
+        Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.TabPage5.Controls.Add(Me.GroupBox6)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(586, 452)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "Configuration"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.lblstartuppath)
+        Me.GroupBox6.Controls.Add(Me.chkstartup)
+        Me.GroupBox6.ForeColor = System.Drawing.Color.Yellow
+        Me.GroupBox6.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(574, 74)
+        Me.GroupBox6.TabIndex = 1
+        Me.GroupBox6.TabStop = false
+        Me.GroupBox6.Text = "Program startup"
+        '
+        'chkstartup
+        '
+        Me.chkstartup.AutoSize = true
+        Me.chkstartup.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.chkstartup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.chkstartup.Location = New System.Drawing.Point(14, 26)
+        Me.chkstartup.Name = "chkstartup"
+        Me.chkstartup.Size = New System.Drawing.Size(180, 21)
+        Me.chkstartup.TabIndex = 0
+        Me.chkstartup.Text = "Run at windows startup"
+        Me.chkstartup.UseVisualStyleBackColor = true
+        '
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.Color.Black
@@ -863,12 +919,33 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = false
         '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(-1, 279)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 10
+        Me.Button7.Text = "Button7"
+        Me.Button7.UseVisualStyleBackColor = true
+        '
+        'lblstartuppath
+        '
+        Me.lblstartuppath.AutoSize = true
+        Me.lblstartuppath.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblstartuppath.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.lblstartuppath.Location = New System.Drawing.Point(31, 50)
+        Me.lblstartuppath.Name = "lblstartuppath"
+        Me.lblstartuppath.Size = New System.Drawing.Size(35, 16)
+        Me.lblstartuppath.TabIndex = 1
+        Me.lblstartuppath.Text = "Path"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.ClientSize = New System.Drawing.Size(756, 508)
+        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
@@ -895,6 +972,9 @@ Partial Class Form1
         Me.GroupBox2.PerformLayout
         Me.GroupBox1.ResumeLayout(false)
         Me.GroupBox1.PerformLayout
+        Me.TabPage5.ResumeLayout(false)
+        Me.GroupBox6.ResumeLayout(false)
+        Me.GroupBox6.PerformLayout
         Me.TabPage4.ResumeLayout(false)
         Me.TabPage4.PerformLayout
         Me.TabPage3.ResumeLayout(false)
@@ -974,4 +1054,10 @@ End Sub
     Friend WithEvents Button5 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents chkstartup As CheckBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents Button7 As Button
+    Friend WithEvents lblstartuppath As Label
 End Class

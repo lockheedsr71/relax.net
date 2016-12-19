@@ -1,6 +1,11 @@
 ﻿Imports System.IO
 Imports System.Threading
-  
+  Imports Microsoft.Win32
+
+
+
+
+
 
 Public Class stuff
 
@@ -155,5 +160,54 @@ Public Class stuff
         End If
        
  End Function
+
+    public Shared Sub addreg()
+ 
+
+Dim regVersion As RegistryKey
+regVersion = 
+Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", True)
+
+If regVersion Is Nothing Then
+    ' Key doesn't exist; create it.
+    regVersion = 
+Registry.CurrentUser.CreateSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run")
+End If
+        
+    regVersion.SetValue("RelaxEngine", application.ExecutablePath , RegistryValueKind.String)
+    regVersion.Close()
+
+       end Sub
+
+
+     public Shared Sub removereg()
+ 
+
+Dim regVersion As RegistryKey
+
+regVersion = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", True)
+        Try 
+             regVersion.DeleteValue ("RelaxEngine")
+              regVersion.Close()
+
+        Catch ex As Exception
+
+        End Try
+   
+  
+
+       end Sub
+
+  
+      public Shared Sub readreg()
+        Dim regVersion As RegistryKey
+regVersion = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", True)
+        
+        Form1.lblstartuppath.Text= regVersion.GetValue ("RelaxEngine")
+    regVersion.Close()
+
+
+      End Sub
+
 
 End Class

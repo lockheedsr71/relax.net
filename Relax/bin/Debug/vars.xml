@@ -2,21 +2,21 @@
 <!--XML Database.-->
 <Configs>
   <Time>
-    <startin1>12:04</startin1>
+    <startin1>12:11</startin1>
     <startin2>0</startin2>
     <startin3>0</startin3>
   </Time>
   <path>
-    <FilePathUbix>o:\rlxtst0\tsasl</FilePathUbix>
-    <FilePathClient>F:\salam\temp</FilePathClient>
-    <FilePathClientOut>F:\salam\44</FilePathClientOut>
+    <FilePathUbix>\\ubix.loc\rec\share_auto\Toosheh TV\</FilePathUbix>
+    <FilePathClient>A:\ts_tmp\temp</FilePathClient>
+    <FilePathClientOut>A:\ts_tmp\out</FilePathClientOut>
   </path>
   <remove>
     <path1>\.lisa\</path1>
     <path2>\toosheh\نرم افزار\</path2>
     <path3>\updates\</path3>
-    <path4>111</path4>
-    <path5>2252</path5>
+    <path4></path4>
+    <path5></path5>
     <ext1>liinfo</ext1>
     <ext2></ext2>
     <ext3></ext3>
