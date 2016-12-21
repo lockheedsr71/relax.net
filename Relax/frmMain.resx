@@ -1793,24 +1793,24 @@
   <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>289, 17</value>
   </metadata>
-  <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Welcome to RELAX Engine.
-
-This program automatically extract recorded TS file on UBIX Server.
-You must first set some parameters in Config file via setting tab to work program
-correctly.For TS files you need recorded file on shared network path.
-program first copy files from server or shared location to client and then
-do job.for each current day you must have only one TS file in source directory.
-We are working hard to release better versions and fix bugs day by day.</value>
-  </data>
   <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>399, 17</value>
   </metadata>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Welcome to RELAX Engine Project for TOOSHEH TV
+
+This program automatically extract recorded TS file on UBIX Server.
+You must first set some parameters in Config file via setting tab to work program
+correctly.For TS files you need recorded file on shared network path or your local hard drive. program first copy files from server or shared location to client and then
+do jobs.for each current day you should have only one TS file in source directory.If source folder contains more than one file, Engine merged the output files in output folder.
+We are working hard to release better versions and fix bugs day by day.</value>
+  </data>
   <data name="RichTextBox2.Text" xml:space="preserve">
-    <value>RELAX Engine  File auto extractor and automation tool.
-Program developer and designer : M.B.K
+    <value>RELAX Engine  TS File auto extractor and automation tool.
+Program developer and designer : M.B.K.
 Freeware and free to copy.
-Please send your feedback to us by mbk.temp@gmail.com
+Please send us your feedback to this email : relaxproject@mail.com
+
 This program need UBIX Server to work with full functionality
 also you can use it with self recorded TS files by any device.
 
@@ -1906,9 +1906,6 @@ also you can use it with self recorded TS files by any device.
         Z/lHZedw3Wtt7f/ppgcklDag6QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>399, 17</value>
-  </metadata>
   <metadata name="FolderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>498, 17</value>
   </metadata>

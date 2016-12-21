@@ -34,6 +34,11 @@ Public Class Form1
         mydate = DateTime.Now.ToString("yyyy-MM-dd")
         mytime = DateTime.Now.ToString("HH:mm")
         lbltime.Text =    DateTime.Now.ToString("HH:mm:ss")                               
+ex:
+        
+        Application.DoEvents ()
+
+
 
     '    if mytime = mytimeend then goto ex
         If mytime = startin1 Or mytime = startin2 Or mytime = startin3 then
@@ -67,7 +72,7 @@ Public Class Form1
             
             doextract ()
             
-         '''   Thread.Sleep(chktimer)
+          
 
 
             '   Remove folders  ==============================================================================================================
@@ -86,7 +91,9 @@ Public Class Form1
             CreateObject("WScript.Shell").Popup(".TS file deleting ... , Operational successfully completed. ", 3, "RELAX Inform", 64)
 
             mytimeend = DateTime.Now.ToString("HH:mm")
-            ex:
+             Thread.Sleep(chktimer)
+
+  
         end if
         
 errpart:
@@ -260,7 +267,7 @@ End With
         End
     End Sub
 
-    
+ 
 
     Private Sub Form1_SizeChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.SizeChanged
         If Me.WindowState = FormWindowState.Minimized Then
@@ -448,5 +455,11 @@ End With
 
 
 
+    End Sub
+
+    Private Sub txtchktimer_Leave(sender As Object, e As EventArgs) Handles txtchktimer.Leave
+         dim vtxtchk as Integer 
+        vtxtchk = val ( txtchktimer.Text)
+        if vtxtchk < 10000 then  txtchktimer.Text ="20000"
     End Sub
 End Class
