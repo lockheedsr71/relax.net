@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--XML Database.-->
+<Configs>
+  <Time>
+    <startin1>14:15</startin1>
+    <startin2>0</startin2>
+    <startin3>0</startin3>
+  </Time>
+  <path>
+    <FilePathUbix>c:\tsSourcefile</FilePathUbix>
+    <FilePathClient>c:\tstemp</FilePathClient>
+    <FilePathClientOut>c:\ts_temp\toosheOutput</FilePathClientOut>
+  </path>
+  <remove>
+    <path1>\.lisa\</path1>
+    <path2>\toosheh\نرم افزار\</path2>
+    <path3>\updates\</path3>
+    <path4></path4>
+    <path5></path5>
+    <ext1>liinfo</ext1>
+    <ext2></ext2>
+    <ext3></ext3>
+  </remove>
+  <timers>
+    <chktimer>20000</chktimer>
+  </timers>
+</Configs>
