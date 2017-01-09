@@ -5,7 +5,7 @@ Imports Microsoft.Win32              ' for sleep command
 
 Public Class Form1
     Private myIni As goini
-    Public startin1, startin2, startin3, FilePathUbix, FilePathClient, FilePathClientOut, removepath1, removepath2, removepath3, removepath4, removepath5, chktimer As String
+    Public startin1, startin2, startin3, FilePathUbix, FilePathClient, FilePathClientOut, removepath1, removepath2, removepath3, removepath4, removepath5, RemoveTS, chktimer As String
     Public mydate As String
     Public mytime As String
     Public projdir As String
@@ -18,6 +18,8 @@ Public Class Form1
  
 
     Private Sub Main()
+
+start:
         stuff.getargs  ()
         
       On Error goto errpart
@@ -29,12 +31,13 @@ Public Class Form1
         filechk("LisaExtractor.dll")
         filechk("LisaExtractorApp.dll")
         filechk("LisaCoreWin.dll")
-        
+
+
         projdir = My.Application.Info.DirectoryPath & "\"
         mydate = DateTime.Now.ToString("yyyy-MM-dd")
         mytime = DateTime.Now.ToString("HH:mm")
         lbltime.Text =    DateTime.Now.ToString("HH:mm:ss")                               
-ex:
+
         
         Application.DoEvents ()
 
@@ -43,59 +46,85 @@ ex:
     '    if mytime = mytimeend then goto ex
         If mytime = startin1 Or mytime = startin2 Or mytime = startin3 then
 
-                CreateObject("WScript.Shell").Popup("This program will copy and convert TOOSHEH TV DATA and Media to shared folder on network share path.RELAX Running at this location : " & projdir, 3, "Welcome to RELAX", 64)
+              '''  CreateObject("WScript.Shell").Popup("This program will copy and convert TOOSHEH TV DATA and Media to shared folder on network share path.RELAX Running at this location : " & projdir, 3, "Welcome to RELAX", 64)
+              
+                stuff.notify (4000,"Starting time detected","This program will copy and convert TOOSHEH TV DATA and Media to shared folder on network share path.RELAX Running at this location : " & projdir,Color.Yellow,Color.DarkBlue  )
+              
                 Directory.CreateDirectory(FilePathClient)         ' create ts folder in project dir 
                 Thread.Sleep(1000)
 
 
-            If chktsclient("ts") = False Then
-     
-                My.Computer.FileSystem.CopyDirectory(FilePathUbix,  txtfilepathclient.Text , showUI:=FileIO.UIOption.AllDialogs)
+            
+     If  Directory.Exists ( FilePathUbix) Then
+        
+                         
+                    If chktsclient("ts") = False Then                  ' if TS file alrady not copied to destination then ... 
 
-            Else
+                    My.Computer.FileSystem.CopyDirectory(FilePathUbix,  txtfilepathclient.Text , showUI:=FileIO.UIOption.AllDialogs)
+                    
+                   
+                      else 
+                   End If 
 
-            End If
-               Dim pathsubix() As String = IO.Directory.GetFiles(FilePathUbix, "*.ts")
-            FileSizeUbix = My.Computer.FileSystem.GetFileInfo(pathsubix(0))            ' ' get TS file size on SERVER  
+        Dim pathsubix() As String = IO.Directory.GetFiles(FilePathUbix, "*.ts")
+    FileSizeUbix = My.Computer.FileSystem.GetFileInfo(pathsubix(0))            ' ' get TS file size on SERVER  
 
-            CreateObject("WScript.Shell").Popup("file size on server = " & FileSizeUbix.Length, 2, "File already exist  ", 64)
+    CreateObject("WScript.Shell").Popup("file size on server = " & FileSizeUbix.Length, 2, "File already exist  ", 64)
 
             If chktssrv("ts") = False Then
 
-                     CreateObject("WScript.Shell").Popup("No .TS file found in server to copy. ", 2, "Copy status ... ", 64)
-
+                  '''   CreateObject("WScript.Shell").Popup("No .TS file found in server to copy. ", 2, "Copy status ... ", 64)
+                                  stuff.notify (4000,"Copy status ...","No .TS file found in server to copy. ", Color.Yellow,Color.DarkBlue  )
               else
 
-                CreateObject("WScript.Shell").Popup("All file(s) copied to client successfully.", 2, "Copy status ... ", 64)
-
+                 ''' CreateObject("WScript.Shell").Popup("All file(s) copied to client successfully.", 2, "Copy status ... ", 64)
+                  stuff.notify (4000,"Copy status ...","All file(s) copied to client successfully.", Color.Yellow,Color.DarkBlue  )
             end if
+
+                  Else
+
+            '''    CreateObject("WScript.Shell").Popup("Source file not detected on source path.RELAX waiting for it in next proper time ...  ", 2, "TS Source not found ", 64)
+                  stuff.notify (4000,"TS Source not found ","Source file not detected on source path.RELAX waiting for it in next proper time ...", Color.Yellow,Color.DarkBlue  )
+
+                 Thread.Sleep(chktimer)
+        goto start
+
+            end If 
+
             
-            doextract ()
+      doextract ()
             
           
-
-
             '   Remove folders  ==============================================================================================================
 
-            delfile( FilePathClientOut &  mydate & removepath1)
+            delfile( FilePathClientOut & mydate & removepath1)
             delfile( FilePathClientOut & mydate & removepath2)
             delfile( FilePathClientOut & mydate & removepath3)
             delfile( FilePathClientOut & mydate & removepath4)
             delfile( FilePathClientOut & mydate & removepath5)
 
-            '  Remove folders  ==============================================================================================================
-            '      Directory.Delete (projdir  & FilePathClient ,True)
+            '  Remove extentions  ==============================================================================================================
+            
+            stuff.removefilebyext (FilePathClientOut &  mydate )               ' remove all extentions define in main form
+            
 
-            delfile( FilePathClient)
+            If RemoveTS = 1 then 
+                delfile( FilePathClient)
+                stuff.notify (4000,".TS file deleting ... ","Operational successfully completed.", Color.Yellow,Color.DarkBlue  )
+                '''   CreateObject("WScript.Shell").Popup(".TS file deleting ... , Operational successfully completed. ", 3, "RELAX Inform", 64)
+            End If
 
-            CreateObject("WScript.Shell").Popup(".TS file deleting ... , Operational successfully completed. ", 3, "RELAX Inform", 64)
 
-            mytimeend = DateTime.Now.ToString("HH:mm")
+          mytimeend = DateTime.Now.ToString("HH:mm")
+
              Thread.Sleep(chktimer)
+            Application.DoEvents 
 
   
         end if
-        
+
+          
+
 errpart:
 
 
@@ -107,16 +136,18 @@ errpart:
         s = s & "You can select cancel to terminate program or click Ok to continue. "
 	'	s = s & "----------------------------------------"
 
-       
+     
 
-        If Err.Number = 76 then
-                stuff.mylog(ErrorToString)
-                '   stuff.notify (5000,"test mikonim title asli injast","It looks like the problem is with the instantiation of your class; you've instantiated as Form1, when it should befrmCentsConverter; i.e. Dim frmConvert As New frmCentsConverter, instead of Dim frmConvert As New Form1. It could also be that you've renamed the start-up form of the a",Color.GreenYellow )
-                msgbox(ErrorToString & " RELAX need correct path to access the TS file.Please set correct path in vars.xml or in setting tab.Please run relax again 1 min latter after starting time. RELAX now terminate.", vbCritical, "TS path not found")
-                stuff.mylog(ErrorToString)
-                 end
+      If Err.Number = 76 then
+              stuff.mylog(ErrorToString)
+              'MsgBox ( err.Raise  )
+         
+              '   stuff.notify (5000,"test mikonim title asli injast","It looks like the problem is with the instantiation of your class; you've instantiated as Form1, when it should befrmCentsConverter; i.e. Dim frmConvert As New frmCentsConverter, instead of Dim frmConvert As New Form1. It could also be that you've renamed the start-up form of the a",Color.GreenYellow )
+              msgbox(ErrorToString & " RELAX need correct path to access the TS file.Please set correct path in vars.xml or in setting tab.Please run relax again 1 min latter after starting time. RELAX now terminate.", vbCritical, "TS path not found")
+              stuff.mylog(ErrorToString)
+               end
 
-        end If
+         end If
 
     If Err.Number <> 0 then
          '   MsgBox(Err.Number & " - " &  ErrorToString)
@@ -133,9 +164,11 @@ errpart:
     Function doextract ()
 
          Dim cmdProcess As New Process
-         Dim cmdcommand 
-        cmdcommand =  FilePathClientOut & mydate & " /ts  "  & FilePathClient
-      
+         Dim cmdcommand
+        
+       
+        cmdcommand =  FilePathClientOut & mydate & " /ts "  &  FilePathClient
+       
        With cmdProcess
              Dim procID As Integer 
 ' Run calculator.
@@ -177,7 +210,9 @@ End With
 
    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
         getxml.wrtxml
+          stuff.notify (3000,"Saving ...","Configuration saved successfully.",Color.Yellow,Color.DarkBlue )
     Form1_Load (e,e)
+           
 
         End Sub
 
@@ -276,6 +311,28 @@ End With
         End If
     End Sub
 
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        txtstartin3.Text =  DateTime.Now.ToString("HH:mm")
+        startin3=DateTime.Now.ToString("HH:mm")
+           stuff.notify (3000,"Starting manually...","Program starting manually now ... ",Color.Cyan,Color.DarkBlue )
+        Thread.Sleep (1000)
+        call Main()
+       startin3=0
+       txtstartin3.Text = "N/A"
+        End Sub
+
+     
+
+    Private Sub CheckBox1_CheckedChanged_1(sender As Object, e As EventArgs) 
+         if chkRemoveTS.Checked=true then stuff.addreg 
+
+        if chkRemoveTS.Checked=false then stuff.removereg 
+    End Sub
+
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         Me.WindowState = FormWindowState.Normal
         'Show in the task bar:
@@ -357,6 +414,8 @@ End With
         removepath3 = txtremovepath3.Text
         removepath4 = txtremovepath4.Text
         removepath5 = txtremovepath5.Text
+        RemoveTS = chkRemoveTS.CheckState 
+
 
         If removepath1 = "" Then removepath1 = "0"
         If removepath2 = "" Then removepath2 = "0"
@@ -462,4 +521,6 @@ End With
         vtxtchk = val ( txtchktimer.Text)
         if vtxtchk < 10000 then  txtchktimer.Text ="20000"
     End Sub
+
+   
 End Class

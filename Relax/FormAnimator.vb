@@ -101,6 +101,8 @@ Public NotInheritable Class FormAnimator
     'Used when you specify FORM, METHOD and DURATION.
     Public Sub New(ByVal form As Form, ByVal method As AnimationMethod, ByVal duration As Integer)
         Me.New(form)
+         Application.DoEvents
+                 
         Me._method = method
         Me._duration = duration
     End Sub

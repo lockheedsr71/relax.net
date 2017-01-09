@@ -1,5 +1,6 @@
 ﻿Imports System.Xml
 Imports System.IO
+Imports System.Threading
 
 Public   Class getxml
     public Shared Function wrtxml
@@ -107,6 +108,11 @@ Public   Class getxml
                                 .WriteStartElement("ext3")
 				                .WriteString(Form1.txtremoveExt3.Text)
 				                .WriteEndElement()
+            
+
+                                .WriteStartElement("RemoveTS")
+				                .WriteString(Form1.chkRemoveTS.CheckState  )
+				                .WriteEndElement()
 
 				                ' The end of this person.
 				                .WriteEndElement()
@@ -130,7 +136,11 @@ Public   Class getxml
 
 			End With
 
-			MsgBox ("Config file saved successfully.",vbInformation ,"Saving configurations")
+		'	stuff.statusmsg ("Configuration saved successfully.",3000)
+
+   
+
+
 		 
 
     End Function
@@ -250,6 +260,12 @@ Public   Class getxml
 					If (document.Name = "ext3") Then
 
 					 Form1.txtremoveExt3.Text  = document.ReadInnerXml.ToString()
+
+					End If
+
+                    If (document.Name = "RemoveTS") Then
+
+					 Form1.chkRemoveTS.CheckState   = document.ReadInnerXml.ToString()
 
 					End If
 

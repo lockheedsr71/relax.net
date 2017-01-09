@@ -109,12 +109,14 @@ Public Class stuff
         End sub
 
    
-    public Shared sub notify ( tmr As Integer , txt1  As String , txt2 As String,clr As color )
+    public Shared sub notify ( tmr As Integer , txt1  As String , txt2 As String,clrtxt As color ,clrback As color)
  
         Dim Notification As New frmNotification(tmr,txt1,txt2)
-       Notification.BackColor=clr
+       Notification.BackColor=clrback
+        Notification.ForeColor=clrtxt
+
       Notification.Show()
-        
+        Notification.Refresh()
         End sub
  
    public Shared   Function   getargs()
@@ -210,4 +212,11 @@ regVersion = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\Curr
       End Sub
 
 
+    public Shared sub statusmsg(txt As String,tmr As String )
+        	Form1.lblstatus.Visible  = True  
+        	Form1.lblstatus.Text = txt
+     Application.DoEvents()
+           Thread.Sleep (tmr)
+        	Form1.lblstatus.Visible  = False 
+  end Sub
 End Class

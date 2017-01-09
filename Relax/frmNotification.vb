@@ -28,11 +28,11 @@ Public Class frmNotification
     Public Sub New(ByVal lifeTime As Integer, ByVal message1 As String, ByVal message2 As String)
         ' This call is required by the Windows Form Designer.
         InitializeComponent()
-
+        
         ' Add any initialization after the InitializeComponent() call.
 
         'Make sure the exit button is set properly
-        btnExit.Image = My.Resources.btnHigh
+        btnExit.Image = My.Resources.btnlow
 
         'Set the time for which the form should be displayed and the message to display in milliseconds.
         Me.lifeTimer.Interval = lifeTime
@@ -122,7 +122,7 @@ Public Class frmNotification
 
     Private Sub NotificationForm_Click(sender As System.Object, e As System.EventArgs) Handles MyBase.Click, lblMessage1.Click, lblMessage2.Click
 
-        MsgBox("Do something with item " & lblMessage1.Text.Substring(lblMessage1.Text.Length - 1))
+        MsgBox("Opss . Click not perform yet..." & lblMessage1.Text.Substring(lblMessage1.Text.Length - 1))
 
     End Sub
 
