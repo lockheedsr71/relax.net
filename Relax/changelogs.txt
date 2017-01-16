@@ -1,0 +1,2 @@
+﻿* fix file delete by extention
+* fix if file not find in source dont terminate program

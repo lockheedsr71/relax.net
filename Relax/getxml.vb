@@ -34,15 +34,15 @@ Public   Class getxml
 				' The person nodes.
 
 				.WriteStartElement("startin1")
-				.WriteString(Form1.txtstartin1.Text )
+				.WriteString(frmMain.txtstartin1.Text )
 				.WriteEndElement()
 
 				.WriteStartElement("startin2")
-				.WriteString(Form1.txtstartin2.Text)
+				.WriteString(frmMain.txtstartin2.Text)
 				.WriteEndElement()
 
                 .WriteStartElement("startin3")
-				.WriteString(Form1.txtstartin3.Text)
+				.WriteString(frmMain.txtstartin3.Text)
 				.WriteEndElement()
 
 
@@ -55,15 +55,15 @@ Public   Class getxml
 				        ' The person nodes.
 
 				        .WriteStartElement("FilePathUbix")
-				        .WriteString(Form1.txtfilepathubix .Text)
+				        .WriteString(frmMain.txtfilepathubix .Text)
 				        .WriteEndElement()
 
 				        .WriteStartElement("FilePathClient")
-				        .WriteString(Form1.txtfilepathclient .Text)
+				        .WriteString(frmMain.txtfilepathclient .Text)
 				        .WriteEndElement()
 
                         .WriteStartElement("FilePathClientOut")
-				        .WriteString(Form1.txtfilepathclientout .Text)
+				        .WriteString(frmMain.txtfilepathclientout .Text)
 				        .WriteEndElement()
 
 
@@ -77,41 +77,41 @@ Public   Class getxml
 				                ' The person nodes.
 
 				                .WriteStartElement("path1")
-				                .WriteString(Form1.txtremovepath1.Text)
+				                .WriteString(frmMain.txtremovepath1.Text)
 				                .WriteEndElement()
 
 				                .WriteStartElement("path2")
-				                .WriteString(Form1.txtremovepath2.Text)
+				                .WriteString(frmMain.txtremovepath2.Text)
 				                .WriteEndElement()
 
                                 .WriteStartElement("path3")
-				                .WriteString(Form1.txtremovepath3.Text)
+				                .WriteString(frmMain.txtremovepath3.Text)
 				                .WriteEndElement()
 
                                  .WriteStartElement("path4")
-				                .WriteString(Form1.txtremovepath4.Text)
+				                .WriteString(frmMain.txtremovepath4.Text)
 				                .WriteEndElement()
 
                                  .WriteStartElement("path5")
-				                .WriteString(Form1.txtremovepath5.Text)
+				                .WriteString(frmMain.txtremovepath5.Text)
 				                .WriteEndElement()
 
             
 				                .WriteStartElement("ext1")
-				                .WriteString(Form1.txtremoveExt1.Text)
+				                .WriteString(frmMain.txtremoveExt1.Text)
 				                .WriteEndElement()
 
 				                .WriteStartElement("ext2")
-				                .WriteString(Form1.txtremoveExt2.Text)
+				                .WriteString(frmMain.txtremoveExt2.Text)
 				                .WriteEndElement()
 
                                 .WriteStartElement("ext3")
-				                .WriteString(Form1.txtremoveExt3.Text)
+				                .WriteString(frmMain.txtremoveExt3.Text)
 				                .WriteEndElement()
             
 
                                 .WriteStartElement("RemoveTS")
-				                .WriteString(Form1.chkRemoveTS.CheckState  )
+				                .WriteString(frmMain.chkRemoveTS.CheckState  )
 				                .WriteEndElement()
 
 				                ' The end of this person.
@@ -123,7 +123,7 @@ Public   Class getxml
 				        ' The person nodes.
 
 				        .WriteStartElement("chktimer")
-				        .WriteString(Form1.txtchktimer .Text)
+				        .WriteString(frmMain.txtchktimer .Text)
 				        .WriteEndElement()
             
 				        ' The end of this person.
@@ -168,21 +168,21 @@ Public   Class getxml
 					If (document.Name = "startin1") Then
 
                     
-                          Form1.txtstartin1 .Text = document.ReadInnerXml.ToString()
+                          frmMain.txtstartin1 .Text = document.ReadInnerXml.ToString()
 
 					End If
 
 					'if the loop found a <LastName tag
 					If (document.Name = "startin2") Then
 
-					    Form1.txtstartin2 .Text  = document.ReadInnerXml.ToString()
+					    frmMain.txtstartin2 .Text  = document.ReadInnerXml.ToString()
                         
 					End If
 
                     'if the loop found a <LastName tag
 					If (document.Name = "startin3") Then
 
-					    Form1.txtstartin3 .Text  = document.ReadInnerXml.ToString()
+					    frmMain.txtstartin3 .Text  = document.ReadInnerXml.ToString()
                         
 					End If 
 
@@ -191,21 +191,21 @@ Public   Class getxml
                     'if the loop found a <LastName tag
 					If (document.Name = "FilePathUbix") Then
 
-					Form1.txtfilepathubix 	.Text = document.ReadInnerXml.ToString()
+					frmMain.txtfilepathubix 	.Text = document.ReadInnerXml.ToString()
 
 					End If
 
                      'if the loop found a <LastName tag
 					If (document.Name = "FilePathClient") Then
 
-						Form1.txtfilepathclient   .Text = document.ReadInnerXml.ToString()
+						frmMain.txtfilepathclient   .Text = document.ReadInnerXml.ToString()
 
 					End If
 
                      'if the loop found a <LastName tag
 					If (document.Name = "FilePathClientOut") Then
 
-					 Form1.txtfilepathclientout.Text  = document.ReadInnerXml.ToString()
+					 frmMain.txtfilepathclientout.Text  = document.ReadInnerXml.ToString()
 
 					End If
                     
@@ -213,31 +213,31 @@ Public   Class getxml
                      'if the loop found a <LastName tag
 					If (document.Name = "path1") Then
 
-					 Form1.txtremovepath1 .Text  = document.ReadInnerXml.ToString()
+					 frmMain.txtremovepath1 .Text  = document.ReadInnerXml.ToString()
 
 					End If
                    'if the loop found a <LastName tag
 					If (document.Name = "path2") Then
 
-					 Form1.txtremovepath2.Text  = document.ReadInnerXml.ToString()
+					 frmMain.txtremovepath2.Text  = document.ReadInnerXml.ToString()
 
 					End If
                   'if the loop found a <LastName tag
 					If (document.Name = "path3") Then
 
-					 Form1.txtremovepath3.Text  = document.ReadInnerXml.ToString()
+					 frmMain.txtremovepath3.Text  = document.ReadInnerXml.ToString()
 
 					End If
                 'if the loop found a <LastName tag
 					If (document.Name = "path4") Then
 
-					 Form1.txtremovepath4.Text  = document.ReadInnerXml.ToString()
+					 frmMain.txtremovepath4.Text  = document.ReadInnerXml.ToString()
 
 					End If
                 'if the loop found a <LastName tag
 					If (document.Name = "path5") Then
 
-					 Form1.txtremovepath5.Text  = document.ReadInnerXml.ToString()
+					 frmMain.txtremovepath5.Text  = document.ReadInnerXml.ToString()
 
 					End If
 
@@ -247,25 +247,25 @@ Public   Class getxml
                      'if the loop found a <LastName tag
 					If (document.Name = "ext1") Then
 
-					 Form1.txtremoveExt1.Text  = document.ReadInnerXml.ToString()
+					 frmMain.txtremoveExt1.Text  = document.ReadInnerXml.ToString()
 
 					End If
                      'if the loop found a <LastName tag
 					If (document.Name = "ext2") Then
 
-					 Form1.txtremoveExt2.Text  = document.ReadInnerXml.ToString()
+					 frmMain.txtremoveExt2.Text  = document.ReadInnerXml.ToString()
 
 					End If
                      'if the loop found a <LastName tag
 					If (document.Name = "ext3") Then
 
-					 Form1.txtremoveExt3.Text  = document.ReadInnerXml.ToString()
+					 frmMain.txtremoveExt3.Text  = document.ReadInnerXml.ToString()
 
 					End If
 
                     If (document.Name = "RemoveTS") Then
 
-					 Form1.chkRemoveTS.CheckState   = document.ReadInnerXml.ToString()
+					 frmMain.chkRemoveTS.CheckState   = document.ReadInnerXml.ToString()
 
 					End If
 
@@ -274,7 +274,7 @@ Public   Class getxml
                      'if the loop found a <LastName tag
 					If (document.Name = "chktimer") Then
 
-					 Form1.txtchktimer .Text  = document.ReadInnerXml.ToString()
+					 frmMain.txtchktimer .Text  = document.ReadInnerXml.ToString()
 
 					End If
 

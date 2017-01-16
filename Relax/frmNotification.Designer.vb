@@ -35,7 +35,7 @@ Partial Class frmNotification
         Me.lblMessage1.Font = New System.Drawing.Font("Times New Roman", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.lblMessage1.Location = New System.Drawing.Point(1, 1)
         Me.lblMessage1.Name = "lblMessage1"
-        Me.lblMessage1.Size = New System.Drawing.Size(418, 21)
+        Me.lblMessage1.Size = New System.Drawing.Size(441, 21)
         Me.lblMessage1.TabIndex = 0
         Me.lblMessage1.Text = "Message will appear here"
         '
@@ -55,7 +55,7 @@ Partial Class frmNotification
         Me.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnExit.ForeColor = System.Drawing.Color.Transparent
         Me.btnExit.Image = Global.Relax.My.Resources.Resources.btnLow
-        Me.btnExit.Location = New System.Drawing.Point(417, 0)
+        Me.btnExit.Location = New System.Drawing.Point(418, -1)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(24, 24)
         Me.btnExit.TabIndex = 3

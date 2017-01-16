@@ -94,17 +94,17 @@ Public Class stuff
    public Shared  sub ttip (title As String,txt As String  ,delay as integer    )
 
         
-           Form1.   notifyIcon1.BalloonTipIcon = ToolTipIcon.Error
-           Form1.  notifyIcon1.BalloonTipTitle = title
-           Form1. notifyIcon1.BalloonTipText = txt
-           Form1. notifyIcon1.ShowBalloonTip(delay)
+           frmMain.   notifyIcon1.BalloonTipIcon = ToolTipIcon.Error
+           frmMain.  notifyIcon1.BalloonTipTitle = title
+           frmMain. notifyIcon1.BalloonTipText = txt
+           frmMain. notifyIcon1.ShowBalloonTip(delay)
      
 
     End sub
     public Shared  sub ttip2  (txt As String )
 
-        Form1.    NotifyIcon1.BalloonTipText = txt
-      Form1.   NotifyIcon1.ShowBalloonTip(8000)
+        frmMain.    NotifyIcon1.BalloonTipText = txt
+      frmMain.   NotifyIcon1.ShowBalloonTip(8000)
       
         End sub
 
@@ -130,7 +130,7 @@ Public Class stuff
                 'When Show menu clicks, it will show the form:
          
 
-        form1.Show()
+        frmMain.Show()
       
 
              End If 
@@ -145,13 +145,13 @@ Public Class stuff
 
              If Directory.Exists(Folder) Then
       
-             For Each _file As String In Directory.GetFiles(Folder, "*." & Form1.txtremoveExt1.Text )
+             For Each _file As String In Directory.GetFiles(Folder, "*." & frmMain.txtremoveExt1.Text )
             File.Delete(_file)
         Next
-             For Each _file As String In Directory.GetFiles(Folder, "*." & Form1.txtremoveExt2.Text )
+             For Each _file As String In Directory.GetFiles(Folder, "*." & frmMain.txtremoveExt2.Text )
             File.Delete(_file)
         Next
-             For Each _file As String In Directory.GetFiles(Folder, "*." & Form1.txtremoveExt3.Text )
+             For Each _file As String In Directory.GetFiles(Folder, "*." & frmMain.txtremoveExt3.Text )
             File.Delete(_file)
         Next
              
@@ -205,18 +205,13 @@ regVersion = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\Curr
         Dim regVersion As RegistryKey
 regVersion = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", True)
         
-        Form1.lblstartuppath.Text= regVersion.GetValue ("RelaxEngine")
+        frmMain.lblstartuppath.Text= regVersion.GetValue ("RelaxEngine")
     regVersion.Close()
 
 
       End Sub
 
+    
 
-    public Shared sub statusmsg(txt As String,tmr As String )
-        	Form1.lblstatus.Visible  = True  
-        	Form1.lblstatus.Text = txt
-     Application.DoEvents()
-           Thread.Sleep (tmr)
-        	Form1.lblstatus.Visible  = False 
-  end Sub
+
 End Class

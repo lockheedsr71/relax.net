@@ -3,7 +3,7 @@ Imports System.IO
 Imports System.Threading
 Imports Microsoft.Win32              ' for sleep command
 
-Public Class Form1
+Public Class frmMain
     Private myIni As goini
     Public startin1, startin2, startin3, FilePathUbix, FilePathClient, FilePathClientOut, removepath1, removepath2, removepath3, removepath4, removepath5, RemoveTS, chktimer As String
     Public mydate As String
@@ -37,9 +37,8 @@ start:
         mydate = DateTime.Now.ToString("yyyy-MM-dd")
         mytime = DateTime.Now.ToString("HH:mm")
         lbltime.Text =    DateTime.Now.ToString("HH:mm:ss")                               
-
-        
         Application.DoEvents ()
+
 
 
 
@@ -61,7 +60,7 @@ start:
                     If chktsclient("ts") = False Then                  ' if TS file alrady not copied to destination then ... 
 
                     My.Computer.FileSystem.CopyDirectory(FilePathUbix,  txtfilepathclient.Text , showUI:=FileIO.UIOption.AllDialogs)
-                    
+                   
                    
                       else 
                    End If 
@@ -74,11 +73,11 @@ start:
             If chktssrv("ts") = False Then
 
                   '''   CreateObject("WScript.Shell").Popup("No .TS file found in server to copy. ", 2, "Copy status ... ", 64)
-                                  stuff.notify (4000,"Copy status ...","No .TS file found in server to copy. ", Color.Yellow,Color.DarkBlue  )
+                                  stuff.notify (4000,"Copy status","No .TS file found in server to copy. ", Color.Yellow,Color.DarkBlue  )
               else
 
                  ''' CreateObject("WScript.Shell").Popup("All file(s) copied to client successfully.", 2, "Copy status ... ", 64)
-                  stuff.notify (4000,"Copy status ...","All file(s) copied to client successfully.", Color.Yellow,Color.DarkBlue  )
+                  stuff.notify (4000,"Copy status","All file(s) copied to client successfully.wait to extracting ...", Color.Yellow,Color.DarkBlue  )
             end if
 
                   Else
@@ -142,7 +141,7 @@ errpart:
               stuff.mylog(ErrorToString)
               'MsgBox ( err.Raise  )
          
-              '   stuff.notify (5000,"test mikonim title asli injast","It looks like the problem is with the instantiation of your class; you've instantiated as Form1, when it should befrmCentsConverter; i.e. Dim frmConvert As New frmCentsConverter, instead of Dim frmConvert As New Form1. It could also be that you've renamed the start-up form of the a",Color.GreenYellow )
+              '   stuff.notify (5000,"test mikonim title asli injast","It looks like the problem is with the instantiation of your class; you've instantiated as Form1, when it should befrmCentsConverter; i.e. Dim frmConvert As New frmCentsConverter, instead of Dim frmConvert As New frmMain. It could also be that you've renamed the start-up form of the a",Color.GreenYellow )
               msgbox(ErrorToString & " RELAX need correct path to access the TS file.Please set correct path in vars.xml or in setting tab.Please run relax again 1 min latter after starting time. RELAX now terminate.", vbCritical, "TS path not found")
               stuff.mylog(ErrorToString)
                end
@@ -169,6 +168,8 @@ errpart:
        
         cmdcommand =  FilePathClientOut & mydate & " /ts "  &  FilePathClient
        
+        
+
        With cmdProcess
              Dim procID As Integer 
 ' Run calculator.
@@ -193,7 +194,7 @@ End With
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+         
         chkxml
         ContextMenuStrip1.Enabled = True
         me.Show()
@@ -325,7 +326,9 @@ End With
        txtstartin3.Text = "N/A"
         End Sub
 
-     
+    Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
+ 
+    End Sub
 
     Private Sub CheckBox1_CheckedChanged_1(sender As Object, e As EventArgs) 
          if chkRemoveTS.Checked=true then stuff.addreg 
@@ -342,6 +345,9 @@ End With
         Me.TabControl1.SelectedTab = TabPage3
 
     End Sub
+
+    
+   
 
     Private Sub chkini()
 
@@ -404,7 +410,7 @@ End With
         
         'read paths
         FilePathUbix = txtfilepathubix.Text  
-        FilePathClient = txtfilepathclient.Text &"\"
+        FilePathClient = txtfilepathclient.Text
         FilePathClientOut = txtfilepathclientout.Text &"\"
 
         'read removing files
@@ -490,6 +496,7 @@ End With
             'Show in the task bar:
      
         End If
+
     End Sub
 
     Private Sub Form1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
@@ -498,6 +505,9 @@ End With
 
         'Now make it invisible (make it look like it went into the system tray)
         Me.Visible = False
+
+
+
     End Sub
 
     Private Sub TabControl1_MouseClick(sender As Object, e As MouseEventArgs) Handles TabControl1.MouseClick
@@ -523,4 +533,6 @@ End With
     End Sub
 
    
+  
+
 End Class

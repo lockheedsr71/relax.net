@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ShowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,7 +35,6 @@ Partial Class Form1
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.lblstatus = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.txtremoveExt3 = New System.Windows.Forms.TextBox()
@@ -96,6 +95,19 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.richtxtlog = New System.Windows.Forms.RichTextBox()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.pnlControlsAndStatus = New System.Windows.Forms.Panel()
+        Me.btnOpenDownload = New System.Windows.Forms.Button()
+        Me.lblStatus = New System.Windows.Forms.Label()
+        Me.lblElapsedTime = New System.Windows.Forms.Label()
+        Me.lblDownloadBytes = New System.Windows.Forms.Label()
+        Me.lblSpeedKBits = New System.Windows.Forms.Label()
+        Me.pbDownloadProgress = New System.Windows.Forms.ProgressBar()
+        Me.lblProgress = New System.Windows.Forms.Label()
+        Me.lblDownloadSize = New System.Windows.Forms.Label()
+        Me.btnDownload = New System.Windows.Forms.Button()
+        Me.lblSpeedKBytes = New System.Windows.Forms.Label()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
@@ -104,6 +116,9 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.txtDownloadAddress = New System.Windows.Forms.TextBox()
+        Me.btnBrowse = New System.Windows.Forms.Button()
+        Me.txtSaveAddress = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -116,6 +131,8 @@ Partial Class Form1
         Me.TabPage5.SuspendLayout
         Me.GroupBox6.SuspendLayout
         Me.TabPage4.SuspendLayout
+        Me.TabPage6.SuspendLayout
+        Me.pnlControlsAndStatus.SuspendLayout
         Me.TabPage3.SuspendLayout
         CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
@@ -175,6 +192,7 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.TabPage6)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.TabControl1.Location = New System.Drawing.Point(150, 13)
@@ -196,7 +214,7 @@ Partial Class Form1
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.RichTextBox1.BackColor = System.Drawing.Color.Black
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.CausesValidation = false
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -213,7 +231,6 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
-        Me.TabPage2.Controls.Add(Me.lblstatus)
         Me.TabPage2.Controls.Add(Me.GroupBox5)
         Me.TabPage2.Controls.Add(Me.Button4)
         Me.TabPage2.Controls.Add(Me.Button3)
@@ -228,18 +245,6 @@ Partial Class Form1
         Me.TabPage2.Size = New System.Drawing.Size(659, 452)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Settings"
-        '
-        'lblstatus
-        '
-        Me.lblstatus.AutoSize = true
-        Me.lblstatus.BackColor = System.Drawing.Color.Red
-        Me.lblstatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lblstatus.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.lblstatus.ForeColor = System.Drawing.Color.Yellow
-        Me.lblstatus.Location = New System.Drawing.Point(12, 423)
-        Me.lblstatus.Name = "lblstatus"
-        Me.lblstatus.Size = New System.Drawing.Size(0, 19)
-        Me.lblstatus.TabIndex = 26
         '
         'GroupBox5
         '
@@ -933,6 +938,171 @@ Partial Class Form1
         Me.richtxtlog.TabIndex = 0
         Me.richtxtlog.Text = ""
         '
+        'TabPage6
+        '
+        Me.TabPage6.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.TabPage6.Controls.Add(Me.txtDownloadAddress)
+        Me.TabPage6.Controls.Add(Me.btnBrowse)
+        Me.TabPage6.Controls.Add(Me.txtSaveAddress)
+        Me.TabPage6.Controls.Add(Me.pnlControlsAndStatus)
+        Me.TabPage6.ForeColor = System.Drawing.Color.Transparent
+        Me.TabPage6.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage6.Size = New System.Drawing.Size(659, 452)
+        Me.TabPage6.TabIndex = 5
+        Me.TabPage6.Text = "Update"
+        '
+        'pnlControlsAndStatus
+        '
+        Me.pnlControlsAndStatus.BackColor = System.Drawing.Color.Transparent
+        Me.pnlControlsAndStatus.Controls.Add(Me.btnOpenDownload)
+        Me.pnlControlsAndStatus.Controls.Add(Me.lblStatus)
+        Me.pnlControlsAndStatus.Controls.Add(Me.lblElapsedTime)
+        Me.pnlControlsAndStatus.Controls.Add(Me.lblDownloadBytes)
+        Me.pnlControlsAndStatus.Controls.Add(Me.lblSpeedKBits)
+        Me.pnlControlsAndStatus.Controls.Add(Me.pbDownloadProgress)
+        Me.pnlControlsAndStatus.Controls.Add(Me.lblProgress)
+        Me.pnlControlsAndStatus.Controls.Add(Me.lblDownloadSize)
+        Me.pnlControlsAndStatus.Controls.Add(Me.btnDownload)
+        Me.pnlControlsAndStatus.Controls.Add(Me.lblSpeedKBytes)
+        Me.pnlControlsAndStatus.Controls.Add(Me.btnCancel)
+        Me.pnlControlsAndStatus.Location = New System.Drawing.Point(5, 313)
+        Me.pnlControlsAndStatus.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.pnlControlsAndStatus.Name = "pnlControlsAndStatus"
+        Me.pnlControlsAndStatus.Size = New System.Drawing.Size(649, 133)
+        Me.pnlControlsAndStatus.TabIndex = 17
+        '
+        'btnOpenDownload
+        '
+        Me.btnOpenDownload.Enabled = false
+        Me.btnOpenDownload.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnOpenDownload.Location = New System.Drawing.Point(515, 105)
+        Me.btnOpenDownload.Name = "btnOpenDownload"
+        Me.btnOpenDownload.Size = New System.Drawing.Size(124, 23)
+        Me.btnOpenDownload.TabIndex = 16
+        Me.btnOpenDownload.Text = "Open"
+        Me.btnOpenDownload.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnOpenDownload.UseVisualStyleBackColor = true
+        '
+        'lblStatus
+        '
+        Me.lblStatus.AutoEllipsis = true
+        Me.lblStatus.AutoSize = true
+        Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblStatus.Location = New System.Drawing.Point(5, 96)
+        Me.lblStatus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(73, 16)
+        Me.lblStatus.TabIndex = 8
+        Me.lblStatus.Text = "Status: Idle"
+        '
+        'lblElapsedTime
+        '
+        Me.lblElapsedTime.AutoEllipsis = true
+        Me.lblElapsedTime.AutoSize = true
+        Me.lblElapsedTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblElapsedTime.Location = New System.Drawing.Point(5, 42)
+        Me.lblElapsedTime.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblElapsedTime.Name = "lblElapsedTime"
+        Me.lblElapsedTime.Size = New System.Drawing.Size(118, 16)
+        Me.lblElapsedTime.TabIndex = 15
+        Me.lblElapsedTime.Text = "Elasped Time: n/a"
+        '
+        'lblDownloadBytes
+        '
+        Me.lblDownloadBytes.AutoEllipsis = true
+        Me.lblDownloadBytes.AutoSize = true
+        Me.lblDownloadBytes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblDownloadBytes.Location = New System.Drawing.Point(5, 24)
+        Me.lblDownloadBytes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblDownloadBytes.Name = "lblDownloadBytes"
+        Me.lblDownloadBytes.Size = New System.Drawing.Size(118, 16)
+        Me.lblDownloadBytes.TabIndex = 10
+        Me.lblDownloadBytes.Text = "Downloaded: 0 KB"
+        '
+        'lblSpeedKBits
+        '
+        Me.lblSpeedKBits.AutoEllipsis = true
+        Me.lblSpeedKBits.AutoSize = true
+        Me.lblSpeedKBits.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblSpeedKBits.Location = New System.Drawing.Point(222, 42)
+        Me.lblSpeedKBits.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSpeedKBits.Name = "lblSpeedKBits"
+        Me.lblSpeedKBits.Size = New System.Drawing.Size(91, 16)
+        Me.lblSpeedKBits.TabIndex = 14
+        Me.lblSpeedKBits.Text = "Speed: 0 kb/s"
+        Me.lblSpeedKBits.Visible = false
+        '
+        'pbDownloadProgress
+        '
+        Me.pbDownloadProgress.Location = New System.Drawing.Point(8, 68)
+        Me.pbDownloadProgress.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
+        Me.pbDownloadProgress.Name = "pbDownloadProgress"
+        Me.pbDownloadProgress.Size = New System.Drawing.Size(639, 26)
+        Me.pbDownloadProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.pbDownloadProgress.TabIndex = 9
+        '
+        'lblProgress
+        '
+        Me.lblProgress.AutoEllipsis = true
+        Me.lblProgress.AutoSize = true
+        Me.lblProgress.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblProgress.ForeColor = System.Drawing.Color.Yellow
+        Me.lblProgress.Location = New System.Drawing.Point(5, 113)
+        Me.lblProgress.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblProgress.Name = "lblProgress"
+        Me.lblProgress.Size = New System.Drawing.Size(100, 16)
+        Me.lblProgress.TabIndex = 7
+        Me.lblProgress.Text = "Progress: 0%"
+        '
+        'lblDownloadSize
+        '
+        Me.lblDownloadSize.AutoEllipsis = true
+        Me.lblDownloadSize.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblDownloadSize.ForeColor = System.Drawing.Color.Yellow
+        Me.lblDownloadSize.Location = New System.Drawing.Point(5, 6)
+        Me.lblDownloadSize.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblDownloadSize.Name = "lblDownloadSize"
+        Me.lblDownloadSize.Size = New System.Drawing.Size(173, 17)
+        Me.lblDownloadSize.TabIndex = 6
+        Me.lblDownloadSize.Text = "Total Size: 0 KB"
+        '
+        'btnDownload
+        '
+        Me.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDownload.Location = New System.Drawing.Point(191, 105)
+        Me.btnDownload.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
+        Me.btnDownload.Name = "btnDownload"
+        Me.btnDownload.Size = New System.Drawing.Size(157, 24)
+        Me.btnDownload.TabIndex = 0
+        Me.btnDownload.Text = "Update"
+        Me.btnDownload.UseVisualStyleBackColor = false
+        '
+        'lblSpeedKBytes
+        '
+        Me.lblSpeedKBytes.AutoEllipsis = true
+        Me.lblSpeedKBytes.AutoSize = true
+        Me.lblSpeedKBytes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblSpeedKBytes.Location = New System.Drawing.Point(222, 24)
+        Me.lblSpeedKBytes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSpeedKBytes.Name = "lblSpeedKBytes"
+        Me.lblSpeedKBytes.Size = New System.Drawing.Size(93, 16)
+        Me.lblSpeedKBytes.TabIndex = 13
+        Me.lblSpeedKBytes.Text = "Speed: 0 KB/s"
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Enabled = false
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCancel.Location = New System.Drawing.Point(355, 105)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(157, 24)
+        Me.btnCancel.TabIndex = 1
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = false
+        '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -949,9 +1119,9 @@ Partial Class Form1
         '
         'RichTextBox4
         '
-        Me.RichTextBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.RichTextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.RichTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox4.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.RichTextBox4.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.RichTextBox4.ForeColor = System.Drawing.Color.Yellow
         Me.RichTextBox4.Location = New System.Drawing.Point(6, 309)
         Me.RichTextBox4.Name = "RichTextBox4"
@@ -975,6 +1145,7 @@ Partial Class Form1
         '
         'PictureBox3
         '
+        Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.PictureBox3.ErrorImage = Nothing
         Me.PictureBox3.Image = Global.Relax.My.Resources.Resources.TooshehLogo
         Me.PictureBox3.Location = New System.Drawing.Point(532, 164)
@@ -986,10 +1157,10 @@ Partial Class Form1
         '
         'RichTextBox2
         '
-        Me.RichTextBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.RichTextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox2.Font = New System.Drawing.Font("Arial Narrow", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.RichTextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.RichTextBox2.ForeColor = System.Drawing.Color.White
         Me.RichTextBox2.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.ReadOnly = true
@@ -1008,7 +1179,40 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = false
         '
-        'Form1
+        'txtDownloadAddress
+        '
+        Me.txtDownloadAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtDownloadAddress.Location = New System.Drawing.Point(13, 22)
+        Me.txtDownloadAddress.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
+        Me.txtDownloadAddress.Name = "txtDownloadAddress"
+        Me.txtDownloadAddress.Size = New System.Drawing.Size(530, 25)
+        Me.txtDownloadAddress.TabIndex = 18
+        Me.txtDownloadAddress.Text = "http://192.168.10.106/Manoto/2017-01-08.12.00.1-0.rec/00001.mpg"
+        Me.txtDownloadAddress.WordWrap = false
+        '
+        'btnBrowse
+        '
+        Me.btnBrowse.AutoEllipsis = true
+        Me.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBrowse.Location = New System.Drawing.Point(520, 66)
+        Me.btnBrowse.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnBrowse.Name = "btnBrowse"
+        Me.btnBrowse.Size = New System.Drawing.Size(116, 26)
+        Me.btnBrowse.TabIndex = 20
+        Me.btnBrowse.Text = "Save To..."
+        Me.btnBrowse.UseVisualStyleBackColor = false
+        '
+        'txtSaveAddress
+        '
+        Me.txtSaveAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSaveAddress.Location = New System.Drawing.Point(13, 66)
+        Me.txtSaveAddress.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
+        Me.txtSaveAddress.Name = "txtSaveAddress"
+        Me.txtSaveAddress.Size = New System.Drawing.Size(446, 25)
+        Me.txtSaveAddress.TabIndex = 19
+        Me.txtSaveAddress.Text = "o:\dl\123.mpg"
+        '
+        'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1022,7 +1226,7 @@ Partial Class Form1
         Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
         Me.MaximizeBox = false
         Me.MinimizeBox = false
-        Me.Name = "Form1"
+        Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RELAX Engine"
         Me.ContextMenuStrip1.ResumeLayout(false)
@@ -1045,6 +1249,10 @@ Partial Class Form1
         Me.GroupBox6.PerformLayout
         Me.TabPage4.ResumeLayout(false)
         Me.TabPage4.PerformLayout
+        Me.TabPage6.ResumeLayout(false)
+        Me.TabPage6.PerformLayout
+        Me.pnlControlsAndStatus.ResumeLayout(false)
+        Me.pnlControlsAndStatus.PerformLayout
         Me.TabPage3.ResumeLayout(false)
         CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
@@ -1131,5 +1339,20 @@ End Sub
     Friend WithEvents chkRemoveTS As CheckBox
     Friend WithEvents RichTextBox4 As RichTextBox
     Friend WithEvents Button7 As Button
-    Friend WithEvents lblstatus As Label
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents pnlControlsAndStatus As Panel
+    Friend WithEvents btnOpenDownload As Button
+    Friend WithEvents lblStatus As Label
+    Friend WithEvents lblElapsedTime As Label
+    Friend WithEvents lblDownloadBytes As Label
+    Friend WithEvents lblSpeedKBits As Label
+    Friend WithEvents pbDownloadProgress As ProgressBar
+    Friend WithEvents lblProgress As Label
+    Friend WithEvents lblDownloadSize As Label
+    Friend WithEvents btnDownload As Button
+    Friend WithEvents lblSpeedKBytes As Label
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents txtDownloadAddress As TextBox
+    Friend WithEvents btnBrowse As Button
+    Friend WithEvents txtSaveAddress As TextBox
 End Class
