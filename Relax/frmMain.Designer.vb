@@ -96,6 +96,9 @@ Partial Class frmMain
         Me.Label17 = New System.Windows.Forms.Label()
         Me.richtxtlog = New System.Windows.Forms.RichTextBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.txtDownloadAddress = New System.Windows.Forms.TextBox()
+        Me.btnBrowse = New System.Windows.Forms.Button()
+        Me.txtSaveAddress = New System.Windows.Forms.TextBox()
         Me.pnlControlsAndStatus = New System.Windows.Forms.Panel()
         Me.btnOpenDownload = New System.Windows.Forms.Button()
         Me.lblStatus = New System.Windows.Forms.Label()
@@ -116,9 +119,6 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.txtDownloadAddress = New System.Windows.Forms.TextBox()
-        Me.btnBrowse = New System.Windows.Forms.Button()
-        Me.txtSaveAddress = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -129,6 +129,7 @@ Partial Class frmMain
         Me.GroupBox2.SuspendLayout
         Me.GroupBox1.SuspendLayout
         Me.TabPage5.SuspendLayout
+
         Me.GroupBox6.SuspendLayout
         Me.TabPage4.SuspendLayout
         Me.TabPage6.SuspendLayout
@@ -214,7 +215,7 @@ Partial Class frmMain
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.BackColor = System.Drawing.Color.Black
+        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.CausesValidation = false
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -230,7 +231,7 @@ Partial Class frmMain
         '
         'TabPage2
         '
-        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.TabPage2.Controls.Add(Me.GroupBox5)
         Me.TabPage2.Controls.Add(Me.Button4)
         Me.TabPage2.Controls.Add(Me.Button3)
@@ -277,6 +278,7 @@ Partial Class frmMain
         '
         'txtremoveExt3
         '
+        Me.txtremoveExt3.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremoveExt3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtremoveExt3.Location = New System.Drawing.Point(88, 49)
         Me.txtremoveExt3.Name = "txtremoveExt3"
@@ -296,6 +298,7 @@ Partial Class frmMain
         '
         'txtremoveExt2
         '
+        Me.txtremoveExt2.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremoveExt2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtremoveExt2.Location = New System.Drawing.Point(238, 27)
         Me.txtremoveExt2.Name = "txtremoveExt2"
@@ -315,6 +318,7 @@ Partial Class frmMain
         '
         'txtremoveExt1
         '
+        Me.txtremoveExt1.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremoveExt1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtremoveExt1.Location = New System.Drawing.Point(88, 28)
         Me.txtremoveExt1.Name = "txtremoveExt1"
@@ -391,6 +395,7 @@ Partial Class frmMain
         '
         'txtchktimer
         '
+        Me.txtchktimer.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtchktimer.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtchktimer.Location = New System.Drawing.Point(151, 20)
         Me.txtchktimer.Name = "txtchktimer"
@@ -455,6 +460,7 @@ Partial Class frmMain
         '
         'txtremovepath5
         '
+        Me.txtremovepath5.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremovepath5.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtremovepath5.Location = New System.Drawing.Point(58, 154)
         Me.txtremovepath5.Name = "txtremovepath5"
@@ -463,6 +469,7 @@ Partial Class frmMain
         '
         'txtremovepath4
         '
+        Me.txtremovepath4.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremovepath4.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtremovepath4.Location = New System.Drawing.Point(58, 123)
         Me.txtremovepath4.Name = "txtremovepath4"
@@ -471,6 +478,7 @@ Partial Class frmMain
         '
         'txtremovepath3
         '
+        Me.txtremovepath3.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremovepath3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtremovepath3.Location = New System.Drawing.Point(58, 92)
         Me.txtremovepath3.Name = "txtremovepath3"
@@ -479,6 +487,7 @@ Partial Class frmMain
         '
         'txtremovepath2
         '
+        Me.txtremovepath2.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremovepath2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtremovepath2.Location = New System.Drawing.Point(58, 59)
         Me.txtremovepath2.Name = "txtremovepath2"
@@ -487,6 +496,7 @@ Partial Class frmMain
         '
         'txtremovepath1
         '
+        Me.txtremovepath1.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremovepath1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtremovepath1.Location = New System.Drawing.Point(58, 26)
         Me.txtremovepath1.Name = "txtremovepath1"
@@ -573,6 +583,7 @@ Partial Class frmMain
         'chkRemoveTS
         '
         Me.chkRemoveTS.AutoSize = true
+        Me.chkRemoveTS.Enabled = false
         Me.chkRemoveTS.ForeColor = System.Drawing.Color.Red
         Me.chkRemoveTS.Location = New System.Drawing.Point(160, 77)
         Me.chkRemoveTS.Name = "chkRemoveTS"
@@ -627,6 +638,7 @@ Partial Class frmMain
         '
         'txtfilepathclientout
         '
+        Me.txtfilepathclientout.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtfilepathclientout.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtfilepathclientout.Enabled = false
         Me.txtfilepathclientout.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
@@ -637,6 +649,7 @@ Partial Class frmMain
         '
         'txtfilepathclient
         '
+        Me.txtfilepathclient.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtfilepathclient.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtfilepathclient.Enabled = false
         Me.txtfilepathclient.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
@@ -647,6 +660,7 @@ Partial Class frmMain
         '
         'txtfilepathubix
         '
+        Me.txtfilepathubix.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtfilepathubix.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtfilepathubix.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.txtfilepathubix.Location = New System.Drawing.Point(160, 17)
@@ -772,6 +786,7 @@ Partial Class frmMain
         '
         'txtstartin3
         '
+        Me.txtstartin3.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtstartin3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtstartin3.Enabled = false
         Me.txtstartin3.Location = New System.Drawing.Point(147, 134)
@@ -781,6 +796,7 @@ Partial Class frmMain
         '
         'txtstartin2
         '
+        Me.txtstartin2.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtstartin2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtstartin2.Location = New System.Drawing.Point(147, 98)
         Me.txtstartin2.Name = "txtstartin2"
@@ -789,6 +805,7 @@ Partial Class frmMain
         '
         'txtstartin1
         '
+        Me.txtstartin1.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtstartin1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtstartin1.Location = New System.Drawing.Point(147, 77)
         Me.txtstartin1.Name = "txtstartin1"
@@ -841,7 +858,8 @@ Partial Class frmMain
         '
         'TabPage5
         '
-        Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        
         Me.TabPage5.Controls.Add(Me.GroupBox6)
         Me.TabPage5.Location = New System.Drawing.Point(4, 27)
         Me.TabPage5.Name = "TabPage5"
@@ -849,7 +867,7 @@ Partial Class frmMain
         Me.TabPage5.Size = New System.Drawing.Size(659, 452)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Configuration"
-        '
+        
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.lblstartuppath)
@@ -887,7 +905,7 @@ Partial Class frmMain
         '
         'TabPage4
         '
-        Me.TabPage4.BackColor = System.Drawing.Color.Black
+        Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.TabPage4.Controls.Add(Me.Button2)
         Me.TabPage4.Controls.Add(Me.Label17)
         Me.TabPage4.Controls.Add(Me.richtxtlog)
@@ -918,7 +936,7 @@ Partial Class frmMain
         '
         Me.Label17.AutoSize = true
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(128,Byte),Integer), CType(CType(128,Byte),Integer))
+        Me.Label17.ForeColor = System.Drawing.Color.Lime
         Me.Label17.Location = New System.Drawing.Point(2, 4)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(221, 16)
@@ -927,7 +945,7 @@ Partial Class frmMain
         '
         'richtxtlog
         '
-        Me.richtxtlog.BackColor = System.Drawing.Color.Black
+        Me.richtxtlog.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.richtxtlog.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.richtxtlog.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.richtxtlog.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
@@ -952,6 +970,39 @@ Partial Class frmMain
         Me.TabPage6.Size = New System.Drawing.Size(659, 452)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Update"
+        '
+        'txtDownloadAddress
+        '
+        Me.txtDownloadAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtDownloadAddress.Location = New System.Drawing.Point(13, 22)
+        Me.txtDownloadAddress.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
+        Me.txtDownloadAddress.Name = "txtDownloadAddress"
+        Me.txtDownloadAddress.Size = New System.Drawing.Size(446, 25)
+        Me.txtDownloadAddress.TabIndex = 18
+        Me.txtDownloadAddress.Text = "http://192.168.10.106/IRIB_TV1-IRIB/2017-01-15.16.00.1-0.rec/00001.mpg"
+        Me.txtDownloadAddress.WordWrap = false
+        '
+        'btnBrowse
+        '
+        Me.btnBrowse.AutoEllipsis = true
+        Me.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBrowse.Location = New System.Drawing.Point(520, 66)
+        Me.btnBrowse.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnBrowse.Name = "btnBrowse"
+        Me.btnBrowse.Size = New System.Drawing.Size(116, 26)
+        Me.btnBrowse.TabIndex = 20
+        Me.btnBrowse.Text = "Save To..."
+        Me.btnBrowse.UseVisualStyleBackColor = false
+        '
+        'txtSaveAddress
+        '
+        Me.txtSaveAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSaveAddress.Location = New System.Drawing.Point(13, 66)
+        Me.txtSaveAddress.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
+        Me.txtSaveAddress.Name = "txtSaveAddress"
+        Me.txtSaveAddress.Size = New System.Drawing.Size(446, 25)
+        Me.txtSaveAddress.TabIndex = 19
+        Me.txtSaveAddress.Text = "o:\dl\123.mpg"
         '
         'pnlControlsAndStatus
         '
@@ -1105,7 +1156,7 @@ Partial Class frmMain
         '
         'TabPage3
         '
-        Me.TabPage3.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.TabPage3.Controls.Add(Me.RichTextBox4)
         Me.TabPage3.Controls.Add(Me.RichTextBox3)
         Me.TabPage3.Controls.Add(Me.PictureBox3)
@@ -1119,7 +1170,7 @@ Partial Class frmMain
         '
         'RichTextBox4
         '
-        Me.RichTextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.RichTextBox4.BackColor = System.Drawing.Color.Black
         Me.RichTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox4.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.RichTextBox4.ForeColor = System.Drawing.Color.Yellow
@@ -1132,7 +1183,7 @@ Partial Class frmMain
         '
         'RichTextBox3
         '
-        Me.RichTextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.RichTextBox3.BackColor = System.Drawing.Color.Black
         Me.RichTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox3.Font = New System.Drawing.Font("Arial Narrow", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.RichTextBox3.ForeColor = System.Drawing.Color.Yellow
@@ -1148,9 +1199,9 @@ Partial Class frmMain
         Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.PictureBox3.ErrorImage = Nothing
         Me.PictureBox3.Image = Global.Relax.My.Resources.Resources.TooshehLogo
-        Me.PictureBox3.Location = New System.Drawing.Point(532, 164)
+        Me.PictureBox3.Location = New System.Drawing.Point(542, 166)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(110, 115)
+        Me.PictureBox3.Size = New System.Drawing.Size(111, 115)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 11
         Me.PictureBox3.TabStop = false
@@ -1160,7 +1211,7 @@ Partial Class frmMain
         Me.RichTextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox2.Font = New System.Drawing.Font("Arial Narrow", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.RichTextBox2.ForeColor = System.Drawing.Color.White
+        Me.RichTextBox2.ForeColor = System.Drawing.Color.Lime
         Me.RichTextBox2.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.ReadOnly = true
@@ -1179,44 +1230,11 @@ Partial Class frmMain
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = false
         '
-        'txtDownloadAddress
-        '
-        Me.txtDownloadAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDownloadAddress.Location = New System.Drawing.Point(13, 22)
-        Me.txtDownloadAddress.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
-        Me.txtDownloadAddress.Name = "txtDownloadAddress"
-        Me.txtDownloadAddress.Size = New System.Drawing.Size(530, 25)
-        Me.txtDownloadAddress.TabIndex = 18
-        Me.txtDownloadAddress.Text = "http://192.168.10.106/Manoto/2017-01-08.12.00.1-0.rec/00001.mpg"
-        Me.txtDownloadAddress.WordWrap = false
-        '
-        'btnBrowse
-        '
-        Me.btnBrowse.AutoEllipsis = true
-        Me.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnBrowse.Location = New System.Drawing.Point(520, 66)
-        Me.btnBrowse.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.btnBrowse.Name = "btnBrowse"
-        Me.btnBrowse.Size = New System.Drawing.Size(116, 26)
-        Me.btnBrowse.TabIndex = 20
-        Me.btnBrowse.Text = "Save To..."
-        Me.btnBrowse.UseVisualStyleBackColor = false
-        '
-        'txtSaveAddress
-        '
-        Me.txtSaveAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSaveAddress.Location = New System.Drawing.Point(13, 66)
-        Me.txtSaveAddress.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
-        Me.txtSaveAddress.Name = "txtSaveAddress"
-        Me.txtSaveAddress.Size = New System.Drawing.Size(446, 25)
-        Me.txtSaveAddress.TabIndex = 19
-        Me.txtSaveAddress.Text = "o:\dl\123.mpg"
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.ClientSize = New System.Drawing.Size(829, 508)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label2)
@@ -1245,6 +1263,7 @@ Partial Class frmMain
         Me.GroupBox1.ResumeLayout(false)
         Me.GroupBox1.PerformLayout
         Me.TabPage5.ResumeLayout(false)
+        
         Me.GroupBox6.ResumeLayout(false)
         Me.GroupBox6.PerformLayout
         Me.TabPage4.ResumeLayout(false)
@@ -1355,4 +1374,6 @@ End Sub
     Friend WithEvents txtDownloadAddress As TextBox
     Friend WithEvents btnBrowse As Button
     Friend WithEvents txtSaveAddress As TextBox
+    
+    Friend WithEvents chkonthefly As CheckBox
 End Class

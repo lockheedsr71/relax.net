@@ -2,25 +2,24 @@
 <!--XML Database.-->
 <Configs>
   <Time>
-    <startin1>10:04</startin1>
-    <startin2>0</startin2>
-    <startin3>09:48</startin3>
+    <startin1>12:11</startin1>
+    <startin2>15:11</startin2>
+    <startin3>0</startin3>
   </Time>
   <path>
-    <FilePathUbix>\\ubix.loc\rec\share_auto\Toosheh TV\</FilePathUbix>
-    <FilePathClient>c:\tstemp</FilePathClient>
-    <FilePathClientOut>c:\ts_temp\toosheOutput</FilePathClientOut>
+    <FilePathUbix>o:\rlxtst0\tsasl\</FilePathUbix>
+    <FilePathClient>A:\ts_tmp\temp</FilePathClient>
+    <FilePathClientOut>A:\ts_tmp\out</FilePathClientOut>
   </path>
   <remove>
     <path1>\.lisa\</path1>
     <path2>\toosheh\نرم افزار\</path2>
     <path3>\updates\</path3>
-    <path4>\toosheh\\اخبار</path4>
-    <path5>\toosheh\ویژه نامه ها</path5>
+    <path4></path4>
+    <path5></path5>
     <ext1>liinfo</ext1>
-    <ext2>mp3</ext2>
+    <ext2></ext2>
     <ext3></ext3>
-    <RemoveTS>0</RemoveTS>
   </remove>
   <timers>
     <chktimer>20000</chktimer>

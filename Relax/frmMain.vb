@@ -5,7 +5,7 @@ Imports Microsoft.Win32              ' for sleep command
 
 Public Class frmMain
     Private myIni As goini
-    Public startin1, startin2, startin3, FilePathUbix, FilePathClient, FilePathClientOut, removepath1, removepath2, removepath3, removepath4, removepath5, RemoveTS, chktimer As String
+    Public startin1, startin2, startin3, FilePathUbix, FilePathClient, FilePathClientOut, removepath1, removepath2, removepath3, removepath4, removepath5, RemoveTS, chktimer, CopyOnFly As String
     Public mydate As String
     Public mytime As String
     Public projdir As String
@@ -15,6 +15,18 @@ Public Class frmMain
     Public nofileclient As Boolean = False
     Public co as Integer = chktimer
     Public variable As Integer = 1
+
+    '---------- updater dimintions -----------
+    Dim uriSource As Uri
+    Dim downloading As New Net.WebClient
+    Dim timerID As IntPtr = 0
+    Dim downloadSpeed As Integer = 0
+    Dim currBytes As Long
+    Dim prevBytes As Long
+    Dim startTime As Long
+    Dim elapsedTime As TimeSpan
+    Dim downloadStarted As Boolean = False
+
  
 
     Private Sub Main()
@@ -167,7 +179,7 @@ errpart:
         
        
         cmdcommand =  FilePathClientOut & mydate & " /ts "  &  FilePathClient
-       
+      ' MsgBox (cmdcommand)
         
 
        With cmdProcess
@@ -184,6 +196,7 @@ errpart:
     End With
            
     .Start() 
+    
     .WaitForExit()
 End With
         
@@ -194,7 +207,7 @@ End With
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-         
+
         chkxml
         ContextMenuStrip1.Enabled = True
         me.Show()
@@ -326,14 +339,12 @@ End With
        txtstartin3.Text = "N/A"
         End Sub
 
-    Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
- 
-    End Sub
+  
 
     Private Sub CheckBox1_CheckedChanged_1(sender As Object, e As EventArgs) 
-         if chkRemoveTS.Checked=true then stuff.addreg 
+       '  if chkRemoveTS.Checked=true then stuff.addreg 
 
-        if chkRemoveTS.Checked=false then stuff.removereg 
+       ' if chkRemoveTS.Checked=false then stuff.removereg 
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
@@ -533,6 +544,6 @@ End With
     End Sub
 
    
-  
+
 
 End Class
