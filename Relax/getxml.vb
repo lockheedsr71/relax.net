@@ -33,24 +33,24 @@ Public   Class getxml
 
 				' The person nodes.
 
-				.WriteStartElement("startin1")
-				.WriteString(frmMain.txtstartin1.Text )
-				.WriteEndElement()
+				        .WriteStartElement("startin1")
+				        .WriteString(frmMain.txtstartin1.Text )
+				        .WriteEndElement()
 
-				.WriteStartElement("startin2")
-				.WriteString(frmMain.txtstartin2.Text)
-				.WriteEndElement()
+				        .WriteStartElement("startin2")
+				        .WriteString(frmMain.txtstartin2.Text)
+				        .WriteEndElement()
 
-                .WriteStartElement("startin3")
-				.WriteString(frmMain.txtstartin3.Text)
-				.WriteEndElement()
+                        .WriteStartElement("startin3")
+				        .WriteString(frmMain.txtstartin3.Text)
+				        .WriteEndElement()
 
 
 				' The end of this person.
 				.WriteEndElement()
                     
                 	        ' Start our first person.
-				        .WriteStartElement("path")
+				 .WriteStartElement("path")
 
 				        ' The person nodes.
 
@@ -68,11 +68,11 @@ Public   Class getxml
 
 
 				        ' The end of this person.
-				        .WriteEndElement()
+			   .WriteEndElement()
 
 
                               ' Start our first person.
-				                .WriteStartElement("remove")
+		   .WriteStartElement("remove")
 
 				                ' The person nodes.
 
@@ -114,21 +114,29 @@ Public   Class getxml
 				                .WriteString(frmMain.chkRemoveTS.CheckState  )
 				                .WriteEndElement()
 
-				                ' The end of this person.
+
+                                .WriteStartElement("extractOnFly")
+				                .WriteString(frmMain.chkextractonfly  .CheckState  )
 				                .WriteEndElement()
+
+
+
+				                ' The end of this person.
+		   .WriteEndElement()
 
                      ' Start our first person.
 				        .WriteStartElement("timers")
 
 				        ' The person nodes.
 
-				        .WriteStartElement("chktimer")
-				        .WriteString(frmMain.txtchktimer .Text)
-				        .WriteEndElement()
+				                .WriteStartElement("chktimer")
+				                .WriteString(frmMain.txtchktimer .Text)
+				                .WriteEndElement()
             
 				        ' The end of this person.
 				        .WriteEndElement()
 
+             
 
 				' Close the XmlTextWriter.
 				.WriteEndDocument()
@@ -269,7 +277,9 @@ Public   Class getxml
 
 					End If
 
-     ' ----------------------- timer section --------------------
+
+
+              ' ----------------------- timer section --------------------
 
                      'if the loop found a <LastName tag
 					If (document.Name = "chktimer") Then
@@ -278,6 +288,30 @@ Public   Class getxml
 
 					End If
 
+
+
+                     ' ----------------------- appsettings --------------------
+
+                     'if the loop found a <LastName tag
+                     
+					If (document.Name = "extractOnFly") Then
+                        Dim extractOnFly As integer =  document.ReadInnerXml
+'                        
+					    If extractOnFly = 1 Then
+					        frmMain.chkextractonfly.Checked=true
+					   
+					   '   MsgBox ("1")
+                            '  
+                        Else
+                          '  MsgBox ("0")
+                            frmMain.chkextractonfly.Checked=false
+					    End If
+                              
+                        End If
+
+                
+					 
+                    
 				End If
 
 			End While

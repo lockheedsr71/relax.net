@@ -7,7 +7,7 @@ Partial Class frmMain
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
+                components.Dispose
             End If
         Finally
             MyBase.Dispose(disposing)
@@ -88,6 +88,8 @@ Partial Class frmMain
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.grpSettings = New System.Windows.Forms.GroupBox()
+        Me.chkextractonfly = New System.Windows.Forms.CheckBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.lblstartuppath = New System.Windows.Forms.Label()
         Me.chkstartup = New System.Windows.Forms.CheckBox()
@@ -119,6 +121,7 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -129,7 +132,7 @@ Partial Class frmMain
         Me.GroupBox2.SuspendLayout
         Me.GroupBox1.SuspendLayout
         Me.TabPage5.SuspendLayout
-
+        Me.grpSettings.SuspendLayout
         Me.GroupBox6.SuspendLayout
         Me.TabPage4.SuspendLayout
         Me.TabPage6.SuspendLayout
@@ -599,9 +602,9 @@ Partial Class frmMain
         Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
         Me.Label23.Location = New System.Drawing.Point(164, 38)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(311, 13)
+        Me.Label23.Size = New System.Drawing.Size(307, 13)
         Me.Label23.TabIndex = 33
-        Me.Label23.Text = "You can add this address manually .E.g. \\192.168.1.10\share\"
+        Me.Label23.Text = "You can add this address manually .E.g. \\192.168.1.10\share"
         '
         'Button6
         '
@@ -859,7 +862,8 @@ Partial Class frmMain
         'TabPage5
         '
         Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
-        
+        Me.TabPage5.Controls.Add(Me.Label24)
+        Me.TabPage5.Controls.Add(Me.grpSettings)
         Me.TabPage5.Controls.Add(Me.GroupBox6)
         Me.TabPage5.Location = New System.Drawing.Point(4, 27)
         Me.TabPage5.Name = "TabPage5"
@@ -867,7 +871,30 @@ Partial Class frmMain
         Me.TabPage5.Size = New System.Drawing.Size(659, 452)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Configuration"
-        
+        '
+        'grpSettings
+        '
+        Me.grpSettings.Controls.Add(Me.chkextractonfly)
+        Me.grpSettings.ForeColor = System.Drawing.Color.Yellow
+        Me.grpSettings.Location = New System.Drawing.Point(6, 86)
+        Me.grpSettings.Name = "grpSettings"
+        Me.grpSettings.Size = New System.Drawing.Size(647, 74)
+        Me.grpSettings.TabIndex = 2
+        Me.grpSettings.TabStop = false
+        Me.grpSettings.Text = "Program  settings"
+        '
+        'chkextractonfly
+        '
+        Me.chkextractonfly.AutoSize = true
+        Me.chkextractonfly.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.chkextractonfly.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.chkextractonfly.Location = New System.Drawing.Point(14, 26)
+        Me.chkextractonfly.Name = "chkextractonfly"
+        Me.chkextractonfly.Size = New System.Drawing.Size(135, 21)
+        Me.chkextractonfly.TabIndex = 0
+        Me.chkextractonfly.Text = "Extract on the fly"
+        Me.chkextractonfly.UseVisualStyleBackColor = true
+        '
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.lblstartuppath)
@@ -986,6 +1013,7 @@ Partial Class frmMain
         '
         Me.btnBrowse.AutoEllipsis = true
         Me.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBrowse.ForeColor = System.Drawing.Color.Lime
         Me.btnBrowse.Location = New System.Drawing.Point(520, 66)
         Me.btnBrowse.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnBrowse.Name = "btnBrowse"
@@ -1018,6 +1046,7 @@ Partial Class frmMain
         Me.pnlControlsAndStatus.Controls.Add(Me.btnDownload)
         Me.pnlControlsAndStatus.Controls.Add(Me.lblSpeedKBytes)
         Me.pnlControlsAndStatus.Controls.Add(Me.btnCancel)
+        Me.pnlControlsAndStatus.ForeColor = System.Drawing.Color.Lime
         Me.pnlControlsAndStatus.Location = New System.Drawing.Point(5, 313)
         Me.pnlControlsAndStatus.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.pnlControlsAndStatus.Name = "pnlControlsAndStatus"
@@ -1028,9 +1057,9 @@ Partial Class frmMain
         '
         Me.btnOpenDownload.Enabled = false
         Me.btnOpenDownload.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnOpenDownload.Location = New System.Drawing.Point(515, 105)
+        Me.btnOpenDownload.Location = New System.Drawing.Point(515, 102)
         Me.btnOpenDownload.Name = "btnOpenDownload"
-        Me.btnOpenDownload.Size = New System.Drawing.Size(124, 23)
+        Me.btnOpenDownload.Size = New System.Drawing.Size(124, 26)
         Me.btnOpenDownload.TabIndex = 16
         Me.btnOpenDownload.Text = "Open"
         Me.btnOpenDownload.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -1041,6 +1070,7 @@ Partial Class frmMain
         Me.lblStatus.AutoEllipsis = true
         Me.lblStatus.AutoSize = true
         Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblStatus.ForeColor = System.Drawing.Color.Lime
         Me.lblStatus.Location = New System.Drawing.Point(5, 96)
         Me.lblStatus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblStatus.Name = "lblStatus"
@@ -1053,6 +1083,7 @@ Partial Class frmMain
         Me.lblElapsedTime.AutoEllipsis = true
         Me.lblElapsedTime.AutoSize = true
         Me.lblElapsedTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblElapsedTime.ForeColor = System.Drawing.Color.Lime
         Me.lblElapsedTime.Location = New System.Drawing.Point(5, 42)
         Me.lblElapsedTime.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblElapsedTime.Name = "lblElapsedTime"
@@ -1065,6 +1096,7 @@ Partial Class frmMain
         Me.lblDownloadBytes.AutoEllipsis = true
         Me.lblDownloadBytes.AutoSize = true
         Me.lblDownloadBytes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblDownloadBytes.ForeColor = System.Drawing.Color.Lime
         Me.lblDownloadBytes.Location = New System.Drawing.Point(5, 24)
         Me.lblDownloadBytes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDownloadBytes.Name = "lblDownloadBytes"
@@ -1077,6 +1109,7 @@ Partial Class frmMain
         Me.lblSpeedKBits.AutoEllipsis = true
         Me.lblSpeedKBits.AutoSize = true
         Me.lblSpeedKBits.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblSpeedKBits.ForeColor = System.Drawing.Color.Lime
         Me.lblSpeedKBits.Location = New System.Drawing.Point(222, 42)
         Me.lblSpeedKBits.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSpeedKBits.Name = "lblSpeedKBits"
@@ -1122,10 +1155,10 @@ Partial Class frmMain
         'btnDownload
         '
         Me.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDownload.Location = New System.Drawing.Point(191, 105)
+        Me.btnDownload.Location = New System.Drawing.Point(191, 102)
         Me.btnDownload.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
         Me.btnDownload.Name = "btnDownload"
-        Me.btnDownload.Size = New System.Drawing.Size(157, 24)
+        Me.btnDownload.Size = New System.Drawing.Size(157, 27)
         Me.btnDownload.TabIndex = 0
         Me.btnDownload.Text = "Update"
         Me.btnDownload.UseVisualStyleBackColor = false
@@ -1135,6 +1168,7 @@ Partial Class frmMain
         Me.lblSpeedKBytes.AutoEllipsis = true
         Me.lblSpeedKBytes.AutoSize = true
         Me.lblSpeedKBytes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblSpeedKBytes.ForeColor = System.Drawing.Color.Lime
         Me.lblSpeedKBytes.Location = New System.Drawing.Point(222, 24)
         Me.lblSpeedKBytes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSpeedKBytes.Name = "lblSpeedKBytes"
@@ -1146,10 +1180,10 @@ Partial Class frmMain
         '
         Me.btnCancel.Enabled = false
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCancel.Location = New System.Drawing.Point(355, 105)
+        Me.btnCancel.Location = New System.Drawing.Point(355, 102)
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(157, 24)
+        Me.btnCancel.Size = New System.Drawing.Size(157, 27)
         Me.btnCancel.TabIndex = 1
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = false
@@ -1230,6 +1264,17 @@ Partial Class frmMain
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = false
         '
+        'Label24
+        '
+        Me.Label24.AutoSize = true
+        Me.Label24.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.Lime
+        Me.Label24.Location = New System.Drawing.Point(6, 431)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(270, 16)
+        Me.Label24.TabIndex = 1
+        Me.Label24.Text = "** Your configs will be saved by tab changes."
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -1263,7 +1308,9 @@ Partial Class frmMain
         Me.GroupBox1.ResumeLayout(false)
         Me.GroupBox1.PerformLayout
         Me.TabPage5.ResumeLayout(false)
-        
+        Me.TabPage5.PerformLayout
+        Me.grpSettings.ResumeLayout(false)
+        Me.grpSettings.PerformLayout
         Me.GroupBox6.ResumeLayout(false)
         Me.GroupBox6.PerformLayout
         Me.TabPage4.ResumeLayout(false)
@@ -1375,5 +1422,8 @@ End Sub
     Friend WithEvents btnBrowse As Button
     Friend WithEvents txtSaveAddress As TextBox
     
-    Friend WithEvents chkonthefly As CheckBox
+   
+    Friend WithEvents grpSettings As GroupBox
+    Friend WithEvents chkextractonfly As CheckBox
+    Friend WithEvents Label24 As Label
 End Class

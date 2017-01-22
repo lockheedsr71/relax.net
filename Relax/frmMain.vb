@@ -3,9 +3,11 @@ Imports System.IO
 Imports System.Threading
 Imports Microsoft.Win32              ' for sleep command
 
+
+
 Public Class frmMain
     Private myIni As goini
-    Public startin1, startin2, startin3, FilePathUbix, FilePathClient, FilePathClientOut, removepath1, removepath2, removepath3, removepath4, removepath5, RemoveTS, chktimer, CopyOnFly As String
+    Public startin1, startin2, startin3, FilePathUbix, FilePathClient, FilePathClientOut, removepath1, removepath2, removepath3, removepath4, removepath5, RemoveTS, chktimer, ExtractOnFly As String
     Public mydate As String
     Public mytime As String
     Public projdir As String
@@ -71,11 +73,19 @@ start:
                          
                     If chktsclient("ts") = False Then                  ' if TS file alrady not copied to destination then ... 
 
+                    if ExtractOnFly = 1 Then 
+
+                        FilePathClient =    Chr(34) &  FilePathUbix  &   Chr(34)
+                      
+                        doextract()
+                        Goto nocopy
+                    End If
                     My.Computer.FileSystem.CopyDirectory(FilePathUbix,  txtfilepathclient.Text , showUI:=FileIO.UIOption.AllDialogs)
                    
                    
                       else 
                    End If 
+
 
         Dim pathsubix() As String = IO.Directory.GetFiles(FilePathUbix, "*.ts")
     FileSizeUbix = My.Computer.FileSystem.GetFileInfo(pathsubix(0))            ' ' get TS file size on SERVER  
@@ -84,19 +94,17 @@ start:
 
             If chktssrv("ts") = False Then
 
-                  '''   CreateObject("WScript.Shell").Popup("No .TS file found in server to copy. ", 2, "Copy status ... ", 64)
-                                  stuff.notify (4000,"Copy status","No .TS file found in server to copy. ", Color.Yellow,Color.DarkBlue  )
+         stuff.notify (4000,"Copy status","No .TS file found in server to copy. ", Color.Yellow,Color.DarkBlue  )
               else
 
-                 ''' CreateObject("WScript.Shell").Popup("All file(s) copied to client successfully.", 2, "Copy status ... ", 64)
-                  stuff.notify (4000,"Copy status","All file(s) copied to client successfully.wait to extracting ...", Color.Yellow,Color.DarkBlue  )
+         stuff.notify (4000,"Copy status","All file(s) copied to client successfully.wait to extracting ...", Color.Yellow,Color.DarkBlue  )
             end if
 
                   Else
 
-            '''    CreateObject("WScript.Shell").Popup("Source file not detected on source path.RELAX waiting for it in next proper time ...  ", 2, "TS Source not found ", 64)
-                  stuff.notify (4000,"TS Source not found ","Source file not detected on source path.RELAX waiting for it in next proper time ...", Color.Yellow,Color.DarkBlue  )
+         stuff.notify (4000,"TS Source not found ","Source file not detected on source path.RELAX waiting for it in next proper time ...", Color.Yellow,Color.DarkBlue  )
 
+nocopy:
                  Thread.Sleep(chktimer)
         goto start
 
@@ -119,13 +127,17 @@ start:
             stuff.removefilebyext (FilePathClientOut &  mydate )               ' remove all extentions define in main form
             
 
-            If RemoveTS = 1 then 
-                delfile( FilePathClient)
+      ''      If RemoveTS = 1 then 
+              if ExtractOnFly = 1 Then 
+                Goto nodelete
+
+                        delfile( FilePathClient)
+                End If
+
+
                 stuff.notify (4000,".TS file deleting ... ","Operational successfully completed.", Color.Yellow,Color.DarkBlue  )
-                '''   CreateObject("WScript.Shell").Popup(".TS file deleting ... , Operational successfully completed. ", 3, "RELAX Inform", 64)
-            End If
-
-
+nodelete:             
+     
           mytimeend = DateTime.Now.ToString("HH:mm")
 
              Thread.Sleep(chktimer)
@@ -151,9 +163,9 @@ errpart:
 
       If Err.Number = 76 then
               stuff.mylog(ErrorToString)
-              'MsgBox ( err.Raise  )
+     
          
-              '   stuff.notify (5000,"test mikonim title asli injast","It looks like the problem is with the instantiation of your class; you've instantiated as Form1, when it should befrmCentsConverter; i.e. Dim frmConvert As New frmCentsConverter, instead of Dim frmConvert As New frmMain. It could also be that you've renamed the start-up form of the a",Color.GreenYellow )
+     
               msgbox(ErrorToString & " RELAX need correct path to access the TS file.Please set correct path in vars.xml or in setting tab.Please run relax again 1 min latter after starting time. RELAX now terminate.", vbCritical, "TS path not found")
               stuff.mylog(ErrorToString)
                end
@@ -162,7 +174,7 @@ errpart:
 
     If Err.Number <> 0 then
          '   MsgBox(Err.Number & " - " &  ErrorToString)
-
+  stuff.mylog(ErrorToString)
              answ =  MsgBox(s, MsgBoxStyle.ApplicationModal + MsgBoxStyle.Critical + MsgBoxStyle.OkCancel , Application.ProductName)
 		 
               if answ = MsgBoxResult.Cancel  then End
@@ -179,7 +191,7 @@ errpart:
         
        
         cmdcommand =  FilePathClientOut & mydate & " /ts "  &  FilePathClient
-      ' MsgBox (cmdcommand)
+     
         
 
        With cmdProcess
@@ -199,6 +211,9 @@ errpart:
     
     .WaitForExit()
 End With
+
+          if ExtractOnFly = 1 Then FilePathClient =   txtfilepathclient.Text
+
         
      '   Dim cmdout As String = cmdProcess.StandardOutput.ReadToEnd
      '  cmdProcess.StandardOutput .ReadToEnd 
@@ -325,11 +340,18 @@ End With
         End If
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+    
+    
+    Private Sub Button9_Click(sender As Object, e As EventArgs) 
+          getxml.wrtxml 
+    End Sub
 
+    Private Sub txtfilepathubix_TextChanged(sender As Object, e As EventArgs) Handles txtfilepathubix.TextChanged
+      
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        chkxml
         txtstartin3.Text =  DateTime.Now.ToString("HH:mm")
         startin3=DateTime.Now.ToString("HH:mm")
            stuff.notify (3000,"Starting manually...","Program starting manually now ... ",Color.Cyan,Color.DarkBlue )
@@ -431,8 +453,9 @@ End With
         removepath3 = txtremovepath3.Text
         removepath4 = txtremovepath4.Text
         removepath5 = txtremovepath5.Text
-        RemoveTS = chkRemoveTS.CheckState 
-
+       ''  RemoveTS = chkRemoveTS.CheckState 
+        Extractonfly = chkextractonfly.CheckState
+         
 
         If removepath1 = "" Then removepath1 = "0"
         If removepath2 = "" Then removepath2 = "0"
@@ -522,7 +545,11 @@ End With
     End Sub
 
     Private Sub TabControl1_MouseClick(sender As Object, e As MouseEventArgs) Handles TabControl1.MouseClick
-        dim full As String 
+        dim full As String
+
+         getxml.wrtxml()
+        getxml.readxml()
+       
 
         stuff.readreg()
         if lblstartuppath.Text =   ""  then 
@@ -543,7 +570,19 @@ End With
         if vtxtchk < 10000 then  txtchktimer.Text ="20000"
     End Sub
 
-   
+    Private Sub txtfilepathubix_LostFocus(sender As Object, e As EventArgs) Handles txtfilepathubix.LostFocus
 
+        Dim lastchar  As String 
+        lastchar =   Microsoft.VisualBasic.Right (txtfilepathubix.Text, 1)
+        
+        if txtfilepathubix.Text.Length <> 0  then 
+            if  lastchar = "\"   then 
+                txtfilepathubix.Text = txtfilepathubix.Text.Substring(0, txtfilepathubix.Text.Length - 1)
+            end if
 
+        End If
+        
+        
+    End Sub
+ 
 End Class
