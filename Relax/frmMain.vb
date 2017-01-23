@@ -376,10 +376,11 @@ errpart:
     Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
 
         Dim updlink As String = "http://foxnet.ir/cdn/relax/updates/version.xml" & "?" & Rnd
-        My.Computer.Network.DownloadFile(updlink, "d:\ver\version.xml", "", "", True, 3000, True)
+        dim tmpdir As String = Path.GetTempPath() 
+         My.Computer.Network.DownloadFile(updlink, tmpdir &  "version.xml", "", "", True, 3000, True)
 
-
-        clsver.rxml("d:\ver\version.xml")
+        
+        clsver.rxml(tmpdir & "version.xml")
         Dim location = Assembly.GetExecutingAssembly().Location
         clsver.comparever(clsver.pver, clsver.getver(location))
         lblupdcurrentver.Text = clsver.getver(location)

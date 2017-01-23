@@ -99,6 +99,7 @@ Partial Class frmMain
         Me.Label17 = New System.Windows.Forms.Label()
         Me.richtxtlog = New System.Windows.Forms.RichTextBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.grpupdate = New System.Windows.Forms.GroupBox()
         Me.txtupddesc = New System.Windows.Forms.RichTextBox()
         Me.lblupdstatus = New System.Windows.Forms.Label()
@@ -1013,6 +1014,7 @@ Partial Class frmMain
         'TabPage6
         '
         Me.TabPage6.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.TabPage6.Controls.Add(Me.ComboBox1)
         Me.TabPage6.Controls.Add(Me.grpupdate)
         Me.TabPage6.Controls.Add(Me.txtDownloadAddress)
         Me.TabPage6.Controls.Add(Me.btnBrowse)
@@ -1025,6 +1027,14 @@ Partial Class frmMain
         Me.TabPage6.Size = New System.Drawing.Size(659, 452)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Update"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = true
+        Me.ComboBox1.Location = New System.Drawing.Point(13, 9)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(221, 26)
+        Me.ComboBox1.TabIndex = 22
         '
         'grpupdate
         '
@@ -1194,10 +1204,10 @@ Partial Class frmMain
         'txtDownloadAddress
         '
         Me.txtDownloadAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDownloadAddress.Location = New System.Drawing.Point(13, 9)
+        Me.txtDownloadAddress.Location = New System.Drawing.Point(413, 9)
         Me.txtDownloadAddress.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
         Me.txtDownloadAddress.Name = "txtDownloadAddress"
-        Me.txtDownloadAddress.Size = New System.Drawing.Size(504, 25)
+        Me.txtDownloadAddress.Size = New System.Drawing.Size(231, 25)
         Me.txtDownloadAddress.TabIndex = 18
         Me.txtDownloadAddress.Text = "http://192.168.10.106/IRIB_TV3/2017-01-18.21.00.3-0.rec/00001.mpg"
         Me.txtDownloadAddress.WordWrap = false
@@ -1637,4 +1647,5 @@ End Sub
     Friend WithEvents lblupdstatuslbl As Label
     Friend WithEvents txtupddesc As RichTextBox
     Friend WithEvents Button8 As Button
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

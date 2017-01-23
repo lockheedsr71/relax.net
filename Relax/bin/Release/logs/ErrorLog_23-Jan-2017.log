@@ -11,3 +11,7 @@ Start Error Log for today
 ------------------------------------------------------------------------------------
 2017-01-23 10:36:57 AM Err# [5].Des --> Version string portion was too short or too long.
 ------------------------------------------------------------------------------------
+2017-01-23 12:06:38 PM Err# [76].Des --> Could not find a part of the path 'O:\MY GIT\relax.net\Relax\bin\Release\tmpdir\version.xml'.
+------------------------------------------------------------------------------------
+2017-01-23 12:06:40 PM Err# [76].Des --> Could not find a part of the path 'O:\MY GIT\relax.net\Relax\bin\Release\tmpdir\version.xml'.
+------------------------------------------------------------------------------------

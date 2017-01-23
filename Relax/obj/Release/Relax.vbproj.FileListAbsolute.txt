@@ -10,3 +10,4 @@ O:\MY GIT\relax.net\Relax\obj\Release\Relax.exe
 O:\MY GIT\relax.net\Relax\obj\Release\Relax.xml
 O:\MY GIT\relax.net\Relax\obj\Release\Relax.pdb
 o:\MY GIT\relax.net\Relax\obj\Release\Relax.frmMain.resources
+O:\MY GIT\relax.net\Relax\obj\Release\Relax.exe.licenses
