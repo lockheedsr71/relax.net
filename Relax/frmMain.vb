@@ -8,7 +8,8 @@ Imports Microsoft.Win32              ' for sleep command
 
 Public Class frmMain
     Private myIni As goini
-    Public startin1, startin2, startin3, FilePathUbix, FilePathClient, FilePathClientOut, removepath1, removepath2, removepath3, removepath4, removepath5, RemoveTS, chktimer, ExtractOnFly As String
+    Public startin1, startin2, startin3, FilePathUbix, FilePathClient, FilePathClientOut, removepath1, removepath2, _
+        removepath3, removepath4, removepath5, RemoveTS, chktimer, ExtractOnFly ,updserver As String
     Public mydate As String
     Public mytime As String
     Public projdir As String
@@ -29,6 +30,8 @@ Public Class frmMain
     Dim startTime As Long
     Dim elapsedTime As TimeSpan
     Dim downloadStarted As Boolean = False
+     Private cbindex As Integer
+
 
 
 
@@ -375,7 +378,7 @@ errpart:
 
     Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
 
-        Dim updlink As String = "http://foxnet.ir/cdn/relax/updates/version.xml" & "?" & Rnd
+        Dim updlink As String = updsrvlist.SelectedItem  & "/version.xml"& "?" & Rnd
         dim tmpdir As String = Path.GetTempPath() 
          My.Computer.Network.DownloadFile(updlink, tmpdir &  "version.xml", "", "", True, 3000, True)
 
@@ -580,6 +583,8 @@ errpart:
 
         'read timers
         chktimer = txtchktimer.Text
+        updserver = updsrvlist.SelectedItem  ()
+      
 
     End Sub
 
@@ -596,13 +601,15 @@ errpart:
         projdir = ""
     End Function
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs) 
          Dim location = Assembly.GetExecutingAssembly().Location
         MsgBox(clsver.getver("o:\MY GIT\relax.net\Relax\bin\Release\LisaCore.dll"))
 
      '   clsver.comparever(clsver.pver, clsver.getver(location))
        
     End Sub
+
+   
 
     Private Function chktsclient(ext As String)
 
@@ -616,6 +623,10 @@ errpart:
         End If
     End Function
 
+   
+    Private Sub chkextractonfly_MouseClick(sender As Object, e As MouseEventArgs) Handles chkextractonfly.MouseClick
+          getxml.wrtxml()
+    End Sub
 
     Private Function chktssrv(ext As String)
 
@@ -669,7 +680,7 @@ errpart:
     Private Sub TabControl1_MouseClick(sender As Object, e As MouseEventArgs) Handles TabControl1.MouseClick
         Dim full As String
 
-        getxml.wrtxml()
+      '  getxml.wrtxml()
         getxml.readxml()
 
 
@@ -879,5 +890,14 @@ errpart:
 
     End Sub
 
+ 
 
+    Private Sub updsrvlist_LostFocus(sender As Object, e As EventArgs) Handles updsrvlist.LostFocus
+          updsrvlist.Items(cbindex) = updsrvlist.Text
+        getxml.wrtxml()
+    End Sub
+    
+    Private Sub updsrvlist_SelectedIndexChanged(sender As Object, e As EventArgs) Handles updsrvlist.SelectedIndexChanged
+          cbindex = updsrvlist .SelectedIndex
+    End Sub
 End Class

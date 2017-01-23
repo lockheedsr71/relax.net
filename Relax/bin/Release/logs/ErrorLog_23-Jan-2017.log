@@ -15,3 +15,59 @@ Start Error Log for today
 ------------------------------------------------------------------------------------
 2017-01-23 12:06:40 PM Err# [76].Des --> Could not find a part of the path 'O:\MY GIT\relax.net\Relax\bin\Release\tmpdir\version.xml'.
 ------------------------------------------------------------------------------------
+2017-01-23 2:38:10 PM Err# [5].Des --> InvalidArgument=Value of '3' is not valid for 'SelectedIndex'.
+Parameter name: SelectedIndex
+------------------------------------------------------------------------------------
+2017-01-23 2:38:27 PM Err# [5].Des --> InvalidArgument=Value of '3' is not valid for 'SelectedIndex'.
+Parameter name: SelectedIndex
+------------------------------------------------------------------------------------
+2017-01-23 4:45:18 PM Err# [5].Des --> 'www.upd2.srv.com/version.xml?0.533424' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 4:47:22 PM Err# [5].Des --> There are multiple root elements. Line 2, position 2.
+------------------------------------------------------------------------------------
+2017-01-23 4:47:53 PM Err# [5].Des --> There are multiple root elements. Line 2, position 2.
+------------------------------------------------------------------------------------
+2017-01-23 4:48:02 PM Err# [5].Des --> There are multiple root elements. Line 2, position 2.
+------------------------------------------------------------------------------------
+2017-01-23 4:51:02 PM Err# [5].Des --> '/version.xml?0.301948' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 4:52:06 PM Err# [5].Des --> '/version.xml?0.01401764' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:19:57 PM Err# [5].Des --> '/version.xml?0.7055475' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:20:01 PM Err# [5].Des --> '444444/version.xml?0.533424' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:22:26 PM Err# [5].Des --> The remote name could not be resolved: 'cdn.relax'
+------------------------------------------------------------------------------------
+2017-01-23 5:22:41 PM Err# [5].Des --> '/version.xml?0.5795186' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:23:00 PM Err# [5].Des --> '/version.xml?0.2895625' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:23:05 PM Err# [5].Des --> '/version.xml?0.301948' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:23:43 PM Err# [5].Des --> '/version.xml?0.7747401' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:23:47 PM Err# [5].Des --> '/version.xml?0.01401764' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:25:01 PM Err# [5].Des --> '/version.xml?0.7607236' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:25:11 PM Err# [5].Des --> '/version.xml?0.81449' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:25:41 PM Err# [5].Des --> '/version.xml?0.8626193' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------
+2017-01-23 5:25:53 PM Err# [5].Des --> '/version.xml?0.79048' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
+Parameter name: address
+------------------------------------------------------------------------------------

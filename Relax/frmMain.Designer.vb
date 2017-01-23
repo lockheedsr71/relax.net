@@ -99,7 +99,7 @@ Partial Class frmMain
         Me.Label17 = New System.Windows.Forms.Label()
         Me.richtxtlog = New System.Windows.Forms.RichTextBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.updsrvlist = New System.Windows.Forms.ComboBox()
         Me.grpupdate = New System.Windows.Forms.GroupBox()
         Me.txtupddesc = New System.Windows.Forms.RichTextBox()
         Me.lblupdstatus = New System.Windows.Forms.Label()
@@ -137,7 +137,6 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -1014,7 +1013,7 @@ Partial Class frmMain
         'TabPage6
         '
         Me.TabPage6.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
-        Me.TabPage6.Controls.Add(Me.ComboBox1)
+        Me.TabPage6.Controls.Add(Me.updsrvlist)
         Me.TabPage6.Controls.Add(Me.grpupdate)
         Me.TabPage6.Controls.Add(Me.txtDownloadAddress)
         Me.TabPage6.Controls.Add(Me.btnBrowse)
@@ -1028,13 +1027,13 @@ Partial Class frmMain
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Update"
         '
-        'ComboBox1
+        'updsrvlist
         '
-        Me.ComboBox1.FormattingEnabled = true
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 9)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(221, 26)
-        Me.ComboBox1.TabIndex = 22
+        Me.updsrvlist.FormattingEnabled = true
+        Me.updsrvlist.Location = New System.Drawing.Point(13, 9)
+        Me.updsrvlist.Name = "updsrvlist"
+        Me.updsrvlist.Size = New System.Drawing.Size(360, 26)
+        Me.updsrvlist.TabIndex = 22
         '
         'grpupdate
         '
@@ -1469,22 +1468,12 @@ Partial Class frmMain
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = false
         '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(27, 384)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
-        Me.Button8.TabIndex = 33
-        Me.Button8.Text = "Button8"
-        Me.Button8.UseVisualStyleBackColor = true
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.ClientSize = New System.Drawing.Size(829, 508)
-        Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
@@ -1646,6 +1635,5 @@ End Sub
     Friend WithEvents lblupdstatus As Label
     Friend WithEvents lblupdstatuslbl As Label
     Friend WithEvents txtupddesc As RichTextBox
-    Friend WithEvents Button8 As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents updsrvlist As ComboBox
 End Class

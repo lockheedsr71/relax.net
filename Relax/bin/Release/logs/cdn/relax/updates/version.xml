@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <Product>
+    <ID>1</ID>
+    <Name>Relax</Name>
+    <Version>2.0.1.1091</Version>
+	<Descriptions>1.Add Remove TS file after successful Extract
+	2.Some graphical changes
+	3.Add changelog to about menu
+	4.Add website for project
+	5.Add some notification bar to program
+	6.Add Start now for Immediately mode
+	7.Update extractor module
+	</Descriptions>
+  </Product>
+  </settings>

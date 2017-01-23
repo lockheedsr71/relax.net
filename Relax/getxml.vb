@@ -126,16 +126,35 @@ Public   Class getxml
 
                      ' Start our first person.
 				        .WriteStartElement("timers")
-
-				        ' The person nodes.
-
-				                .WriteStartElement("chktimer")
+                            .WriteStartElement("chktimer")
 				                .WriteString(frmMain.txtchktimer .Text)
 				                .WriteEndElement()
             
 				        ' The end of this person.
 				        .WriteEndElement()
+            
+                            .WriteStartElement("appsettings")
+ 
+                                    .WriteStartElement("updateserver1")
+				                    .WriteString(frmMain.updsrvlist.Items (0) )
+                         
+				                    .WriteEndElement()
+             
+				              
 
+            
+                                    .WriteStartElement("updateserver2")
+				                    .WriteString(frmMain.updsrvlist.Items (1) )
+				                    .WriteEndElement()
+
+                                    .WriteStartElement("activeserver")
+				                    .WriteString(frmMain.updsrvlist.SelectedIndex )
+				                    .WriteEndElement()
+
+             
+				                  .WriteEndElement()
+
+               
              
 
 				' Close the XmlTextWriter.
@@ -310,8 +329,36 @@ Public   Class getxml
                         End If
 
                 
-					 
                     
+              ' ----------------------- update server section --------------------
+
+					If (document.Name = "updateserver1") Then
+                         
+
+                           If  frmMain.updsrvlist.Items.Count =0 
+
+                        frmMain.updsrvlist.Items.Add (document.ReadInnerXml.ToString())
+                         
+                            End If 
+	             frmMain.updsrvlist.SelectedIndex = 0
+	                End If
+
+
+                    If (document.Name = "updateserver2") Then
+                         
+
+                           If  frmMain.updsrvlist.Items.Count =1 
+
+                        frmMain.updsrvlist.Items.Add (document.ReadInnerXml.ToString())
+                         End If 
+	                       End If
+
+                    If (document.Name = "activeserver") Then
+                         
+                      frmMain.updsrvlist.SelectedIndex =  (document.ReadInnerXml.ToString())
+                         
+	                End If
+                   
 				End If
 
 			End While
