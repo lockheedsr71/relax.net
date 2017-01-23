@@ -1793,9 +1793,6 @@
   <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>289, 17</value>
   </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>399, 17</value>
-  </metadata>
   <data name="RichTextBox1.Text" xml:space="preserve">
     <value>Welcome to RELAX Engine Project for TOOSHEH TV
 
@@ -1805,6 +1802,9 @@ correctly.For TS files you need recorded file on shared network path or your loc
 do jobs.for each current day you should have only one TS file in source directory.If source folder contains more than one file, Engine merged the output files in output folder.
 We are working hard to release better versions and fix bugs day by day.</value>
   </data>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>399, 17</value>
+  </metadata>
   <data name="RichTextBox4.Text" xml:space="preserve">
     <value>###############################
 # Relax Engine change log file    

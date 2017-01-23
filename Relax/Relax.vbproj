@@ -19,7 +19,7 @@
     <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
     <AssemblyInfoVersionSettings>
     </AssemblyInfoVersionSettings>
-    <AssemblyVersion>2.0.1.976</AssemblyVersion>
+    <AssemblyVersion>2.0.1.1007</AssemblyVersion>
     <PrimaryVersionType>AssemblyFileVersionAttribute</PrimaryVersionType>
     <AssemblyVersionSettings>
     </AssemblyVersionSettings>
@@ -136,6 +136,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="stuff.vb" />
+    <Compile Include="ver.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmMain.resx">
