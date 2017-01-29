@@ -21,7 +21,7 @@
     <ext2>mp3</ext2>
     <ext3></ext3>
     <RemoveTS>0</RemoveTS>
-    <extractOnFly>0</extractOnFly>
+    <extractOnFly>1</extractOnFly>
   </remove>
   <timers>
     <chktimer>20000</chktimer>
@@ -29,6 +29,6 @@
   <appsettings>
     <updateserver1>http://cdn.foxnet.ir/relax/updates</updateserver1>
     <updateserver2>http://saatco.com/srv/</updateserver2>
-    <activeserver>-1</activeserver>
+    <activeserver>1</activeserver>
   </appsettings>
 </Configs>

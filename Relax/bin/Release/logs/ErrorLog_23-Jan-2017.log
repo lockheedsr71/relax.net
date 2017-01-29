@@ -71,3 +71,5 @@ Parameter name: address
 2017-01-23 5:25:53 PM Err# [5].Des --> '/version.xml?0.79048' is not a valid remote file address. A valid address should include a protocol, a path and a file name.
 Parameter name: address
 ------------------------------------------------------------------------------------
+2017-01-23 5:42:29 PM Err# [5].Des --> The operation was canceled.
+------------------------------------------------------------------------------------

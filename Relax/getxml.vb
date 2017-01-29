@@ -42,7 +42,7 @@ Public   Class getxml
 				        .WriteEndElement()
 
                         .WriteStartElement("startin3")
-				        .WriteString(frmMain.txtstartin3.Text)
+                        .WriteString(frmMain.txtstartin3.Text)
 				        .WriteEndElement()
 
 

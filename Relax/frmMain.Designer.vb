@@ -1484,7 +1484,7 @@ Partial Class frmMain
         Me.MinimizeBox = false
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "RELAX Engine"
+        Me.Text = "b"
         Me.ContextMenuStrip1.ResumeLayout(false)
         Me.TabControl1.ResumeLayout(false)
         Me.TabPage1.ResumeLayout(false)
