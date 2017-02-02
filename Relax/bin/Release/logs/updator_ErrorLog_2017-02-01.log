@@ -1,0 +1,29 @@
+
+System.IO.DirectoryNotFoundException: Could not find directory 'o:\MY GIT\relax.net\Relax\bin\Release\tmpupdate'.
+   at Microsoft.VisualBasic.FileIO.FileSystem.CopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite, UIOptionInternal showUI, UICancelOption onUserCancel)
+   at Microsoft.VisualBasic.MyServices.FileSystemProxy.CopyDirectory(String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite)
+   at Updater.func.copyto()
+System.IO.IOException: Could not complete operation on some files and directories. See the Data property of the exception for more details.
+   at Microsoft.VisualBasic.FileIO.FileSystem.FxCopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryPath, String targetDirectoryPath, Boolean overwrite)
+   at Microsoft.VisualBasic.FileIO.FileSystem.CopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite, UIOptionInternal showUI, UICancelOption onUserCancel)
+   at Microsoft.VisualBasic.MyServices.FileSystemProxy.CopyDirectory(String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite)
+   at Updater.func.copyto()
+----------------------------------------------------------2017-02-01 4:57:38 PM
+System.IO.IOException: Could not complete operation on some files and directories. See the Data property of the exception for more details.
+   at Microsoft.VisualBasic.FileIO.FileSystem.FxCopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryPath, String targetDirectoryPath, Boolean overwrite)
+   at Microsoft.VisualBasic.FileIO.FileSystem.CopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite, UIOptionInternal showUI, UICancelOption onUserCancel)
+   at Microsoft.VisualBasic.MyServices.FileSystemProxy.CopyDirectory(String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite)
+   at Updater.func.copyto()
+----------------------------------------------------------2017-02-01 4:58:02 PM
+System.IO.IOException: Could not complete operation on some files and directories. See the Data property of the exception for more details.
+   at Microsoft.VisualBasic.FileIO.FileSystem.FxCopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryPath, String targetDirectoryPath, Boolean overwrite)
+   at Microsoft.VisualBasic.FileIO.FileSystem.CopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite, UIOptionInternal showUI, UICancelOption onUserCancel)
+   at Microsoft.VisualBasic.MyServices.FileSystemProxy.CopyDirectory(String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite)
+   at Updater.func.copyto()
+----------------------------------------------------------2017-02-01 4:59:59 PM
+System.IO.IOException: Could not complete operation on some files and directories. See the Data property of the exception for more details.
+   at Microsoft.VisualBasic.FileIO.FileSystem.FxCopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryPath, String targetDirectoryPath, Boolean overwrite)
+   at Microsoft.VisualBasic.FileIO.FileSystem.CopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite, UIOptionInternal showUI, UICancelOption onUserCancel)
+   at Microsoft.VisualBasic.MyServices.FileSystemProxy.CopyDirectory(String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite)
+   at Updater.func.copyto()
+----------------------------------------------------------2017-02-01 5:03:31 PM

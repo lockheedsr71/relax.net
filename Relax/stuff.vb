@@ -1,15 +1,19 @@
 ﻿Imports System.IO
+Imports System.Security.Cryptography
+Imports System.Text
 Imports System.Threading
-  Imports Microsoft.Win32
+Imports Microsoft.Win32
+ 
 
 
+ 
 
 
 
 
 Public Class stuff
 
-  
+   public  Shared   getcmdargs as Boolean 
 
     Public Function CompareFiles(ByVal file1FullPath As String, ByVal file2FullPath As String) As Boolean
 
@@ -89,7 +93,7 @@ Public Class stuff
 
     End sub
 
-
+    
        
    public Shared  sub ttip (title As String,txt As String  ,delay as integer    )
 
@@ -121,21 +125,23 @@ Public Class stuff
  
    public Shared   Function   getargs()
               Dim CommandLineArgs As System.Collections.ObjectModel.ReadOnlyCollection(Of String) = My.Application.CommandLineArgs
-
+            
          For i As Integer = 0 To CommandLineArgs.Count - 1
           'MessageBox.Show(CommandLineArgs(i))
-             if  (CommandLineArgs(i)) ="/s" Then 
-                 'MsgBox ("end")
+             if  (CommandLineArgs(i)) ="/afterupdate" Then 
+                 MsgBox ("Update completed.All new files replaced with new versions.",vbInformation,"Update completed")
+                frmMain.BringToFront
               '  stuff.notify   (1000,"salaam","sss",Color.Red )
                 'When Show menu clicks, it will show the form:
-         
+         getcmdargs=True  
+                
 
         frmMain.Show()
       
 
              End If 
              if  (CommandLineArgs(i)) = "/f"  Then
-                 'MsgBox ("null")
+               ' MsgBox ("null")
              End If 
 
         Next
@@ -206,12 +212,116 @@ regVersion = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\Curr
 regVersion = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", True)
         
         frmMain.lblstartuppath.Text= regVersion.GetValue ("RelaxEngine")
-    regVersion.Close()
+         regVersion.Close()
 
+       
 
       End Sub
 
-    
+   
+
+
+
+    public Shared sub startupdate
+
+           Dim locationdir =Directory.GetCurrentDirectory()
+         msgbox ("Click OK to restart program and perform update ... ",vbInformation,"Updating ...")
+          Process.Start(locationdir & "\updater.exe ", "/update ")
+      Thread.Sleep (1500)
+        end
+
+
+    End sub
+
+End Class
+
+
+
+
+ 
+Public class hashing
+
+     Public Shared Function hashed(ByVal plainText As String, ByVal salt As String) As String
+ 
+'Encode by UTF8
+Dim pt As New UTF8Encoding
+Dim ptBytes() As Byte = pt.GetBytes(plainText)
+Dim s As New UTF8Encoding
+Dim sBytes() As Byte = s.GetBytes(salt)
+'Mix plaintext + salt
+'Reserver array to mix plain and salt
+Dim ptSBytes() As Byte = New Byte(ptBytes.Length + sBytes.Length - 1) {}
+'Copy plaintext bytes to array.
+Dim num As Integer
+ 
+For num = 0 To ptBytes.Length - 1
+ptSBytes(num) = ptBytes(num)
+Next num
+ 
+'Copy salt bytes to array.
+For num = 0 To sBytes.Length - 1
+ptSBytes(ptBytes.Length + num) = sBytes(num)
+Next num
+ 
+Dim hash As HashAlgorithm
+'hashing algorithm class.
+'hash = New SHA1Managed()
+'hash = New SHA384Managed()
+'hash = New SHA512Managed()
+hash = New SHA256Managed()
+' Compute hash
+ 
+Dim hashBytes As Byte()
+hashBytes = hash.ComputeHash(ptSBytes)
+' Convert into a base64-encoded string.
+ 
+Dim hashValue As String
+hashValue = Convert.ToBase64String(hashBytes)
+hashed = hashValue
+End Function
+
+
+     Public Shared Function rndhash() As String
+ 
+'Encode by UTF8
+Dim pt As New UTF8Encoding
+Dim ptBytes() As Byte = pt.GetBytes(rnd)
+Dim s As New UTF8Encoding
+Dim sBytes() As Byte = s.GetBytes(rnd)
+'Mix plaintext + salt
+'Reserver array to mix plain and salt
+Dim ptSBytes() As Byte = New Byte(ptBytes.Length + sBytes.Length - 1) {}
+'Copy plaintext bytes to array.
+Dim num As Integer
+ 
+For num = 0 To ptBytes.Length - 1
+ptSBytes(num) = ptBytes(num)
+Next num
+ 
+'Copy salt bytes to array.
+For num = 0 To sBytes.Length - 1
+ptSBytes(ptBytes.Length + num) = sBytes(num)
+Next num
+ 
+Dim hash As HashAlgorithm
+'hashing algorithm class.
+'hash = New SHA1Managed()
+'hash = New SHA384Managed()
+'hash = New SHA512Managed()
+hash = New SHA256Managed()
+' Compute hash
+ 
+Dim hashBytes As Byte()
+hashBytes = hash.ComputeHash(ptSBytes)
+' Convert into a base64-encoded string.
+ 
+Dim hashValue As String
+hashValue = Convert.ToBase64String(hashBytes)
+rndhash = hashValue
+End Function
+
+
+
 
 
 End Class

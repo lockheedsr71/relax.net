@@ -1,0 +1,43 @@
+Start Error Log for today
+2017-01-29 12:21:24 PM Err# [53].Des --> Could not find file 'O:\MY GIT\relax.net\Relax\bin\Release\123'.
+------------------------------------------------------------------------------------
+2017-01-29 12:23:07 PM Err# [53].Des --> Could not find file 'O:\MY GIT\relax.net\Relax\bin\Release\123'.
+------------------------------------------------------------------------------------
+2017-01-29 12:23:12 PM Err# [53].Des --> Could not find file 'O:\MY GIT\relax.net\Relax\bin\Release\123'.
+------------------------------------------------------------------------------------
+2017-01-29 12:23:52 PM Err# [53].Des --> Could not find file 'O:\MY GIT\relax.net\Relax\bin\Release\123'.
+------------------------------------------------------------------------------------
+2017-01-29 12:25:49 PM Err# [5].Des --> Overload resolution failed because no Public 'ComputeHash' can be called with these arguments:
+    'Public Function ComputeHash(inputStream As System.IO.Stream) As Byte()':
+        Argument matching parameter 'inputStream' cannot convert from 'String' to 'Stream'.
+    'Public Function ComputeHash(buffer As Byte()) As Byte()':
+        Argument matching parameter 'buffer' cannot convert from 'String' to 'Byte()'.
+------------------------------------------------------------------------------------
+2017-01-29 12:26:06 PM Err# [5].Des --> Overload resolution failed because no Public 'ComputeHash' can be called with these arguments:
+    'Public Function ComputeHash(inputStream As System.IO.Stream) As Byte()':
+        Argument matching parameter 'inputStream' cannot convert from 'String' to 'Stream'.
+    'Public Function ComputeHash(buffer As Byte()) As Byte()':
+        Argument matching parameter 'buffer' cannot convert from 'String' to 'Byte()'.
+------------------------------------------------------------------------------------
+2017-01-29 12:27:13 PM Err# [5].Des --> Overload resolution failed because no Public 'ComputeHash' can be called with these arguments:
+    'Public Function ComputeHash(inputStream As System.IO.Stream) As Byte()':
+        Argument matching parameter 'inputStream' cannot convert from 'String' to 'Stream'.
+    'Public Function ComputeHash(buffer As Byte()) As Byte()':
+        Argument matching parameter 'buffer' cannot convert from 'String' to 'Byte()'.
+------------------------------------------------------------------------------------
+2017-01-29 12:27:16 PM Err# [5].Des --> Overload resolution failed because no Public 'ComputeHash' can be called with these arguments:
+    'Public Function ComputeHash(inputStream As System.IO.Stream) As Byte()':
+        Argument matching parameter 'inputStream' cannot convert from 'String' to 'Stream'.
+    'Public Function ComputeHash(buffer As Byte()) As Byte()':
+        Argument matching parameter 'buffer' cannot convert from 'String' to 'Byte()'.
+------------------------------------------------------------------------------------
+2017-01-29 12:30:06 PM Err# [53].Des --> Could not find file 'O:\MY GIT\relax.net\Relax\bin\Release\123'.
+------------------------------------------------------------------------------------
+2017-01-29 4:09:06 PM Err# [5].Des --> The remote server returned an error: (404) Not Found.
+------------------------------------------------------------------------------------
+2017-01-29 4:17:59 PM Err# [5].Des --> The remote server returned an error: (404) Not Found.
+------------------------------------------------------------------------------------
+2017-01-29 4:31:10 PM Err# [5].Des --> The operation was canceled.
+------------------------------------------------------------------------------------
+2017-01-29 4:31:19 PM Err# [5].Des --> The operation was canceled.
+------------------------------------------------------------------------------------

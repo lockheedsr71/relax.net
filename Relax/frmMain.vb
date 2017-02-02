@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.IO
 Imports System.Reflection
+Imports System.Text
 Imports System.Threading
 Imports Microsoft.Win32              ' for sleep command
 
@@ -31,16 +32,17 @@ Public Class frmMain
     Dim elapsedTime As TimeSpan
     Dim downloadStarted As Boolean = False
      Private cbindex As Integer
+   '  Dim location = Assembly.GetExecutingAssembly().Location
+     Dim locationdir =Directory.GetCurrentDirectory()
 
-
-
+    
 
     Private Sub Main()
 
 start:
-        stuff.getargs()
+        if stuff.getcmdargs = false then stuff.getargs()
 
-        On Error GoTo errpart
+       On Error GoTo errpart
 
         ' check needed files tu run relax 
         filechk("vars.xml")
@@ -108,7 +110,7 @@ start:
 
                 stuff.notify(4000, "TS Source not found ", "Source file not detected on source path.RELAX waiting for it in next proper time ...", Color.Yellow, Color.DarkBlue)
 
-nocopy:
+
                 Thread.Sleep(chktimer)
                 GoTo start
 
@@ -116,7 +118,7 @@ nocopy:
 
 
             doextract()
-
+nocopy:
 
             '   Remove folders  ==============================================================================================================
 
@@ -154,11 +156,10 @@ nodelete:
 
 errpart:
 
-
-        Dim s As String
+        
         Dim answ As String
         '   s = "----------------------------------------" & vbCrLf
-        s = s & Err.Number & " - "                                 '& Err.Source & vbCrLf
+        Dim s As String = s & Err.Number & " - "                                 '& Err.Source & vbCrLf
         s = s & Err.Description & vbCrLf
         s = s & "You can select cancel to terminate program or click Ok to continue. "
         '	s = s & "----------------------------------------"
@@ -218,6 +219,13 @@ errpart:
 
         If ExtractOnFly = 1 Then FilePathClient = txtfilepathclient.Text
 
+        try
+           delfile (  txtfilepathclient.Text)
+
+        Catch ex As Exception
+
+        End Try
+
 
         '   Dim cmdout As String = cmdProcess.StandardOutput.ReadToEnd
         '  cmdProcess.StandardOutput .ReadToEnd 
@@ -226,6 +234,7 @@ errpart:
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Try
             '
             'Setup the needed event handlers for getting download status, ect..
@@ -239,15 +248,28 @@ errpart:
         End Try
 
         chkxml
-        ContextMenuStrip1.Enabled = True
-        Me.Show()
+     '   ContextMenuStrip1.Enabled = True
+      '  Me.Show()
+        '---------------------------------
+
+      Me.Show()
+        NotifyIcon1.BalloonTipText = "Application Minimized.Double click to bring on top."
+         NotifyIcon1.BalloonTipTitle = "RELAX Engine"
+
+
+
+
+        '--------------------------------
         Label2.Text = Application.ProductVersion
         While 1
             Application.DoEvents()
-            ' me.Refresh
+       
             Thread.Sleep(100)
             Main()
         End While
+
+      '  stuff.zip()
+
 
     End Sub
 
@@ -378,9 +400,9 @@ errpart:
 
     Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
 
-        Dim updlink As String = updsrvlist.SelectedItem  & "/version.xml"& "?" & Rnd
+        Dim updlink As String = updsrvlist.SelectedItem  & "/version.xml"& "?" & hashing.rndhash
         dim tmpdir As String = Path.GetTempPath() 
-         My.Computer.Network.DownloadFile(updlink, tmpdir &  "version.xml", "", "", True, 3000, True)
+         My.Computer.Network.DownloadFile(updlink, tmpdir &  "/version.xml", "", "", True, 3000, True)
 
         
         clsver.rxml(tmpdir & "version.xml")
@@ -391,6 +413,7 @@ errpart:
         lblupdprogname.Text = clsver.pName
         lblupdveronserver.Text = clsver.pver
 
+        lbllisacorever0.Text=clsver.getver ( "o:\MY GIT\relax.net\Relax\bin\Release\LisaExtractor.dll")
         'lblupddesc.Text=clsver.pdes
         txtupddesc.Text = clsver.pdes
 
@@ -398,12 +421,16 @@ errpart:
         Select Case clsver.result
             Case 1
                 lblupdstatus.Text = "There is a new release on the update server.You can install it by click on Update now button."
+                btnOpenDownload.Enabled=True
               ' The following is the only Case clause that evaluates to True.
             Case 0
                 lblupdstatus.Text = "There is no new update available. the installed version is the last version."
+                 btnOpenDownload.Enabled=false
             Case -1
-                lblupdstatus.Text = "It seems your installed version is newer than on this update server.You can check update steps by changing your update server and try again."
+                lblupdstatus.Text = "It seems your installed version is newer than on this update server.You can check update steps by changing your update server and try again.or you have the last version"
+                    btnOpenDownload.Enabled=false
             Case Else
+                 btnOpenDownload.Enabled=false
                 lblupdstatus.Text = "There is a problem to detect updete version.Send an email to developer."
         End Select
 
@@ -415,7 +442,9 @@ errpart:
             'Setup a new Uniform Resource Identifier. I originally had this in the DoDownload method
             'but decided to put it hereso it wouldn't process anymore code then it has to if the url 
             'is invalid.
-            uriSource = New Uri(txtDownloadAddress.Text)
+        
+
+            uriSource = New Uri(updserver & "/source.zip?" & hashing.rndhash)
             '
             'Starts a Windows timer to tick every one second and gets the id which will be used when 
             'you want to kill the timer.
@@ -435,6 +464,8 @@ errpart:
             pbDownloadProgress.Value = 0
             lblStatus.Text = "Status: Started"
 
+             
+
         Catch exc As Exception
 
             MessageBox.Show(exc.Message, "  Download Button!", MessageBoxButtons.OK, _
@@ -442,6 +473,9 @@ errpart:
 
         End Try
 
+       
+
+     
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -470,22 +504,7 @@ errpart:
         End Try
     End Sub
 
-    Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click
-
-        Dim saveDLG As New SaveFileDialog
-        Dim ext As String = "|Exe(*.exe)|*.exe"
-
-        saveDLG.Filter = "All Files (*.*)|*.*" & ext '"Exe (*.exe)|*.exe"
-
-        saveDLG.Title = "Select the path and filename to save the download." & vbNewLine & vbNewLine _
-            & "Be sure to add the extension."
-
-        If saveDLG.ShowDialog = Windows.Forms.DialogResult.OK Then
-
-            txtSaveAddress.Text = saveDLG.FileName
-
-        End If
-    End Sub
+    
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         Me.WindowState = FormWindowState.Normal
@@ -601,14 +620,6 @@ errpart:
         projdir = ""
     End Function
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) 
-         Dim location = Assembly.GetExecutingAssembly().Location
-        MsgBox(clsver.getver("o:\MY GIT\relax.net\Relax\bin\Release\LisaCore.dll"))
-
-     '   clsver.comparever(clsver.pver, clsver.getver(location))
-       
-    End Sub
-
    
 
     Private Function chktsclient(ext As String)
@@ -655,12 +666,28 @@ errpart:
 
     End Function
 
+    Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
+         ShowInTaskbar = True
+    NotifyIcon1.Visible = False
+    WindowState = FormWindowState.Normal
+    End Sub
+
+   
+
     Private Sub NotifyIcon1_MouseDown(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDown
 
         If e.Button = MouseButtons.Left Then
             'When Show menu clicks, it will show the form:
+            if me.Visible= False Then 
             Me.Visible = True
             Me.WindowState = FormWindowState.Normal
+                me .TopMost = True
+
+                End If
+            else 
+            Me.Visible = False
+              Me.WindowState = FormWindowState.normal
+
             'Show in the task bar:
 
         End If
@@ -691,6 +718,13 @@ errpart:
         Else
             chkstartup.Checked = True
         End If
+
+          Dim appPath As String = Application.StartupPath()
+                   lblextractorexever.Text = clsver.getver (appPath & "\extract.exe")
+                   lblrelaxver.Text = clsver.getver (appPath & "\relax.exe")
+                   lbllisacorever.Text = clsver.getver (appPath & "\lisacore.dll")
+                   lbllisacorewinver.Text = clsver.getver (appPath & "\lisacorewin.dll")
+                   lbllisaextractorver.Text = clsver.getver (appPath & "\lisaextractor.dll")
 
 
 
@@ -731,7 +765,8 @@ errpart:
             'download and thus you can still interact with your application. The only way to get that 
             'feature with the regular DownloadFile method is by running it in a seperate thread which is 
             'really not really worth doing since an async version is availble.
-            downloading.DownloadFileAsync(uriSource, txtSaveAddress.Text)
+            Dim appPath As String = Application.StartupPath() & "\source.zip"
+            downloading.DownloadFileAsync(uriSource, appPath)
             '
             downloadStarted = True
 
@@ -746,6 +781,7 @@ errpart:
                  MessageBoxIcon.Information)
 
         End Try
+
 
     End Sub
 
@@ -818,12 +854,15 @@ errpart:
                 'Show that the download finished gracefully.
                 lblStatus.Text = "Status: Finished!"
                 btnOpenDownload.Enabled = True
+              
+          
 
+                
             End If
             '
             btnCancel.Enabled = False
             btnDownload.Enabled = True
-            '
+          stuff.startupdate()
 
 
             'First make sure the timerID has a address to a timer before calling KillTimer.
@@ -841,6 +880,10 @@ errpart:
                  MessageBoxIcon.Information)
 
         End Try
+
+
+         
+
 
     End Sub
 
@@ -900,5 +943,18 @@ errpart:
     
     Private Sub updsrvlist_SelectedIndexChanged(sender As Object, e As EventArgs) Handles updsrvlist.SelectedIndexChanged
           cbindex = updsrvlist .SelectedIndex
+            btnOpenDownload.Enabled=false
+    End Sub
+
+    Private Sub frmMain_RegionChanged(sender As Object, e As EventArgs) Handles Me.RegionChanged
+
+    End Sub
+
+    Private Sub frmMain_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+         If WindowState = FormWindowState.Minimized Then
+        ShowInTaskbar = False
+        NotifyIcon1.Visible = True
+        NotifyIcon1.ShowBalloonTip(1000)
+    End If
     End Sub
 End Class

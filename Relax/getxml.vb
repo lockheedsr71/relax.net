@@ -153,21 +153,13 @@ Public   Class getxml
 
              
 				                  .WriteEndElement()
-
-               
-             
+            
 
 				' Close the XmlTextWriter.
 				.WriteEndDocument()
 				.Close()
 
 			End With
-
-		'	stuff.statusmsg ("Configuration saved successfully.",3000)
-
-   
-
-
 		 
 
     End Function
@@ -296,7 +288,7 @@ Public   Class getxml
 
 					End If
 
-
+                    
 
               ' ----------------------- timer section --------------------
 
@@ -366,7 +358,7 @@ Public   Class getxml
 
 		Else
 
-			MessageBox.Show("The filename you selected was not found.")
+		'	MessageBox.Show("The filename you selected was not found.")
 		End If
         end Function
 

@@ -19,7 +19,7 @@
     <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
     <AssemblyInfoVersionSettings>
     </AssemblyInfoVersionSettings>
-    <AssemblyVersion>2.0.1.1067</AssemblyVersion>
+    <AssemblyVersion>2.0.1.1210</AssemblyVersion>
     <PrimaryVersionType>AssemblyFileVersionAttribute</PrimaryVersionType>
     <AssemblyVersionSettings>
     </AssemblyVersionSettings>
@@ -84,6 +84,7 @@
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />

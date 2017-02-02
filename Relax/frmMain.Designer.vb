@@ -104,7 +104,6 @@ Partial Class frmMain
         Me.txtupddesc = New System.Windows.Forms.RichTextBox()
         Me.lblupdstatus = New System.Windows.Forms.Label()
         Me.lblupdstatuslbl = New System.Windows.Forms.Label()
-        Me.lblupdlink = New System.Windows.Forms.Label()
         Me.lblupdcurrentver = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.lblupdveronserver = New System.Windows.Forms.Label()
@@ -114,9 +113,6 @@ Partial Class frmMain
         Me.lblupdid = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
-        Me.txtDownloadAddress = New System.Windows.Forms.TextBox()
-        Me.btnBrowse = New System.Windows.Forms.Button()
-        Me.txtSaveAddress = New System.Windows.Forms.TextBox()
         Me.pnlControlsAndStatus = New System.Windows.Forms.Panel()
         Me.btnOpenDownload = New System.Windows.Forms.Button()
         Me.lblStatus = New System.Windows.Forms.Label()
@@ -129,7 +125,19 @@ Partial Class frmMain
         Me.btnDownload = New System.Windows.Forms.Button()
         Me.lblSpeedKBytes = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.lblupdlink = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Versioninfo = New System.Windows.Forms.GroupBox()
+        Me.lbllisacorewinver = New System.Windows.Forms.Label()
+        Me.lblrelaxver = New System.Windows.Forms.Label()
+        Me.lblextractorexever = New System.Windows.Forms.Label()
+        Me.lbllisaextractorver = New System.Windows.Forms.Label()
+        Me.lbllisacorever = New System.Windows.Forms.Label()
+        Me.lbllisacorewinver0 = New System.Windows.Forms.Label()
+        Me.lblrelaxver0 = New System.Windows.Forms.Label()
+        Me.lblextractorexever0 = New System.Windows.Forms.Label()
+        Me.lbllisacorever0 = New System.Windows.Forms.Label()
+        Me.lbllisaextractorver0 = New System.Windows.Forms.Label()
         Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -154,6 +162,7 @@ Partial Class frmMain
         Me.grpupdate.SuspendLayout
         Me.pnlControlsAndStatus.SuspendLayout
         Me.TabPage3.SuspendLayout
+        Me.Versioninfo.SuspendLayout
         CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
         Me.SuspendLayout
@@ -604,7 +613,7 @@ Partial Class frmMain
         Me.chkRemoveTS.AutoSize = true
         Me.chkRemoveTS.Enabled = false
         Me.chkRemoveTS.ForeColor = System.Drawing.Color.Red
-        Me.chkRemoveTS.Location = New System.Drawing.Point(160, 77)
+        Me.chkRemoveTS.Location = New System.Drawing.Point(167, 79)
         Me.chkRemoveTS.Name = "chkRemoveTS"
         Me.chkRemoveTS.Size = New System.Drawing.Size(205, 20)
         Me.chkRemoveTS.TabIndex = 29
@@ -661,9 +670,9 @@ Partial Class frmMain
         Me.txtfilepathclientout.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtfilepathclientout.Enabled = false
         Me.txtfilepathclientout.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.txtfilepathclientout.Location = New System.Drawing.Point(160, 99)
+        Me.txtfilepathclientout.Location = New System.Drawing.Point(167, 99)
         Me.txtfilepathclientout.Name = "txtfilepathclientout"
-        Me.txtfilepathclientout.Size = New System.Drawing.Size(395, 19)
+        Me.txtfilepathclientout.Size = New System.Drawing.Size(388, 19)
         Me.txtfilepathclientout.TabIndex = 15
         '
         'txtfilepathclient
@@ -672,9 +681,9 @@ Partial Class frmMain
         Me.txtfilepathclient.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtfilepathclient.Enabled = false
         Me.txtfilepathclient.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.txtfilepathclient.Location = New System.Drawing.Point(160, 54)
+        Me.txtfilepathclient.Location = New System.Drawing.Point(167, 54)
         Me.txtfilepathclient.Name = "txtfilepathclient"
-        Me.txtfilepathclient.Size = New System.Drawing.Size(395, 19)
+        Me.txtfilepathclient.Size = New System.Drawing.Size(388, 19)
         Me.txtfilepathclient.TabIndex = 14
         '
         'txtfilepathubix
@@ -682,9 +691,9 @@ Partial Class frmMain
         Me.txtfilepathubix.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtfilepathubix.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtfilepathubix.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.txtfilepathubix.Location = New System.Drawing.Point(160, 17)
+        Me.txtfilepathubix.Location = New System.Drawing.Point(167, 17)
         Me.txtfilepathubix.Name = "txtfilepathubix"
-        Me.txtfilepathubix.Size = New System.Drawing.Size(395, 19)
+        Me.txtfilepathubix.Size = New System.Drawing.Size(388, 19)
         Me.txtfilepathubix.TabIndex = 13
         '
         'Label6
@@ -705,9 +714,9 @@ Partial Class frmMain
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
         Me.Label7.Location = New System.Drawing.Point(6, 56)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(146, 15)
+        Me.Label7.Size = New System.Drawing.Size(158, 15)
         Me.Label7.TabIndex = 13
-        Me.Label7.Text = "Destination .TS file path :"
+        Me.Label7.Text = "Destination .TS temp path :"
         '
         'Label8
         '
@@ -979,7 +988,7 @@ Partial Class frmMain
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Yellow
-        Me.Button2.Location = New System.Drawing.Point(579, 420)
+        Me.Button2.Location = New System.Drawing.Point(531, 420)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(116, 27)
         Me.Button2.TabIndex = 25
@@ -1015,10 +1024,8 @@ Partial Class frmMain
         Me.TabPage6.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.TabPage6.Controls.Add(Me.updsrvlist)
         Me.TabPage6.Controls.Add(Me.grpupdate)
-        Me.TabPage6.Controls.Add(Me.txtDownloadAddress)
-        Me.TabPage6.Controls.Add(Me.btnBrowse)
-        Me.TabPage6.Controls.Add(Me.txtSaveAddress)
         Me.TabPage6.Controls.Add(Me.pnlControlsAndStatus)
+        Me.TabPage6.Controls.Add(Me.lblupdlink)
         Me.TabPage6.ForeColor = System.Drawing.Color.Transparent
         Me.TabPage6.Location = New System.Drawing.Point(4, 27)
         Me.TabPage6.Name = "TabPage6"
@@ -1032,7 +1039,7 @@ Partial Class frmMain
         Me.updsrvlist.FormattingEnabled = true
         Me.updsrvlist.Location = New System.Drawing.Point(13, 9)
         Me.updsrvlist.Name = "updsrvlist"
-        Me.updsrvlist.Size = New System.Drawing.Size(360, 26)
+        Me.updsrvlist.Size = New System.Drawing.Size(631, 26)
         Me.updsrvlist.TabIndex = 22
         '
         'grpupdate
@@ -1041,7 +1048,6 @@ Partial Class frmMain
         Me.grpupdate.Controls.Add(Me.txtupddesc)
         Me.grpupdate.Controls.Add(Me.lblupdstatus)
         Me.grpupdate.Controls.Add(Me.lblupdstatuslbl)
-        Me.grpupdate.Controls.Add(Me.lblupdlink)
         Me.grpupdate.Controls.Add(Me.lblupdcurrentver)
         Me.grpupdate.Controls.Add(Me.Label29)
         Me.grpupdate.Controls.Add(Me.lblupdveronserver)
@@ -1065,17 +1071,17 @@ Partial Class frmMain
         Me.txtupddesc.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.txtupddesc.Location = New System.Drawing.Point(293, 37)
         Me.txtupddesc.Name = "txtupddesc"
-        Me.txtupddesc.Size = New System.Drawing.Size(338, 187)
+        Me.txtupddesc.Size = New System.Drawing.Size(338, 206)
         Me.txtupddesc.TabIndex = 32
         Me.txtupddesc.Text = ""
         '
         'lblupdstatus
         '
-        Me.lblupdstatus.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblupdstatus.Font = New System.Drawing.Font("Tahoma", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.lblupdstatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
         Me.lblupdstatus.Location = New System.Drawing.Point(9, 119)
         Me.lblupdstatus.Name = "lblupdstatus"
-        Me.lblupdstatus.Size = New System.Drawing.Size(267, 105)
+        Me.lblupdstatus.Size = New System.Drawing.Size(278, 105)
         Me.lblupdstatus.TabIndex = 31
         Me.lblupdstatus.Text = "N/A"
         '
@@ -1089,17 +1095,6 @@ Partial Class frmMain
         Me.lblupdstatuslbl.Size = New System.Drawing.Size(98, 13)
         Me.lblupdstatuslbl.TabIndex = 30
         Me.lblupdstatuslbl.Text = "Update status : "
-        '
-        'lblupdlink
-        '
-        Me.lblupdlink.AutoSize = true
-        Me.lblupdlink.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.lblupdlink.ForeColor = System.Drawing.Color.White
-        Me.lblupdlink.Location = New System.Drawing.Point(9, 229)
-        Me.lblupdlink.Name = "lblupdlink"
-        Me.lblupdlink.Size = New System.Drawing.Size(80, 16)
-        Me.lblupdlink.TabIndex = 29
-        Me.lblupdlink.Text = "Update link :"
         '
         'lblupdcurrentver
         '
@@ -1196,44 +1191,9 @@ Partial Class frmMain
         Me.Label37.ForeColor = System.Drawing.Color.White
         Me.Label37.Location = New System.Drawing.Point(9, 77)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(110, 13)
+        Me.Label37.Size = New System.Drawing.Size(136, 13)
         Me.Label37.TabIndex = 23
-        Me.Label37.Text = "Version onserver :"
-        '
-        'txtDownloadAddress
-        '
-        Me.txtDownloadAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDownloadAddress.Location = New System.Drawing.Point(413, 9)
-        Me.txtDownloadAddress.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
-        Me.txtDownloadAddress.Name = "txtDownloadAddress"
-        Me.txtDownloadAddress.Size = New System.Drawing.Size(231, 25)
-        Me.txtDownloadAddress.TabIndex = 18
-        Me.txtDownloadAddress.Text = "http://192.168.10.106/IRIB_TV3/2017-01-18.21.00.3-0.rec/00001.mpg"
-        Me.txtDownloadAddress.WordWrap = false
-        '
-        'btnBrowse
-        '
-        Me.btnBrowse.AutoEllipsis = true
-        Me.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnBrowse.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.btnBrowse.ForeColor = System.Drawing.Color.Lime
-        Me.btnBrowse.Location = New System.Drawing.Point(528, 42)
-        Me.btnBrowse.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.btnBrowse.Name = "btnBrowse"
-        Me.btnBrowse.Size = New System.Drawing.Size(116, 26)
-        Me.btnBrowse.TabIndex = 20
-        Me.btnBrowse.Text = "Save To..."
-        Me.btnBrowse.UseVisualStyleBackColor = false
-        '
-        'txtSaveAddress
-        '
-        Me.txtSaveAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSaveAddress.Location = New System.Drawing.Point(13, 41)
-        Me.txtSaveAddress.Margin = New System.Windows.Forms.Padding(2, 5, 2, 5)
-        Me.txtSaveAddress.Name = "txtSaveAddress"
-        Me.txtSaveAddress.Size = New System.Drawing.Size(503, 25)
-        Me.txtSaveAddress.TabIndex = 19
-        Me.txtSaveAddress.Text = "O:\MY GIT\relax.net\Relax\bin\Release\logs\6.7"
+        Me.Label37.Text = "Version on the server :"
         '
         'pnlControlsAndStatus
         '
@@ -1258,6 +1218,7 @@ Partial Class frmMain
         '
         'btnOpenDownload
         '
+        Me.btnOpenDownload.Enabled = false
         Me.btnOpenDownload.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnOpenDownload.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.btnOpenDownload.Location = New System.Drawing.Point(439, 87)
@@ -1313,7 +1274,7 @@ Partial Class frmMain
         Me.lblSpeedKBits.AutoSize = true
         Me.lblSpeedKBits.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.lblSpeedKBits.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.lblSpeedKBits.Location = New System.Drawing.Point(289, 39)
+        Me.lblSpeedKBits.Location = New System.Drawing.Point(309, 39)
         Me.lblSpeedKBits.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSpeedKBits.Name = "lblSpeedKBits"
         Me.lblSpeedKBits.Size = New System.Drawing.Size(91, 16)
@@ -1373,7 +1334,7 @@ Partial Class frmMain
         Me.lblSpeedKBytes.AutoSize = true
         Me.lblSpeedKBytes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.lblSpeedKBytes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.lblSpeedKBytes.Location = New System.Drawing.Point(289, 21)
+        Me.lblSpeedKBytes.Location = New System.Drawing.Point(309, 21)
         Me.lblSpeedKBytes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSpeedKBytes.Name = "lblSpeedKBytes"
         Me.lblSpeedKBytes.Size = New System.Drawing.Size(93, 16)
@@ -1392,9 +1353,21 @@ Partial Class frmMain
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = false
         '
+        'lblupdlink
+        '
+        Me.lblupdlink.AutoSize = true
+        Me.lblupdlink.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblupdlink.ForeColor = System.Drawing.Color.White
+        Me.lblupdlink.Location = New System.Drawing.Point(10, 39)
+        Me.lblupdlink.Name = "lblupdlink"
+        Me.lblupdlink.Size = New System.Drawing.Size(80, 16)
+        Me.lblupdlink.TabIndex = 29
+        Me.lblupdlink.Text = "Update link :"
+        '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.TabPage3.Controls.Add(Me.Versioninfo)
         Me.TabPage3.Controls.Add(Me.RichTextBox4)
         Me.TabPage3.Controls.Add(Me.RichTextBox3)
         Me.TabPage3.Controls.Add(Me.PictureBox3)
@@ -1405,6 +1378,136 @@ Partial Class frmMain
         Me.TabPage3.Size = New System.Drawing.Size(659, 452)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "About"
+        '
+        'Versioninfo
+        '
+        Me.Versioninfo.Controls.Add(Me.lbllisacorewinver)
+        Me.Versioninfo.Controls.Add(Me.lblrelaxver)
+        Me.Versioninfo.Controls.Add(Me.lblextractorexever)
+        Me.Versioninfo.Controls.Add(Me.lbllisaextractorver)
+        Me.Versioninfo.Controls.Add(Me.lbllisacorever)
+        Me.Versioninfo.Controls.Add(Me.lbllisacorewinver0)
+        Me.Versioninfo.Controls.Add(Me.lblrelaxver0)
+        Me.Versioninfo.Controls.Add(Me.lblextractorexever0)
+        Me.Versioninfo.Controls.Add(Me.lbllisacorever0)
+        Me.Versioninfo.Controls.Add(Me.lbllisaextractorver0)
+        Me.Versioninfo.ForeColor = System.Drawing.Color.Yellow
+        Me.Versioninfo.Location = New System.Drawing.Point(436, 3)
+        Me.Versioninfo.Name = "Versioninfo"
+        Me.Versioninfo.Size = New System.Drawing.Size(217, 129)
+        Me.Versioninfo.TabIndex = 14
+        Me.Versioninfo.TabStop = false
+        Me.Versioninfo.Text = "Modules version Info:"
+        '
+        'lbllisacorewinver
+        '
+        Me.lbllisacorewinver.AutoSize = true
+        Me.lbllisacorewinver.Font = New System.Drawing.Font("Tahoma", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lbllisacorewinver.ForeColor = System.Drawing.Color.White
+        Me.lbllisacorewinver.Location = New System.Drawing.Point(110, 81)
+        Me.lbllisacorewinver.Name = "lbllisacorewinver"
+        Me.lbllisacorewinver.Size = New System.Drawing.Size(14, 14)
+        Me.lbllisacorewinver.TabIndex = 32
+        Me.lbllisacorewinver.Text = "0"
+        '
+        'lblrelaxver
+        '
+        Me.lblrelaxver.AutoSize = true
+        Me.lblrelaxver.Font = New System.Drawing.Font("Tahoma", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblrelaxver.ForeColor = System.Drawing.Color.White
+        Me.lblrelaxver.Location = New System.Drawing.Point(110, 99)
+        Me.lblrelaxver.Name = "lblrelaxver"
+        Me.lblrelaxver.Size = New System.Drawing.Size(14, 14)
+        Me.lblrelaxver.TabIndex = 31
+        Me.lblrelaxver.Text = "0"
+        '
+        'lblextractorexever
+        '
+        Me.lblextractorexever.AutoSize = true
+        Me.lblextractorexever.Font = New System.Drawing.Font("Tahoma", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblextractorexever.ForeColor = System.Drawing.Color.White
+        Me.lblextractorexever.Location = New System.Drawing.Point(110, 63)
+        Me.lblextractorexever.Name = "lblextractorexever"
+        Me.lblextractorexever.Size = New System.Drawing.Size(14, 14)
+        Me.lblextractorexever.TabIndex = 30
+        Me.lblextractorexever.Text = "0"
+        '
+        'lbllisaextractorver
+        '
+        Me.lbllisaextractorver.AutoSize = true
+        Me.lbllisaextractorver.Font = New System.Drawing.Font("Tahoma", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lbllisaextractorver.ForeColor = System.Drawing.Color.White
+        Me.lbllisaextractorver.Location = New System.Drawing.Point(110, 45)
+        Me.lbllisaextractorver.Name = "lbllisaextractorver"
+        Me.lbllisaextractorver.Size = New System.Drawing.Size(14, 14)
+        Me.lbllisaextractorver.TabIndex = 29
+        Me.lbllisaextractorver.Text = "0"
+        '
+        'lbllisacorever
+        '
+        Me.lbllisacorever.AutoSize = true
+        Me.lbllisacorever.Font = New System.Drawing.Font("Tahoma", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lbllisacorever.ForeColor = System.Drawing.Color.White
+        Me.lbllisacorever.Location = New System.Drawing.Point(110, 27)
+        Me.lbllisacorever.Name = "lbllisacorever"
+        Me.lbllisacorever.Size = New System.Drawing.Size(14, 14)
+        Me.lbllisacorever.TabIndex = 28
+        Me.lbllisacorever.Text = "0"
+        '
+        'lbllisacorewinver0
+        '
+        Me.lbllisacorewinver0.AutoSize = true
+        Me.lbllisacorewinver0.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lbllisacorewinver0.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.lbllisacorewinver0.Location = New System.Drawing.Point(6, 79)
+        Me.lbllisacorewinver0.Name = "lbllisacorewinver0"
+        Me.lbllisacorewinver0.Size = New System.Drawing.Size(89, 16)
+        Me.lbllisacorewinver0.TabIndex = 27
+        Me.lbllisacorewinver0.Text = "Lisacorewin:"
+        '
+        'lblrelaxver0
+        '
+        Me.lblrelaxver0.AutoSize = true
+        Me.lblrelaxver0.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblrelaxver0.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.lblrelaxver0.Location = New System.Drawing.Point(6, 97)
+        Me.lblrelaxver0.Name = "lblrelaxver0"
+        Me.lblrelaxver0.Size = New System.Drawing.Size(48, 16)
+        Me.lblrelaxver0.TabIndex = 26
+        Me.lblrelaxver0.Text = "Relax:"
+        '
+        'lblextractorexever0
+        '
+        Me.lblextractorexever0.AutoSize = true
+        Me.lblextractorexever0.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblextractorexever0.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.lblextractorexever0.Location = New System.Drawing.Point(6, 61)
+        Me.lblextractorexever0.Name = "lblextractorexever0"
+        Me.lblextractorexever0.Size = New System.Drawing.Size(74, 16)
+        Me.lblextractorexever0.TabIndex = 25
+        Me.lblextractorexever0.Text = "Extractor:"
+        '
+        'lbllisacorever0
+        '
+        Me.lbllisacorever0.AutoSize = true
+        Me.lbllisacorever0.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lbllisacorever0.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.lbllisacorever0.Location = New System.Drawing.Point(6, 25)
+        Me.lbllisacorever0.Name = "lbllisacorever0"
+        Me.lbllisacorever0.Size = New System.Drawing.Size(67, 16)
+        Me.lbllisacorever0.TabIndex = 24
+        Me.lbllisacorever0.Text = "Lisacore:"
+        '
+        'lbllisaextractorver0
+        '
+        Me.lbllisaextractorver0.AutoSize = true
+        Me.lbllisaextractorver0.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lbllisaextractorver0.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.lbllisaextractorver0.Location = New System.Drawing.Point(6, 43)
+        Me.lbllisaextractorver0.Name = "lbllisaextractorver0"
+        Me.lbllisaextractorver0.Size = New System.Drawing.Size(99, 16)
+        Me.lbllisaextractorver0.TabIndex = 0
+        Me.lbllisaextractorver0.Text = "LisaExtractor:"
         '
         'RichTextBox4
         '
@@ -1437,7 +1540,7 @@ Partial Class frmMain
         Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.PictureBox3.ErrorImage = Nothing
         Me.PictureBox3.Image = Global.Relax.My.Resources.Resources.TooshehLogo
-        Me.PictureBox3.Location = New System.Drawing.Point(542, 166)
+        Me.PictureBox3.Location = New System.Drawing.Point(540, 167)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(111, 115)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1453,7 +1556,7 @@ Partial Class frmMain
         Me.RichTextBox2.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.ReadOnly = true
-        Me.RichTextBox2.Size = New System.Drawing.Size(640, 276)
+        Me.RichTextBox2.Size = New System.Drawing.Size(427, 276)
         Me.RichTextBox2.TabIndex = 6
         Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
         '
@@ -1484,7 +1587,7 @@ Partial Class frmMain
         Me.MinimizeBox = false
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "b"
+        Me.Text = "RELAX Engine"
         Me.ContextMenuStrip1.ResumeLayout(false)
         Me.TabControl1.ResumeLayout(false)
         Me.TabPage1.ResumeLayout(false)
@@ -1515,6 +1618,8 @@ Partial Class frmMain
         Me.pnlControlsAndStatus.ResumeLayout(false)
         Me.pnlControlsAndStatus.PerformLayout
         Me.TabPage3.ResumeLayout(false)
+        Me.Versioninfo.ResumeLayout(false)
+        Me.Versioninfo.PerformLayout
         CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
@@ -1613,9 +1718,6 @@ End Sub
     Friend WithEvents btnDownload As Button
     Friend WithEvents lblSpeedKBytes As Label
     Friend WithEvents btnCancel As Button
-    Friend WithEvents txtDownloadAddress As TextBox
-    Friend WithEvents btnBrowse As Button
-    Friend WithEvents txtSaveAddress As TextBox
     
    
     Friend WithEvents grpSettings As GroupBox
@@ -1636,4 +1738,15 @@ End Sub
     Friend WithEvents lblupdstatuslbl As Label
     Friend WithEvents txtupddesc As RichTextBox
     Friend WithEvents updsrvlist As ComboBox
+    Friend WithEvents Versioninfo As GroupBox
+    Friend WithEvents lblrelaxver0 As Label
+    Friend WithEvents lblextractorexever0 As Label
+    Friend WithEvents lbllisacorever0 As Label
+    Friend WithEvents lbllisaextractorver0 As Label
+    Friend WithEvents lbllisacorewinver0 As Label
+    Friend WithEvents lbllisacorewinver As Label
+    Friend WithEvents lblrelaxver As Label
+    Friend WithEvents lblextractorexever As Label
+    Friend WithEvents lbllisaextractorver As Label
+    Friend WithEvents lbllisacorever As Label
 End Class
