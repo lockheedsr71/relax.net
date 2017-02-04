@@ -1,0 +1,11 @@
+c:\users\bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\WindowsApplication40.vbprojResolveAssemblyReference.cache
+c:\users\bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\WindowsApplication40.vbproj.GenerateResource.Cache
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\bin\Debug\Updater.exe.config
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\bin\Debug\Updater.exe
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\bin\Debug\Updater.pdb
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\bin\Debug\Updater.xml
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\Updater.frmmain.resources
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\Updater.Resources.resources
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\Updater.exe
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\Updater.xml
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\Updater.pdb

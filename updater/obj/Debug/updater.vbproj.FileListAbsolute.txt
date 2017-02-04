@@ -1,0 +1,22 @@
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\bin\Debug\Updater.exe.config
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\bin\Debug\Updater.exe
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\bin\Debug\Updater.pdb
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\bin\Debug\Updater.xml
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\updater.vbprojResolveAssemblyReference.cache
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\Updater.frmmain.resources
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\Updater.Resources.resources
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\updater.vbproj.GenerateResource.Cache
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\Updater.exe
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\Updater.xml
+C:\Users\Bagherzadeh\documents\visual studio 2015\Projects\WindowsApplication40\WindowsApplication40\obj\Debug\Updater.pdb
+o:\MY GIT\relax.net\updater\bin\Debug\Updater.exe.config
+o:\MY GIT\relax.net\updater\obj\Debug\Updater.exe
+o:\MY GIT\relax.net\updater\obj\Debug\Updater.xml
+o:\MY GIT\relax.net\updater\obj\Debug\Updater.pdb
+o:\MY GIT\relax.net\updater\bin\Debug\Updater.exe
+o:\MY GIT\relax.net\updater\bin\Debug\Updater.pdb
+o:\MY GIT\relax.net\updater\bin\Debug\Updater.xml
+o:\MY GIT\relax.net\updater\obj\Debug\updater.vbprojResolveAssemblyReference.cache
+o:\MY GIT\relax.net\updater\obj\Debug\Updater.frmmain.resources
+o:\MY GIT\relax.net\updater\obj\Debug\Updater.Resources.resources
+o:\MY GIT\relax.net\updater\obj\Debug\updater.vbproj.GenerateResource.Cache
