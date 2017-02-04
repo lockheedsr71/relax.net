@@ -400,7 +400,7 @@ errpart:
 
     Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
 
-        Dim updlink As String = updsrvlist.SelectedItem  & "/version.xml"& "?" & hashing.rndhash
+        Dim updlink As String = updsrvlist.SelectedItem  & "/version.xml"& "?random=" & hashing.rndhash
         dim tmpdir As String = Path.GetTempPath() 
          My.Computer.Network.DownloadFile(updlink, tmpdir &  "/version.xml", "", "", True, 3000, True)
 
@@ -444,7 +444,7 @@ errpart:
             'is invalid.
         
 
-            uriSource = New Uri(updserver & "/source.zip?" & hashing.rndhash)
+            uriSource = New Uri(updserver & "/source.zip?random=" & hashing.rndhash)
             '
             'Starts a Windows timer to tick every one second and gets the id which will be used when 
             'you want to kill the timer.
@@ -672,7 +672,6 @@ errpart:
     WindowState = FormWindowState.Normal
     End Sub
 
-   
 
     Private Sub NotifyIcon1_MouseDown(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDown
 
@@ -725,7 +724,7 @@ errpart:
                    lbllisacorever.Text = clsver.getver (appPath & "\lisacore.dll")
                    lbllisacorewinver.Text = clsver.getver (appPath & "\lisacorewin.dll")
                    lbllisaextractorver.Text = clsver.getver (appPath & "\lisaextractor.dll")
-
+                    lblupdaterver.Text=  clsver.getver (appPath & "\updater.exe")
 
 
 
@@ -820,8 +819,8 @@ errpart:
             'it comes to files or storage then 1KB = 1024bytes. Anyways, I just went ahead and set 
             '1 KB to equal 1000 bytes. Even though I personally feel all KB's whether packet based 
             'or file based should be 1024.
-            lblDownloadBytes.Text = "Downloaded: " & FormatNumber(e.BytesReceived / 1024000, 2).ToString & "MB"
-            lblDownloadSize.Text = "Download Size: " & FormatNumber(e.TotalBytesToReceive / 1024000, 2).ToString & " MB"
+            lblDownloadBytes.Text = "Downloaded: " & FormatNumber(e.BytesReceived / 1024, 2).ToString & " KB"
+            lblDownloadSize.Text = "Download Size: " & FormatNumber(e.TotalBytesToReceive / 1024, 2).ToString & " KB"
             '
             'Keep this updated with the latest value. Used for calculating the download speed.
             currBytes = e.BytesReceived

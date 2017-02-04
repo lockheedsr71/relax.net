@@ -128,8 +128,15 @@ Public Class stuff
             
          For i As Integer = 0 To CommandLineArgs.Count - 1
           'MessageBox.Show(CommandLineArgs(i))
-             if  (CommandLineArgs(i)) ="/afterupdate" Then 
-                 MsgBox ("Update completed.All new files replaced with new versions.",vbInformation,"Update completed")
+             if  (CommandLineArgs(i)) ="/afterupdate" Then
+                Thread.Sleep (1000)
+                File.Delete (Application.StartupPath & "\updater.exe")
+                MsgBox ("Update completed.All new files replaced with new versions.",vbInformation,"Update completed")
+                
+                File.Copy(Application.StartupPath & "\updater.tmp",Application.StartupPath & "\updater.exe", True)
+                Thread.Sleep (1500)
+                File.Delete (Application.StartupPath & "\updater.tmp")
+
                 frmMain.BringToFront
               '  stuff.notify   (1000,"salaam","sss",Color.Red )
                 'When Show menu clicks, it will show the form:
@@ -225,11 +232,10 @@ regVersion = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\Curr
     public Shared sub startupdate
 
            Dim locationdir =Directory.GetCurrentDirectory()
-         msgbox ("Click OK to restart program and perform update ... ",vbInformation,"Updating ...")
+       
+          msgbox ("Click OK to restart program and perform update ... ",vbInformation,"Updating ...")
           Process.Start(locationdir & "\updater.exe ", "/update ")
-      Thread.Sleep (1500)
-        end
-
+       
 
     End sub
 

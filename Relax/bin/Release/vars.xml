@@ -29,6 +29,6 @@
   <appsettings>
     <updateserver1>http://cdn.foxnet.ir/relax/updates</updateserver1>
     <updateserver2>http://saatco.com/srv</updateserver2>
-    <activeserver>0</activeserver>
+    <activeserver>1</activeserver>
   </appsettings>
 </Configs>

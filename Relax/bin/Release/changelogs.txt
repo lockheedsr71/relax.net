@@ -9,7 +9,8 @@
 2.Add update module for online update
 3.Add Extract on the fly
 4.Update extractor moduals
-5.
+5.Fix some bugs and improve stability
+
 
 
 

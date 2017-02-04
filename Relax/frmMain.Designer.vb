@@ -145,6 +145,8 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.lblupdaterver = New System.Windows.Forms.Label()
+        Me.lblupdaterver0 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -1234,7 +1236,7 @@ Partial Class frmMain
         Me.lblStatus.AutoEllipsis = true
         Me.lblStatus.AutoSize = true
         Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.lblStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.lblStatus.ForeColor = System.Drawing.Color.Red
         Me.lblStatus.Location = New System.Drawing.Point(5, 82)
         Me.lblStatus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblStatus.Name = "lblStatus"
@@ -1381,6 +1383,8 @@ Partial Class frmMain
         '
         'Versioninfo
         '
+        Me.Versioninfo.Controls.Add(Me.lblupdaterver)
+        Me.Versioninfo.Controls.Add(Me.lblupdaterver0)
         Me.Versioninfo.Controls.Add(Me.lbllisacorewinver)
         Me.Versioninfo.Controls.Add(Me.lblrelaxver)
         Me.Versioninfo.Controls.Add(Me.lblextractorexever)
@@ -1394,7 +1398,7 @@ Partial Class frmMain
         Me.Versioninfo.ForeColor = System.Drawing.Color.Yellow
         Me.Versioninfo.Location = New System.Drawing.Point(436, 3)
         Me.Versioninfo.Name = "Versioninfo"
-        Me.Versioninfo.Size = New System.Drawing.Size(217, 129)
+        Me.Versioninfo.Size = New System.Drawing.Size(217, 140)
         Me.Versioninfo.TabIndex = 14
         Me.Versioninfo.TabStop = false
         Me.Versioninfo.Text = "Modules version Info:"
@@ -1570,6 +1574,28 @@ Partial Class frmMain
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = false
+        '
+        'lblupdaterver
+        '
+        Me.lblupdaterver.AutoSize = true
+        Me.lblupdaterver.Font = New System.Drawing.Font("Tahoma", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblupdaterver.ForeColor = System.Drawing.Color.White
+        Me.lblupdaterver.Location = New System.Drawing.Point(110, 116)
+        Me.lblupdaterver.Name = "lblupdaterver"
+        Me.lblupdaterver.Size = New System.Drawing.Size(14, 14)
+        Me.lblupdaterver.TabIndex = 34
+        Me.lblupdaterver.Text = "0"
+        '
+        'lblupdaterver0
+        '
+        Me.lblupdaterver0.AutoSize = true
+        Me.lblupdaterver0.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblupdaterver0.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.lblupdaterver0.Location = New System.Drawing.Point(6, 114)
+        Me.lblupdaterver0.Name = "lblupdaterver0"
+        Me.lblupdaterver0.Size = New System.Drawing.Size(65, 16)
+        Me.lblupdaterver0.TabIndex = 33
+        Me.lblupdaterver0.Text = "Updater:"
         '
         'frmMain
         '
@@ -1749,4 +1775,6 @@ End Sub
     Friend WithEvents lblextractorexever As Label
     Friend WithEvents lbllisaextractorver As Label
     Friend WithEvents lbllisacorever As Label
+    Friend WithEvents lblupdaterver As Label
+    Friend WithEvents lblupdaterver0 As Label
 End Class
