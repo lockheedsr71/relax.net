@@ -128,6 +128,8 @@ Partial Class frmMain
         Me.lblupdlink = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Versioninfo = New System.Windows.Forms.GroupBox()
+        Me.lblupdaterver = New System.Windows.Forms.Label()
+        Me.lblupdaterver0 = New System.Windows.Forms.Label()
         Me.lbllisacorewinver = New System.Windows.Forms.Label()
         Me.lblrelaxver = New System.Windows.Forms.Label()
         Me.lblextractorexever = New System.Windows.Forms.Label()
@@ -145,8 +147,7 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.lblupdaterver = New System.Windows.Forms.Label()
-        Me.lblupdaterver0 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -1024,6 +1025,7 @@ Partial Class frmMain
         'TabPage6
         '
         Me.TabPage6.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.TabPage6.Controls.Add(Me.Label25)
         Me.TabPage6.Controls.Add(Me.updsrvlist)
         Me.TabPage6.Controls.Add(Me.grpupdate)
         Me.TabPage6.Controls.Add(Me.pnlControlsAndStatus)
@@ -1038,10 +1040,11 @@ Partial Class frmMain
         '
         'updsrvlist
         '
+        Me.updsrvlist.Enabled = false
         Me.updsrvlist.FormattingEnabled = true
-        Me.updsrvlist.Location = New System.Drawing.Point(13, 9)
+        Me.updsrvlist.Location = New System.Drawing.Point(126, 9)
         Me.updsrvlist.Name = "updsrvlist"
-        Me.updsrvlist.Size = New System.Drawing.Size(631, 26)
+        Me.updsrvlist.Size = New System.Drawing.Size(526, 26)
         Me.updsrvlist.TabIndex = 22
         '
         'grpupdate
@@ -1358,11 +1361,11 @@ Partial Class frmMain
         'lblupdlink
         '
         Me.lblupdlink.AutoSize = true
-        Me.lblupdlink.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.lblupdlink.ForeColor = System.Drawing.Color.White
+        Me.lblupdlink.Font = New System.Drawing.Font("Tahoma", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblupdlink.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
         Me.lblupdlink.Location = New System.Drawing.Point(10, 39)
         Me.lblupdlink.Name = "lblupdlink"
-        Me.lblupdlink.Size = New System.Drawing.Size(80, 16)
+        Me.lblupdlink.Size = New System.Drawing.Size(76, 14)
         Me.lblupdlink.TabIndex = 29
         Me.lblupdlink.Text = "Update link :"
         '
@@ -1402,6 +1405,28 @@ Partial Class frmMain
         Me.Versioninfo.TabIndex = 14
         Me.Versioninfo.TabStop = false
         Me.Versioninfo.Text = "Modules version Info:"
+        '
+        'lblupdaterver
+        '
+        Me.lblupdaterver.AutoSize = true
+        Me.lblupdaterver.Font = New System.Drawing.Font("Tahoma", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblupdaterver.ForeColor = System.Drawing.Color.White
+        Me.lblupdaterver.Location = New System.Drawing.Point(110, 116)
+        Me.lblupdaterver.Name = "lblupdaterver"
+        Me.lblupdaterver.Size = New System.Drawing.Size(14, 14)
+        Me.lblupdaterver.TabIndex = 34
+        Me.lblupdaterver.Text = "0"
+        '
+        'lblupdaterver0
+        '
+        Me.lblupdaterver0.AutoSize = true
+        Me.lblupdaterver0.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.lblupdaterver0.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
+        Me.lblupdaterver0.Location = New System.Drawing.Point(6, 114)
+        Me.lblupdaterver0.Name = "lblupdaterver0"
+        Me.lblupdaterver0.Size = New System.Drawing.Size(65, 16)
+        Me.lblupdaterver0.TabIndex = 33
+        Me.lblupdaterver0.Text = "Updater:"
         '
         'lbllisacorewinver
         '
@@ -1575,27 +1600,16 @@ Partial Class frmMain
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = false
         '
-        'lblupdaterver
+        'Label25
         '
-        Me.lblupdaterver.AutoSize = true
-        Me.lblupdaterver.Font = New System.Drawing.Font("Tahoma", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.lblupdaterver.ForeColor = System.Drawing.Color.White
-        Me.lblupdaterver.Location = New System.Drawing.Point(110, 116)
-        Me.lblupdaterver.Name = "lblupdaterver"
-        Me.lblupdaterver.Size = New System.Drawing.Size(14, 14)
-        Me.lblupdaterver.TabIndex = 34
-        Me.lblupdaterver.Text = "0"
-        '
-        'lblupdaterver0
-        '
-        Me.lblupdaterver0.AutoSize = true
-        Me.lblupdaterver0.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.lblupdaterver0.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.lblupdaterver0.Location = New System.Drawing.Point(6, 114)
-        Me.lblupdaterver0.Name = "lblupdaterver0"
-        Me.lblupdaterver0.Size = New System.Drawing.Size(65, 16)
-        Me.lblupdaterver0.TabIndex = 33
-        Me.lblupdaterver0.Text = "Updater:"
+        Me.Label25.AutoSize = true
+        Me.Label25.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.White
+        Me.Label25.Location = New System.Drawing.Point(10, 13)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(110, 16)
+        Me.Label25.TabIndex = 30
+        Me.Label25.Text = "Update server :"
         '
         'frmMain
         '
@@ -1777,4 +1791,5 @@ End Sub
     Friend WithEvents lbllisacorever As Label
     Friend WithEvents lblupdaterver As Label
     Friend WithEvents lblupdaterver0 As Label
+    Friend WithEvents Label25 As Label
 End Class

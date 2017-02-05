@@ -51,6 +51,7 @@ start:
         filechk("LisaExtractor.dll")
         filechk("LisaExtractorApp.dll")
         filechk("LisaCoreWin.dll")
+        filechk("updater.exe")
 
 
         projdir = My.Application.Info.DirectoryPath & "\"
@@ -719,13 +720,21 @@ errpart:
         End If
 
           Dim appPath As String = Application.StartupPath()
-                   lblextractorexever.Text = clsver.getver (appPath & "\extract.exe")
+
+           try
+                    lblextractorexever.Text = clsver.getver (appPath & "\extract.exe")
                    lblrelaxver.Text = clsver.getver (appPath & "\relax.exe")
                    lbllisacorever.Text = clsver.getver (appPath & "\lisacore.dll")
                    lbllisacorewinver.Text = clsver.getver (appPath & "\lisacorewin.dll")
                    lbllisaextractorver.Text = clsver.getver (appPath & "\lisaextractor.dll")
                     lblupdaterver.Text=  clsver.getver (appPath & "\updater.exe")
 
+           Catch ex As Exception
+            stuff.mylog (ex.ToString())
+         MsgBox ( "Some files can't be found to export it's version.For more informations see the log.",vbCritical , "Version error")
+
+        End Try
+            
 
 
 

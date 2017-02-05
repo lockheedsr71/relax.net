@@ -27,8 +27,8 @@
     <chktimer>20000</chktimer>
   </timers>
   <appsettings>
-    <updateserver1>http://cdn.foxnet.ir/relax/updates</updateserver1>
-    <updateserver2>http://saatco.com/srv</updateserver2>
-    <activeserver>1</activeserver>
+    <updateserver1>http://relaxproject.000webhostapp.com/update/</updateserver1>
+    <updateserver2>http://relaxproject.000webhostapp.com/update/</updateserver2>
+    <activeserver>0</activeserver>
   </appsettings>
 </Configs>

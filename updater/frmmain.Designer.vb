@@ -38,11 +38,11 @@ Partial Class frmmain
         '
         Me.Label1.AutoSize = true
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(114, 7)
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer))
+        Me.Label1.Location = New System.Drawing.Point(114, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(177, 16)
+        Me.Label1.Size = New System.Drawing.Size(227, 19)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Updating RELAX Engine  ..."
         '
@@ -62,11 +62,11 @@ Partial Class frmmain
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(114, 28)
+        Me.Label2.Location = New System.Drawing.Point(115, 25)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(407, 36)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Please wait ... Program will be restart automatically "
+        Me.Label2.Text = "Program will be restart automatically . Please wait ..."
         '
         'PictureBox1
         '
@@ -104,14 +104,14 @@ Partial Class frmmain
         '
         Me.lblerror.Font = New System.Drawing.Font("Tahoma", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.lblerror.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer))
-        Me.lblerror.Location = New System.Drawing.Point(117, 48)
+        Me.lblerror.Location = New System.Drawing.Point(117, 50)
         Me.lblerror.Name = "lblerror"
-        Me.lblerror.Size = New System.Drawing.Size(375, 44)
+        Me.lblerror.Size = New System.Drawing.Size(395, 39)
         Me.lblerror.TabIndex = 10
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(117, 96)
+        Me.ProgressBar1.Location = New System.Drawing.Point(118, 95)
         Me.ProgressBar1.Maximum = 200
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(314, 24)

@@ -130,12 +130,17 @@ Public Class stuff
           'MessageBox.Show(CommandLineArgs(i))
              if  (CommandLineArgs(i)) ="/afterupdate" Then
                 Thread.Sleep (1000)
-                File.Delete (Application.StartupPath & "\updater.exe")
-                MsgBox ("Update completed.All new files replaced with new versions.",vbInformation,"Update completed")
-                
-                File.Copy(Application.StartupPath & "\updater.tmp",Application.StartupPath & "\updater.exe", True)
-                Thread.Sleep (1500)
-                File.Delete (Application.StartupPath & "\updater.tmp")
+                      If File.Exists(Application.StartupPath & "\updater.tmp") then
+                      
+                        File.Delete (Application.StartupPath & "\updater.exe")
+                        MsgBox ("Update completed.All new files replaced with new versions.",vbInformation,"Update completed")
+                        File.Copy(Application.StartupPath & "\updater.tmp",Application.StartupPath & "\updater.exe", True)
+                        Thread.Sleep (1500)
+                        File.Delete (Application.StartupPath & "\updater.tmp")
+                    Else 
+                     MsgBox ("Update not completed correctly.Updater.exe can't replaced with new version.Please try again or If you interest on update this module please download the last version from website.",vbCritical   ,"Update error")
+                    End If
+
 
                 frmMain.BringToFront
               '  stuff.notify   (1000,"salaam","sss",Color.Red )
