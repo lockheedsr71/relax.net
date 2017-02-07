@@ -1,0 +1,61 @@
+Start Error Log for today
+2017-02-05 11:31:03 AM Err# [53].Des --> updater.exe
+------------------------------------------------------------------------------------
+2017-02-05 11:31:14 AM Err# [53].Des --> updater.exe
+------------------------------------------------------------------------------------
+2017-02-05 11:31:18 AM Err# [53].Des --> updater.exe
+------------------------------------------------------------------------------------
+2017-02-05 11:36:15 AM Err# [53].Des --> System.IO.FileNotFoundException: updater.exe
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at Relax.clsver.getver(String location) in O:\MY GIT\relax.net\Relax\ver.vb:line 20
+   at Relax.frmMain.TabControl1_MouseClick(Object sender, MouseEventArgs e) in O:\MY GIT\relax.net\Relax\frmMain.vb:line 729
+------------------------------------------------------------------------------------
+2017-02-05 11:36:21 AM Err# [53].Des --> System.IO.FileNotFoundException: updater.exe
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at Relax.clsver.getver(String location) in O:\MY GIT\relax.net\Relax\ver.vb:line 20
+   at Relax.frmMain.TabControl1_MouseClick(Object sender, MouseEventArgs e) in O:\MY GIT\relax.net\Relax\frmMain.vb:line 729
+------------------------------------------------------------------------------------
+2017-02-05 11:36:25 AM Err# [53].Des --> System.IO.FileNotFoundException: updater.exe
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at Relax.clsver.getver(String location) in O:\MY GIT\relax.net\Relax\ver.vb:line 20
+   at Relax.frmMain.TabControl1_MouseClick(Object sender, MouseEventArgs e) in O:\MY GIT\relax.net\Relax\frmMain.vb:line 729
+------------------------------------------------------------------------------------
+2017-02-05 11:36:29 AM Err# [53].Des --> System.IO.FileNotFoundException: updater.exe
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at Relax.clsver.getver(String location) in O:\MY GIT\relax.net\Relax\ver.vb:line 20
+   at Relax.frmMain.TabControl1_MouseClick(Object sender, MouseEventArgs e) in O:\MY GIT\relax.net\Relax\frmMain.vb:line 729
+------------------------------------------------------------------------------------
+2017-02-05 11:36:38 AM Err# [53].Des --> System.IO.FileNotFoundException: updater.exe
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at Relax.clsver.getver(String location) in O:\MY GIT\relax.net\Relax\ver.vb:line 20
+   at Relax.frmMain.TabControl1_MouseClick(Object sender, MouseEventArgs e) in O:\MY GIT\relax.net\Relax\frmMain.vb:line 729
+------------------------------------------------------------------------------------
+2017-02-05 11:36:59 AM Err# [53].Des --> System.IO.FileNotFoundException: updater.exe
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at Relax.clsver.getver(String location) in O:\MY GIT\relax.net\Relax\ver.vb:line 20
+   at Relax.frmMain.TabControl1_MouseClick(Object sender, MouseEventArgs e) in O:\MY GIT\relax.net\Relax\frmMain.vb:line 729
+------------------------------------------------------------------------------------
+2017-02-05 11:37:00 AM Err# [53].Des --> System.IO.FileNotFoundException: updater.exe
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at Relax.clsver.getver(String location) in O:\MY GIT\relax.net\Relax\ver.vb:line 20
+   at Relax.frmMain.TabControl1_MouseClick(Object sender, MouseEventArgs e) in O:\MY GIT\relax.net\Relax\frmMain.vb:line 729
+------------------------------------------------------------------------------------
+2017-02-05 11:37:02 AM Err# [53].Des --> System.IO.FileNotFoundException: updater.exe
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at Relax.clsver.getver(String location) in O:\MY GIT\relax.net\Relax\ver.vb:line 20
+   at Relax.frmMain.TabControl1_MouseClick(Object sender, MouseEventArgs e) in O:\MY GIT\relax.net\Relax\frmMain.vb:line 729
+------------------------------------------------------------------------------------
+2017-02-05 11:37:04 AM Err# [53].Des --> System.IO.FileNotFoundException: updater.exe
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at Relax.clsver.getver(String location) in O:\MY GIT\relax.net\Relax\ver.vb:line 20
+   at Relax.frmMain.TabControl1_MouseClick(Object sender, MouseEventArgs e) in O:\MY GIT\relax.net\Relax\frmMain.vb:line 729
+------------------------------------------------------------------------------------
+2017-02-05 11:37:06 AM Err# [53].Des --> System.IO.FileNotFoundException: updater.exe
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at Relax.clsver.getver(String location) in O:\MY GIT\relax.net\Relax\ver.vb:line 20
+   at Relax.frmMain.TabControl1_MouseClick(Object sender, MouseEventArgs e) in O:\MY GIT\relax.net\Relax\frmMain.vb:line 729
+------------------------------------------------------------------------------------
+2017-02-05 11:37:21 AM Err# [53].Des --> updater.exe
+------------------------------------------------------------------------------------
+2017-02-05 11:38:31 AM Err# [0].Des --> RELAX need some files to runing correctly but  O:\MY GIT\relax.net\Relax\bin\Release\updater.exe not found in current dir.Please copy this file to current project dir and run it again.RELAX terminated by now.File not found
+------------------------------------------------------------------------------------

@@ -1,0 +1,44 @@
+
+System.IO.InvalidDataException: End of Central Directory record could not be found.
+   at System.IO.Compression.ZipArchive.ReadEndOfCentralDirectory()
+   at System.IO.Compression.ZipArchive.Init(Stream stream, ZipArchiveMode mode, Boolean leaveOpen)
+   at System.IO.Compression.ZipArchive..ctor(Stream stream, ZipArchiveMode mode, Boolean leaveOpen, Encoding entryNameEncoding)
+   at System.IO.Compression.ZipFile.Open(String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding)
+   at System.IO.Compression.ZipFile.ExtractToDirectory(String sourceArchiveFileName, String destinationDirectoryName, Encoding entryNameEncoding)
+   at System.IO.Compression.ZipFile.ExtractToDirectory(String sourceArchiveFileName, String destinationDirectoryName)
+   at Updater.func.zip(String zipPath, String unzippath)
+----------------------------------------------------------2017-02-05 11:13:16 AM
+System.IO.DirectoryNotFoundException: Could not find directory 'O:\MY GIT\relax.net\Relax\bin\Release\tmpupdate'.
+   at Microsoft.VisualBasic.FileIO.FileSystem.CopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite, UIOptionInternal showUI, UICancelOption onUserCancel)
+   at Microsoft.VisualBasic.MyServices.FileSystemProxy.CopyDirectory(String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite)
+   at Updater.func.copyto()
+----------------------------------------------------------2017-02-05 11:13:17 AM
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'O:\MY GIT\relax.net\Relax\bin\Release\tmpupdate\updater.exe'.
+   at Microsoft.VisualBasic.FileSystem.FileCopy(String Source, String Destination)
+   at Updater.func.copyto()
+----------------------------------------------------------2017-02-05 11:13:20 AM
+System.IO.FileNotFoundException: Could not find file 'o:\MY GIT\relax.net\Relax\bin\Release\source.zip'.
+File name: 'o:\MY GIT\relax.net\Relax\bin\Release\source.zip'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Compression.ZipFile.Open(String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding)
+   at System.IO.Compression.ZipFile.ExtractToDirectory(String sourceArchiveFileName, String destinationDirectoryName, Encoding entryNameEncoding)
+   at System.IO.Compression.ZipFile.ExtractToDirectory(String sourceArchiveFileName, String destinationDirectoryName)
+   at Updater.func.zip(String zipPath, String unzippath)
+----------------------------------------------------------2017-02-05 11:13:51 AM
+System.IO.DirectoryNotFoundException: Could not find directory 'o:\MY GIT\relax.net\Relax\bin\Release\tmpupdate'.
+   at Microsoft.VisualBasic.FileIO.FileSystem.CopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite, UIOptionInternal showUI, UICancelOption onUserCancel)
+   at Microsoft.VisualBasic.MyServices.FileSystemProxy.CopyDirectory(String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite)
+   at Updater.func.copyto()
+----------------------------------------------------------2017-02-05 11:13:52 AM
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'o:\MY GIT\relax.net\Relax\bin\Release\tmpupdate\updater.exe'.
+   at Microsoft.VisualBasic.FileSystem.FileCopy(String Source, String Destination)
+   at Updater.func.copyto()
+----------------------------------------------------------2017-02-05 11:13:55 AM
+System.IO.IOException: Could not complete operation on some files and directories. See the Data property of the exception for more details.
+   at Microsoft.VisualBasic.FileIO.FileSystem.FxCopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryPath, String targetDirectoryPath, Boolean overwrite)
+   at Microsoft.VisualBasic.FileIO.FileSystem.CopyOrMoveDirectory(CopyOrMove operation, String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite, UIOptionInternal showUI, UICancelOption onUserCancel)
+   at Microsoft.VisualBasic.MyServices.FileSystemProxy.CopyDirectory(String sourceDirectoryName, String destinationDirectoryName, Boolean overwrite)
+   at Updater.func.copyto()
+----------------------------------------------------------2017-02-05 11:39:20 AM
