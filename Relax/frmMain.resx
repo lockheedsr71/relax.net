@@ -6305,6 +6305,16 @@
 # Created by M.B.K    
 ###############################
 
+
+2.0.3.1300
+===============
+1.Fix remove empty folders bug
+2.Update extractor and some DLL moduals
+
+
+
+
+
 2.0.2.1258
 ===============
 1.Fix minimize to tray bugs
@@ -6401,8 +6411,7 @@
 
 1.0.0.0
 ===============
-1.first release of relax program used autoit scripting language
-</value>
+1.first release of relax program used autoit scripting language</value>
   </data>
   <data name="RichTextBox2.Text" xml:space="preserve">
     <value>RELAX Engine  TS File auto extractor and automation tool.

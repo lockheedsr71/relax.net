@@ -50,7 +50,7 @@ Partial Class frmMain
         Me.txtchktimer = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label27 = New System.Windows.Forms.Label()
+        Me.chkRemoveemptydir = New System.Windows.Forms.CheckBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.txtremovepath5 = New System.Windows.Forms.TextBox()
         Me.txtremovepath4 = New System.Windows.Forms.TextBox()
@@ -63,7 +63,6 @@ Partial Class frmMain
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.chkRemoveTS = New System.Windows.Forms.CheckBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -99,6 +98,7 @@ Partial Class frmMain
         Me.Label17 = New System.Windows.Forms.Label()
         Me.richtxtlog = New System.Windows.Forms.RichTextBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.updsrvlist = New System.Windows.Forms.ComboBox()
         Me.grpupdate = New System.Windows.Forms.GroupBox()
         Me.txtupddesc = New System.Windows.Forms.RichTextBox()
@@ -147,7 +147,6 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -276,7 +275,7 @@ Partial Class frmMain
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(659, 452)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Settings"
+        Me.TabPage2.Text = "Extractor Settings"
         '
         'GroupBox5
         '
@@ -446,7 +445,7 @@ Partial Class frmMain
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Label27)
+        Me.GroupBox3.Controls.Add(Me.chkRemoveemptydir)
         Me.GroupBox3.Controls.Add(Me.Label26)
         Me.GroupBox3.Controls.Add(Me.txtremovepath5)
         Me.GroupBox3.Controls.Add(Me.txtremovepath4)
@@ -467,33 +466,33 @@ Partial Class frmMain
         Me.GroupBox3.TabStop = false
         Me.GroupBox3.Text = "Removing paths after extract:"
         '
-        'Label27
+        'chkRemoveemptydir
         '
-        Me.Label27.AutoSize = true
-        Me.Label27.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
-        Me.Label27.Location = New System.Drawing.Point(55, 76)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(142, 13)
-        Me.Label27.TabIndex = 27
-        Me.Label27.Text = "Example : \toosheh\نرم افزار"
+        Me.chkRemoveemptydir.AutoSize = true
+        Me.chkRemoveemptydir.ForeColor = System.Drawing.Color.Red
+        Me.chkRemoveemptydir.Location = New System.Drawing.Point(9, 160)
+        Me.chkRemoveemptydir.Name = "chkRemoveemptydir"
+        Me.chkRemoveemptydir.Size = New System.Drawing.Size(254, 20)
+        Me.chkRemoveemptydir.TabIndex = 29
+        Me.chkRemoveemptydir.Text = "Remove empty folders  after extract"
+        Me.chkRemoveemptydir.UseVisualStyleBackColor = true
         '
         'Label26
         '
         Me.Label26.AutoSize = true
         Me.Label26.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
-        Me.Label26.Location = New System.Drawing.Point(55, 43)
+        Me.Label26.Location = New System.Drawing.Point(57, 142)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(80, 13)
+        Me.Label26.Size = New System.Drawing.Size(186, 13)
         Me.Label26.TabIndex = 26
-        Me.Label26.Text = "Example : \.lisa"
+        Me.Label26.Text = "Example : \.lisa Or  \toosheh\نرم افزار"
         '
         'txtremovepath5
         '
         Me.txtremovepath5.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremovepath5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtremovepath5.Location = New System.Drawing.Point(58, 154)
+        Me.txtremovepath5.Location = New System.Drawing.Point(58, 127)
         Me.txtremovepath5.Name = "txtremovepath5"
         Me.txtremovepath5.Size = New System.Drawing.Size(300, 15)
         Me.txtremovepath5.TabIndex = 8
@@ -502,7 +501,7 @@ Partial Class frmMain
         '
         Me.txtremovepath4.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremovepath4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtremovepath4.Location = New System.Drawing.Point(58, 123)
+        Me.txtremovepath4.Location = New System.Drawing.Point(58, 102)
         Me.txtremovepath4.Name = "txtremovepath4"
         Me.txtremovepath4.Size = New System.Drawing.Size(300, 15)
         Me.txtremovepath4.TabIndex = 7
@@ -511,7 +510,7 @@ Partial Class frmMain
         '
         Me.txtremovepath3.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremovepath3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtremovepath3.Location = New System.Drawing.Point(58, 92)
+        Me.txtremovepath3.Location = New System.Drawing.Point(58, 77)
         Me.txtremovepath3.Name = "txtremovepath3"
         Me.txtremovepath3.Size = New System.Drawing.Size(300, 15)
         Me.txtremovepath3.TabIndex = 6
@@ -520,7 +519,7 @@ Partial Class frmMain
         '
         Me.txtremovepath2.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtremovepath2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtremovepath2.Location = New System.Drawing.Point(58, 59)
+        Me.txtremovepath2.Location = New System.Drawing.Point(58, 51)
         Me.txtremovepath2.Name = "txtremovepath2"
         Me.txtremovepath2.Size = New System.Drawing.Size(300, 15)
         Me.txtremovepath2.TabIndex = 5
@@ -550,7 +549,7 @@ Partial Class frmMain
         Me.Label10.AutoSize = true
         Me.Label10.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label10.Location = New System.Drawing.Point(6, 58)
+        Me.Label10.Location = New System.Drawing.Point(6, 50)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(46, 15)
         Me.Label10.TabIndex = 16
@@ -561,7 +560,7 @@ Partial Class frmMain
         Me.Label11.AutoSize = true
         Me.Label11.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label11.Location = New System.Drawing.Point(6, 91)
+        Me.Label11.Location = New System.Drawing.Point(6, 76)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(46, 15)
         Me.Label11.TabIndex = 17
@@ -572,7 +571,7 @@ Partial Class frmMain
         Me.Label12.AutoSize = true
         Me.Label12.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label12.Location = New System.Drawing.Point(6, 122)
+        Me.Label12.Location = New System.Drawing.Point(6, 101)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(46, 15)
         Me.Label12.TabIndex = 18
@@ -583,7 +582,7 @@ Partial Class frmMain
         Me.Label13.AutoSize = true
         Me.Label13.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label13.Location = New System.Drawing.Point(6, 154)
+        Me.Label13.Location = New System.Drawing.Point(6, 127)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(46, 15)
         Me.Label13.TabIndex = 19
@@ -591,7 +590,6 @@ Partial Class frmMain
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.chkRemoveTS)
         Me.GroupBox2.Controls.Add(Me.Label23)
         Me.GroupBox2.Controls.Add(Me.Button6)
         Me.GroupBox2.Controls.Add(Me.Button5)
@@ -610,18 +608,6 @@ Partial Class frmMain
         Me.GroupBox2.TabIndex = 22
         Me.GroupBox2.TabStop = false
         Me.GroupBox2.Text = "File and folders path:"
-        '
-        'chkRemoveTS
-        '
-        Me.chkRemoveTS.AutoSize = true
-        Me.chkRemoveTS.Enabled = false
-        Me.chkRemoveTS.ForeColor = System.Drawing.Color.Red
-        Me.chkRemoveTS.Location = New System.Drawing.Point(167, 79)
-        Me.chkRemoveTS.Name = "chkRemoveTS"
-        Me.chkRemoveTS.Size = New System.Drawing.Size(205, 20)
-        Me.chkRemoveTS.TabIndex = 29
-        Me.chkRemoveTS.Text = "Remove TS file after extract"
-        Me.chkRemoveTS.UseVisualStyleBackColor = true
         '
         'Label23
         '
@@ -1037,6 +1023,17 @@ Partial Class frmMain
         Me.TabPage6.Size = New System.Drawing.Size(659, 452)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Update"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = true
+        Me.Label25.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.White
+        Me.Label25.Location = New System.Drawing.Point(10, 13)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(110, 16)
+        Me.Label25.TabIndex = 30
+        Me.Label25.Text = "Update server :"
         '
         'updsrvlist
         '
@@ -1600,17 +1597,6 @@ Partial Class frmMain
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = false
         '
-        'Label25
-        '
-        Me.Label25.AutoSize = true
-        Me.Label25.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.Label25.ForeColor = System.Drawing.Color.White
-        Me.Label25.Location = New System.Drawing.Point(10, 13)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(110, 16)
-        Me.Label25.TabIndex = 30
-        Me.Label25.Text = "Update server :"
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -1729,7 +1715,6 @@ End Sub
     Friend WithEvents Label22 As Label
     Friend WithEvents txtremovepath5 As TextBox
     Friend WithEvents txtremovepath4 As TextBox
-    Friend WithEvents Label27 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label28 As Label
     Friend WithEvents Button6 As Button
@@ -1742,7 +1727,7 @@ End Sub
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents lblstartuppath As Label
     Friend WithEvents RichTextBox3 As RichTextBox
-    Friend WithEvents chkRemoveTS As CheckBox
+    Friend WithEvents chkRemoveemptydir As CheckBox
     Friend WithEvents RichTextBox4 As RichTextBox
     Friend WithEvents Button7 As Button
     Friend WithEvents TabPage6 As TabPage

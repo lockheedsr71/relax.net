@@ -3,6 +3,17 @@
 # Created by M.B.K    
 ###############################
 
+
+
+2.0.2.x
+===============
+1.Add delete empty folder(after some rules removing files)
+
+
+
+
+
+
 2.0.2.1258
 ===============
 1.Fix minimize to tray bugs

@@ -110,8 +110,8 @@ Public   Class getxml
 				                .WriteEndElement()
             
 
-                                .WriteStartElement("RemoveTS")
-				                .WriteString(frmMain.chkRemoveTS.CheckState  )
+                                .WriteStartElement("Removeemptydir")
+				                .WriteString(frmMain.chkRemoveemptydir.CheckState  )
 				                .WriteEndElement()
 
 
@@ -282,9 +282,9 @@ Public   Class getxml
 
 					End If
 
-                    If (document.Name = "RemoveTS") Then
+                    If (document.Name = "Removeemptydir") Then
 
-					 frmMain.chkRemoveTS.CheckState   = document.ReadInnerXml.ToString()
+					 frmMain.chkRemoveemptydir.CheckState   = document.ReadInnerXml.ToString()
 
 					End If
 

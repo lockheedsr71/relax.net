@@ -3,17 +3,12 @@ Imports System.Security.Cryptography
 Imports System.Text
 Imports System.Threading
 Imports Microsoft.Win32
- 
-
-
- 
-
-
-
-
+  
 Public Class stuff
 
    public  Shared   getcmdargs as Boolean 
+   Public Shared   _listAllDirectories As New List(Of String)
+
 
     Public Function CompareFiles(ByVal file1FullPath As String, ByVal file2FullPath As String) As Boolean
 
@@ -65,7 +60,7 @@ Public Class stuff
         End While
     End Sub
 
-
+     
 
 
   Public Shared sub mylog (logtxt As String)
@@ -244,6 +239,35 @@ regVersion = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\Curr
 
     End sub
 
+
+    Public Shared Sub DeleteEmptyFolder(ByVal sourceFolderPath As String)
+        Try
+            CheckFolder(sourceFolderPath)
+                For ctr As Integer = _listAllDirectories.Count - 1 To 0 Step -1
+                    Dim dir As New IO.DirectoryInfo(_listAllDirectories(ctr))
+                    If dir.GetFiles.Length = 0 And dir.GetDirectories.Length = 0 Then
+                        dir.Delete()
+                    End If
+                Next
+        Catch ex As Exception
+
+                stuff.mylog (ex.ToString())
+        End Try
+
+       
+    End Sub
+
+    'Here's the code:
+          Shared   Sub CheckFolder(ByVal sourceFolderPath As String)
+        Dim di As New IO.DirectoryInfo(sourceFolderPath)
+        For Each directory As IO.DirectoryInfo In di.GetDirectories
+            _listAllDirectories.Add(directory.FullName)
+            CheckFolder(directory.FullName)
+        Next
+    End Sub
+
+
+
 End Class
 
 
@@ -330,6 +354,9 @@ Dim hashValue As String
 hashValue = Convert.ToBase64String(hashBytes)
 rndhash = hashValue
 End Function
+
+
+
 
 
 

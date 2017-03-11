@@ -10,7 +10,7 @@ Imports Microsoft.Win32              ' for sleep command
 Public Class frmMain
     Private myIni As goini
     Public startin1, startin2, startin3, FilePathUbix, FilePathClient, FilePathClientOut, removepath1, removepath2, _
-        removepath3, removepath4, removepath5, RemoveTS, chktimer, ExtractOnFly ,updserver As String
+        removepath3, removepath4, removepath5, Removeemptydir, chktimer, ExtractOnFly ,updserver As String
     Public mydate As String
     Public mytime As String
     Public projdir As String
@@ -42,7 +42,7 @@ Public Class frmMain
 start:
         if stuff.getcmdargs = false then stuff.getargs()
 
-       On Error GoTo errpart
+     '  On Error GoTo errpart
 
         ' check needed files tu run relax 
         filechk("vars.xml")
@@ -119,6 +119,10 @@ start:
 
 
             doextract()
+          
+          
+         
+         
 nocopy:
 
             '   Remove folders  ==============================================================================================================
@@ -128,6 +132,14 @@ nocopy:
             delfile(FilePathClientOut & mydate & removepath3)
             delfile(FilePathClientOut & mydate & removepath4)
             delfile(FilePathClientOut & mydate & removepath5)
+           
+
+            if Removeemptydir=1 Then
+                 Thread.Sleep (1000)
+                stuff.DeleteEmptyFolder(FilePathClientOut & mydate )
+            End If    
+            
+            
 
             '  Remove extentions  ==============================================================================================================
 
@@ -384,11 +396,7 @@ errpart:
         getxml.wrtxml
     End Sub
 
-    Private Sub txtfilepathubix_TextChanged(sender As Object, e As EventArgs) Handles txtfilepathubix.TextChanged
-
-    End Sub
-
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+  Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         chkxml
         txtstartin3.Text = DateTime.Now.ToString("HH:mm")
         startin3 = DateTime.Now.ToString("HH:mm")
@@ -404,8 +412,6 @@ errpart:
         Dim updlink As String = updsrvlist.SelectedItem  & "/version.xml"& "?random=" & hashing.rndhash
         dim tmpdir As String = Path.GetTempPath() 
          My.Computer.Network.DownloadFile(updlink, tmpdir &  "/version.xml", "", "", True, 3000, True)
-
-        
         clsver.rxml(tmpdir & "version.xml")
         Dim location = Assembly.GetExecutingAssembly().Location
         clsver.comparever(clsver.pver, clsver.getver(location))
@@ -413,11 +419,9 @@ errpart:
         lblupdid.Text = clsver.pID
         lblupdprogname.Text = clsver.pName
         lblupdveronserver.Text = clsver.pver
-
         lbllisacorever0.Text=clsver.getver ( "o:\MY GIT\relax.net\Relax\bin\Release\LisaExtractor.dll")
         'lblupddesc.Text=clsver.pdes
         txtupddesc.Text = clsver.pdes
-
         lblupdlink.Text = updlink
         Select Case clsver.result
             Case 1
@@ -444,7 +448,6 @@ errpart:
             'but decided to put it hereso it wouldn't process anymore code then it has to if the url 
             'is invalid.
         
-
             uriSource = New Uri(updserver & "/source.zip?random=" & hashing.rndhash)
             '
             'Starts a Windows timer to tick every one second and gets the id which will be used when 
@@ -464,8 +467,6 @@ errpart:
             downloadSpeed = 0
             pbDownloadProgress.Value = 0
             lblStatus.Text = "Status: Started"
-
-             
 
         Catch exc As Exception
 
@@ -591,7 +592,7 @@ errpart:
         removepath3 = txtremovepath3.Text
         removepath4 = txtremovepath4.Text
         removepath5 = txtremovepath5.Text
-        ''  RemoveTS = chkRemoveTS.CheckState 
+        Removeemptydir = chkRemoveemptydir .CheckState 
         ExtractOnFly = chkextractonfly.CheckState
 
 
@@ -673,6 +674,10 @@ errpart:
     WindowState = FormWindowState.Normal
     End Sub
 
+    Private Sub chkRemoveemptydir_MouseClick(sender As Object, e As MouseEventArgs) Handles chkRemoveemptydir.MouseClick
+           getxml.wrtxml()
+    End Sub
+
 
     Private Sub NotifyIcon1_MouseDown(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDown
 
@@ -700,9 +705,7 @@ errpart:
 
         'Now make it invisible (make it look like it went into the system tray)
         Me.Visible = False
-
-
-
+         
     End Sub
 
     Private Sub TabControl1_MouseClick(sender As Object, e As MouseEventArgs) Handles TabControl1.MouseClick
