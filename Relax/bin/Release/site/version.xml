@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <Product>
+    <ID>1</ID>
+    <Name>Relax</Name>
+    <Version>2.0.2.1258</Version>
+	<Descriptions>New version include this :
+1.Fix minimize to tray bugs
+2.Add update module for online update
+3.Add Extract on the fly
+4.Update extractor moduals
+5.Fix some bugs and improve stability
+
+	</Descriptions>
+  </Product>
+  </settings>

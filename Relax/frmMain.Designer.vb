@@ -147,6 +147,7 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
@@ -211,11 +212,11 @@ Partial Class frmMain
         Me.Label2.AutoSize = true
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(8, 491)
+        Me.Label2.Location = New System.Drawing.Point(61, 492)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 13)
+        Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Version :"
+        Me.Label2.Text = "0.0.0.0"
         '
         'TabControl1
         '
@@ -417,7 +418,7 @@ Partial Class frmMain
         Me.Label22.AutoSize = true
         Me.Label22.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
-        Me.Label22.Location = New System.Drawing.Point(22, 39)
+        Me.Label22.Location = New System.Drawing.Point(6, 40)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(156, 26)
         Me.Label22.TabIndex = 26
@@ -470,7 +471,7 @@ Partial Class frmMain
         '
         Me.chkRemoveemptydir.AutoSize = true
         Me.chkRemoveemptydir.ForeColor = System.Drawing.Color.Red
-        Me.chkRemoveemptydir.Location = New System.Drawing.Point(9, 160)
+        Me.chkRemoveemptydir.Location = New System.Drawing.Point(9, 162)
         Me.chkRemoveemptydir.Name = "chkRemoveemptydir"
         Me.chkRemoveemptydir.Size = New System.Drawing.Size(254, 20)
         Me.chkRemoveemptydir.TabIndex = 29
@@ -482,7 +483,7 @@ Partial Class frmMain
         Me.Label26.AutoSize = true
         Me.Label26.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
-        Me.Label26.Location = New System.Drawing.Point(57, 142)
+        Me.Label26.Location = New System.Drawing.Point(57, 143)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(186, 13)
         Me.Label26.TabIndex = 26
@@ -635,7 +636,7 @@ Partial Class frmMain
         '
         Me.Button5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(564, 53)
+        Me.Button5.Location = New System.Drawing.Point(564, 56)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(67, 21)
         Me.Button5.TabIndex = 31
@@ -670,7 +671,7 @@ Partial Class frmMain
         Me.txtfilepathclient.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtfilepathclient.Enabled = false
         Me.txtfilepathclient.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
-        Me.txtfilepathclient.Location = New System.Drawing.Point(167, 54)
+        Me.txtfilepathclient.Location = New System.Drawing.Point(167, 57)
         Me.txtfilepathclient.Name = "txtfilepathclient"
         Me.txtfilepathclient.Size = New System.Drawing.Size(388, 19)
         Me.txtfilepathclient.TabIndex = 14
@@ -701,7 +702,7 @@ Partial Class frmMain
         Me.Label7.AutoSize = true
         Me.Label7.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label7.Location = New System.Drawing.Point(6, 56)
+        Me.Label7.Location = New System.Drawing.Point(6, 59)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(158, 15)
         Me.Label7.TabIndex = 13
@@ -773,7 +774,7 @@ Partial Class frmMain
         Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label16.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(10, 37)
+        Me.Label16.Location = New System.Drawing.Point(10, 36)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(234, 37)
         Me.Label16.TabIndex = 15
@@ -806,27 +807,27 @@ Partial Class frmMain
         Me.txtstartin3.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtstartin3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtstartin3.Enabled = false
-        Me.txtstartin3.Location = New System.Drawing.Point(147, 134)
+        Me.txtstartin3.Location = New System.Drawing.Point(185, 133)
         Me.txtstartin3.Name = "txtstartin3"
-        Me.txtstartin3.Size = New System.Drawing.Size(112, 15)
+        Me.txtstartin3.Size = New System.Drawing.Size(71, 15)
         Me.txtstartin3.TabIndex = 3
         '
         'txtstartin2
         '
         Me.txtstartin2.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtstartin2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtstartin2.Location = New System.Drawing.Point(147, 98)
+        Me.txtstartin2.Location = New System.Drawing.Point(185, 106)
         Me.txtstartin2.Name = "txtstartin2"
-        Me.txtstartin2.Size = New System.Drawing.Size(112, 15)
+        Me.txtstartin2.Size = New System.Drawing.Size(71, 15)
         Me.txtstartin2.TabIndex = 2
         '
         'txtstartin1
         '
         Me.txtstartin1.BackColor = System.Drawing.Color.FromArgb(CType(CType(250,Byte),Integer), CType(CType(239,Byte),Integer), CType(CType(203,Byte),Integer))
         Me.txtstartin1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtstartin1.Location = New System.Drawing.Point(147, 77)
+        Me.txtstartin1.Location = New System.Drawing.Point(185, 79)
         Me.txtstartin1.Name = "txtstartin1"
-        Me.txtstartin1.Size = New System.Drawing.Size(112, 15)
+        Me.txtstartin1.Size = New System.Drawing.Size(71, 15)
         Me.txtstartin1.TabIndex = 1
         '
         'Label3
@@ -834,7 +835,7 @@ Partial Class frmMain
         Me.Label3.AutoSize = true
         Me.Label3.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label3.Location = New System.Drawing.Point(7, 77)
+        Me.Label3.Location = New System.Drawing.Point(6, 80)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(99, 15)
         Me.Label3.TabIndex = 9
@@ -845,18 +846,18 @@ Partial Class frmMain
         Me.Label4.AutoSize = true
         Me.Label4.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label4.Location = New System.Drawing.Point(5, 97)
+        Me.Label4.Location = New System.Drawing.Point(5, 105)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(114, 15)
+        Me.Label4.Size = New System.Drawing.Size(169, 15)
         Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Second start time :"
+        Me.Label4.Text = "Second start time (Optional):"
         '
         'Label5
         '
         Me.Label5.AutoSize = true
         Me.Label5.Font = New System.Drawing.Font("Arial", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.Label5.Location = New System.Drawing.Point(7, 134)
+        Me.Label5.Location = New System.Drawing.Point(7, 131)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(134, 15)
         Me.Label5.TabIndex = 11
@@ -1597,12 +1598,24 @@ Partial Class frmMain
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = false
         '
+        'Label27
+        '
+        Me.Label27.AutoSize = true
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178,Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.White
+        Me.Label27.Location = New System.Drawing.Point(4, 491)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(57, 13)
+        Me.Label27.TabIndex = 10
+        Me.Label27.Text = "Version :"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.ClientSize = New System.Drawing.Size(829, 508)
+        Me.Controls.Add(Me.Label27)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
@@ -1777,4 +1790,5 @@ End Sub
     Friend WithEvents lblupdaterver As Label
     Friend WithEvents lblupdaterver0 As Label
     Friend WithEvents Label25 As Label
+    Friend WithEvents Label27 As Label
 End Class

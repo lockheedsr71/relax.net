@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <Product>
+    <ID>1</ID>
+    <Name>Relax</Name>
+    <Version>2.0.2.1300</Version>
+	<Descriptions>1.Fix remove empty folders bug
+2.Update extractor and some DLL moduals
+3.Add delete empty folder(after some rules removing files)
+
+	</Descriptions>
+  </Product>
+  </settings>

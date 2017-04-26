@@ -5,10 +5,12 @@
 
 
 
-2.0.2.x
-===============
-1.Add delete empty folder(after some rules removing files)
 
+2.0.3.1300
+===============
+1.Fix remove empty folders bug
+2.Update extractor and some DLL moduals
+3.Add delete empty folder(after some rules removing files)
 
 
 
